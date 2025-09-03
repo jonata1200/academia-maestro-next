@@ -1,10 +1,9 @@
-// src/app/layout.tsx
 import type { Metadata } from "next";
-// NÃO PRECISA MAIS IMPORTAR O globals.css AQUI, POIS O style.css JÁ FAZ ISSO.
-import '../styles/style.css'; // <-- USANDO O CAMINHO RELATIVO GARANTIDO
+import '../styles/style.css'; 
 
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import GoogleAnalytics from "@/components/GoogleAnalytics"; // PASSO 1: IMPORTAR
 
 export const metadata: Metadata = {
   title: "Academia de Música Maestro",
@@ -22,6 +21,9 @@ export default function RootLayout({
         <Header />
         <main>{children}</main>
         <Footer />
+        
+        {/* PASSO 2: ADICIONAR O COMPONENTE AQUI */}
+        <GoogleAnalytics /> 
       </body>
     </html>
   );
