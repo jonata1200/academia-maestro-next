@@ -1,0 +1,157 @@
+/* BIBLIOTECA DE COMPONENTES REUTILIZÁVEIS */
+
+/* --- Botão --- */
+.cta-button {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+    transition: transform 0.3s, background-color 0.3s;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0 4px 15px rgba(0, 0, 255, 0.2);
+}
+.cta-button:hover { transform: translateY(-3px); background-color: #0000CC; }
+
+/* --- Cards de Destaque (Home & outros) --- */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.feature-card {
+    background: var(--secondary-color);
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    border: 1px solid #eee;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    /* <<-- EFEITO DE TRANSIÇÃO SUAVE -->> */
+    transition: all 0.3s ease-in-out;
+    border-top: 3px solid transparent; /* Espaço para a borda no hover */
+}
+
+.feature-card:hover {
+    /* <<-- EFEITO DE "LEVANTAR" O CARD -->> */
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+    /* <<-- BORDA COLORIDA QUE APARECE NO HOVER -->> */
+    border-top-color: var(--primary-color);
+}
+
+.feature-icon {
+    /* <<-- CÍRCULO DE FUNDO PARA O ÍCONE -->> */
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 20px;
+    background-color: #e8e8ff; /* Um azul bem clarinho */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.feature-icon img {
+    width: 40px; /* Ajuste o tamanho da imagem dentro do círculo */
+    height: 40px;
+}
+
+.feature-card h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+/* --- Cards de Depoimentos (Home) --- */
+.testimonial-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 30px; margin-top: 40px; }
+.testimonial-card { background: rgba(255, 255, 255, 0.1); padding: 30px; border-radius: 8px; border-left: 5px solid var(--primary-color); text-align: left; }
+.testimonial-card p { color: #eee; font-style: italic; font-size: 1.1rem; margin-bottom: 20px; }
+.testimonial-card cite { color: var(--secondary-color); font-weight: 600; font-style: normal; }
+
+/* --- Cards de Missão/Visão/Valores (Sobre) --- */
+.mission-vision-values { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+.mission-vision-values .card { background-color: var(--light-gray); padding: 30px; border-radius: 8px; border-left: 5px solid var(--primary-color); }
+
+/* --- Grid da Galeria --- */
+.gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+.gallery-grid img { width: 100%; height: 250px; border-radius: 8px; object-fit: cover; transition: transform 0.3s; }
+.gallery-grid img:hover { transform: scale(1.05); }
+
+/* --- Layout e Formulário de Contato --- */
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; margin-top: 40px; }
+.location-card { background-color: var(--light-gray); padding: 20px; border-radius: 8px; margin-bottom: 20px; }
+.contact-form form input,
+.contact-form form textarea { width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px; font-family: var(--font-family); }
+
+/* --- Responsividade dos Componentes --- */
+@media (max-width: 768px) {
+    .testimonial-grid, .contact-grid { grid-template-columns: 1fr; }
+}
+
+/* --- SEÇÃO DE MAPAS DAS UNIDADES --- */
+.maps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.map-card {
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 20px;
+    background-color: var(--secondary-color);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    text-align: center; /* Centraliza todo o texto dentro do card */
+}
+
+.map-card h3 {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+}
+
+.map-card p {
+    margin-bottom: 20px;
+    color: var(--text-light);
+    /* Garante que o texto tenha uma altura consistente */
+    min-height: 40px; 
+}
+
+.map-container {
+    border-radius: 8px;
+    overflow: hidden; /* Garante que o iframe respeite a borda arredondada */
+}
+
+.map-container iframe {
+    /* Remove a borda padrão e garante que o mapa preencha o container */
+    border: 0;
+    width: 100%;
+    height: 250px;
+}
+
+.map-button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    background-color: transparent;
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.map-button:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}

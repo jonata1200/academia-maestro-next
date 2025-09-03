@@ -1,0 +1,143 @@
+/* ========================================================
+   HEADER CSS (VERSÃO FINAL E ROBUSTA)
+   ======================================================== */
+
+/* --- ESTADO PADRÃO (FIXO E BRANCO) --- */
+header {
+    position: static;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-color: var(--secondary-color);
+    border-bottom: 1px solid #eee;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.4s ease, border-color 0.4s ease;
+}
+
+/* --- ESTADO ESPECIAL (TRANSPARENTE - SÓ NO TOPO DA HOME) --- */
+body.home-page header:not(.scrolled) {
+    background-color: transparent;
+    border-color: transparent;
+    box-shadow: none;
+}
+body.home-page header:not(.scrolled) .logo img {
+    filter: brightness(0) invert(1);
+}
+body.home-page header:not(.scrolled) nav.nav-desktop ul li a {
+    color: var(--secondary-color);
+}
+body.home-page header:not(.scrolled) nav.nav-desktop ul li a:hover {
+    color: var(--secondary-color);
+}
+/* Link ativo no topo da Home continua azul */
+body.home-page header:not(.scrolled) nav.nav-desktop ul li a.active {
+    color: var(--secondary-color);
+}
+
+
+/* --- LAYOUT INTERNO (LOGO, NAV) --- */
+header .container { display: flex; justify-content: space-between; align-items: center; height: 100%; }
+.logo { position: static; transform: none; }
+.logo img { height: 100px; display: block; filter: invert(15%) sepia(99%) saturate(6970%) hue-rotate(241deg) brightness(94%) contrast(143%); transition: filter 0.4s ease; }
+
+/* Navegação e Links */
+nav.nav-desktop { display: block; }
+nav.nav-desktop ul { list-style: none; display: flex; gap: 30px; }
+nav.nav-desktop ul li a { text-decoration: none; font-weight: 600; font-size: 16px; padding-bottom: 8px; position: relative; color: var(--text-color); transition: color 0.3s ease; }
+nav.nav-desktop ul li a::after { content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 2px; background-color: var(--primary-color); transform: scaleX(0); transform-origin: center; transition: transform 0.4s ease; }
+nav.nav-desktop ul li a:hover::after,
+nav.nav-desktop ul li a.active::after { transform: scaleX(1); }
+nav.nav-desktop ul li a:hover { color: var(--primary-color); }
+
+
+/* --- RESPONSIVIDADE (MENU HAMBÚRGUER) --- */
+.menu-toggle { display: none; width: 30px; height: 25px; background: transparent; border: none; cursor: pointer; flex-direction: column; justify-content: space-between; z-index: 10001; }
+.menu-toggle .bar { width: 100%; height: 3px; border-radius: 3px; transition: all 0.3s ease-in-out; }
+
+@media (max-width: 768px) {
+    header .container { 
+        height: auto;
+        padding: 15px 20px;
+        flex-direction: row; 
+        justify-content: space-between; 
+        align-items: center; 
+    }
+    .logo { order: 2; }
+    .logo img { height: 80px; }
+    .menu-toggle { display: flex; order: 1; }
+    
+    /* Estilo das barras do hambúrguer */
+    .menu-toggle .bar {
+        background-color: var(--dark-blue); 
+    }
+
+    /* Cor branca quando header transparente (apenas na home) */
+    body.home-page header:not(.scrolled) .menu-toggle .bar {
+        background-color: var(--secondary-color); /* Branco */
+    }
+    
+    /* Cor do texto quando menu aberto */
+    body.home-page header:not(.scrolled) nav.nav-desktop.active ul li a {
+        color: var(--text-color);
+    }
+
+    /* Link ativo mantém cor azul */
+    body.home-page header:not(.scrolled) nav.nav-desktop.active ul li a.active {
+        color: var(--primary-color);
+    }
+    
+    /* Cor das barras quando menu está ativo */
+    body.home-page header:not(.scrolled) .menu-toggle.active .bar {
+        background-color: var(--dark-blue);
+    }
+    
+    /* Menu lateral (gaveta) */
+    nav.nav-desktop { 
+        position: fixed; 
+        top: 0; 
+        left: -100%; 
+        width: 80%; 
+        max-width: 300px; 
+        height: 100vh; 
+        background-color: var(--secondary-color); 
+        box-shadow: 5px 0 15px rgba(0,0,0,0.1); 
+        padding-top: 100px; 
+        transition: left 0.4s ease; 
+        z-index: 10000; 
+    }
+    nav.nav-desktop.active { left: 0; }
+    
+    nav.nav-desktop ul { 
+        flex-direction: column; 
+        align-items: flex-start; 
+        padding: 20px; 
+        gap: 20px; 
+    }
+    nav.nav-desktop ul li a { 
+        font-size: 1.2rem; 
+        color: var(--text-color); 
+    }
+    nav.nav-desktop ul li a.active { color: var(--primary-color); }
+
+    /* Animação do hambúrguer para "X" */
+    .menu-toggle.active .bar:nth-child(1) { 
+        transform: rotate(45deg) translate(7px, 7px); 
+    }
+    .menu-toggle.active .bar:nth-child(2) { opacity: 0; }
+    .menu-toggle.active .bar:nth-child(3) { 
+        transform: rotate(-45deg) translate(7px, -7px); 
+    }
+    
+    /* Overlay para fechar menu ao clicar fora */
+    nav.nav-desktop.active::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: transparent;
+        z-index: -1;
+    }
+}

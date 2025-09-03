@@ -1,0 +1,352 @@
+/* ========================================================
+   ESTILOS DAS PÁGINAS INTERNAS (SOBRE, PLANOS, INSTRUMENTOS, ETC.)
+   VERSÃO FINAL E COMPLETA
+   ======================================================== */
+
+/* --- ESTRUTURA GERAL DAS PÁGINAS INTERNAS --- */
+.generic-page-content {
+    /* Espaçamento normal já que o header não é mais fixo */
+    padding-top: 80px; 
+    padding-bottom: 80px;
+}
+
+/* Para a página Sobre Nós, que tem uma estrutura diferente */
+.page-title-section {
+    /* Espaçamento normal já que o header não é mais fixo */
+    padding-top: 80px; 
+    padding-bottom: 50px;
+    text-align: center;
+}
+.generic-page-content h1 {
+    text-align: center;
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+}
+.generic-page-content > .container > p {
+    text-align: center;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 60px;
+    font-size: 1.2rem;
+    color: var(--text-light);
+}
+
+/* === PÁGINA SOBRE NÓS === */
+.page-title-section h1 { font-size: 2.8rem; }
+.timeline-section {
+    padding-top: 40px; /* Reduzido de 60px para 40px */
+    padding-bottom: 60px; /* Mantemos o espaço inferior */
+}
+.timeline { position: relative; max-width: 800px; margin: 0 auto; border-left: 3px solid var(--primary-color); }
+.timeline-item { padding: 20px 40px; position: relative; margin-bottom: 30px; }
+.timeline-icon { position: absolute; left: -26.5px; top: 20px; background-color: var(--primary-color); color: var(--secondary-color); width: 50px; height: 50px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 1.5rem; }
+.timeline-content h3 { font-size: 1.8rem; }
+.timeline-content p { font-size: 1.1rem; line-height: 1.7; }
+.core-values-section { padding: 80px 0; background-color: var(--light-gray); }
+.core-values-section h2 { text-align: center; color: var(--dark-blue); font-size: 2.2rem; }
+.values-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
+.value-card { background-color: var(--secondary-color); padding: 30px; border-radius: 12px; border: 1px solid #e0e0e0; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+.value-card h4 { color: var(--primary-color); font-size: 1.5rem; border-bottom: 2px solid var(--primary-color); padding-bottom: 10px; margin-bottom: 20px; display: inline-block; }
+.value-card p { color: var(--text-light); }
+
+
+/* === PÁGINA DE INSTRUMENTOS (VERSÃO CARROSSEL) === */
+.instrument-carousel {
+    width: 100%;
+    padding: 20px 0 50px; /* Espaço para a paginação */
+    margin: 40px 0;
+}
+
+.instrument-carousel .swiper-slide {
+    display: flex;
+    justify-content: center;
+    height: auto;
+}
+
+.category-card {
+    background-color: var(--secondary-color);
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.category-card-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.category-card-content {
+    padding: 25px;
+    flex-grow: 1;
+}
+.category-card-content h3 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin: 0 0 15px 0;
+}
+.category-card-content ul {
+    list-style: none;
+    padding: 0;
+    columns: 1; /* Uma coluna só, fica melhor no carrossel */
+}
+.category-card-content ul.multi-column {
+    columns: 2; /* Divide a lista em 2 colunas */
+    gap: 20px; /* Espaço entre as colunas */
+}
+.category-card-content ul li {
+    margin-bottom: 8px;
+    color: var(--text-light);
+}
+.category-card-content ul li::before {
+    content: '•';
+    color: var(--primary-color);
+    margin-right: 8px;
+    font-weight: bold;
+}
+.category-description { color: var(--text-light); line-height: 1.7; }
+
+
+/* === CUSTOMIZAÇÃO DOS CONTROLES DO SWIPER === */
+.instrument-carousel .swiper-pagination {
+    bottom: 10px !important;
+}
+
+.instrument-carousel .swiper-pagination-bullet {
+    background-color: rgba(0, 0, 255, 0.3) !important;
+    opacity: 1 !important;
+}
+
+.instrument-carousel .swiper-pagination-bullet-active {
+    background-color: var(--primary-color) !important;
+}
+
+.instrument-carousel .swiper-button-next,
+.instrument-carousel .swiper-button-prev {
+    color: var(--primary-color) !important;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    width: 44px !important;
+    height: 44px !important;
+    margin-top: -22px !important;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.instrument-carousel .swiper-button-next:after,
+.instrument-carousel .swiper-button-prev:after {
+    font-size: 18px !important;
+    font-weight: bold;
+}
+
+/* Botão CTA da página */
+.instrument-page-cta {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.cta-button.large {
+    padding: 15px 35px;
+    font-size: 18px;
+    border-radius: 8px;
+}
+
+
+/* === PÁGINA CURSO ONLINE === */
+.online-course-hero {
+    margin: 60px 0;
+}
+
+.course-benefits h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 50px;
+    color: var(--dark-blue);
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.benefit-item {
+    background-color: var(--secondary-color);
+    padding: 30px 20px;
+    border-radius: 12px;
+    text-align: center;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.benefit-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.benefit-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.benefit-item h3 {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+.benefit-item p {
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+.course-categories {
+    margin: 80px 0;
+}
+
+.course-categories h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 50px;
+    color: var(--dark-blue);
+}
+
+.online-courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.online-course-card {
+    background-color: var(--secondary-color);
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.online-course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.online-course-card h3 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.online-course-card p {
+    color: var(--text-light);
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.online-course-card ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 25px;
+    flex-grow: 1;
+}
+
+.online-course-card ul li {
+    color: var(--text-light);
+    margin-bottom: 8px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.online-course-card ul li::before {
+    content: '✓';
+    color: var(--primary-color);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.course-button {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.course-button:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.trial-online-section {
+    background-color: var(--light-gray);
+    padding: 60px 30px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.trial-online-section h2 {
+    color: var(--dark-blue);
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.trial-online-section p {
+    color: var(--text-light);
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+/* === RESPONSIVIDADE DAS PÁGINAS INTERNAS === */
+@media (max-width: 768px) {
+    .generic-page-content,
+    .page-title-section {
+        padding-top: 60px; /* Espaçamento normal para mobile */
+    }
+    /* Página Sobre Nós */
+    .timeline-section, .core-values-section {
+        padding: 60px 0;
+    }
+    .timeline-item {
+        padding: 20px 20px 20px 40px; /* Ajusta o padding para a timeline */
+    }
+    .timeline-icon {
+        left: -16.5px; /* Reajusta a posição do ícone */
+    }
+    /* Página de Instrumentos */
+    .instrument-grid-page .category-card-content ul li::before {
+    content: '•';
+    color: var(--primary-color);
+    margin-right: 8px;
+    font-weight: bold;
+    }
+    /* Página de Planos */
+    .pricing-grid {
+        grid-template-columns: 1fr; /* Garante que os cards fiquem em 1 coluna */
+    }
+    .pricing-card.popular {
+        transform: scale(1); /* Remove o efeito de escala no mobile */
+    }
+}
