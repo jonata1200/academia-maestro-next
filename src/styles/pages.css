@@ -319,12 +319,106 @@
     margin-bottom: 30px;
 }
 
+/* ========================================================
+   ESTILOS DA PÁGINA DE MANUTENÇÃO
+   ======================================================== */
+/* Hero Banner da Página */
+.maintenance-hero {
+    position: relative;
+    color: var(--secondary-color);
+    text-align: center;
+    background-image: url('/manutencao-bg.jpg'); /* <-- SUA NOVA IMAGEM DE FUNDO */
+    background-size: cover;
+    background-position: center 60%;
+    padding: 150px 0;
+    isolation: isolate;
+}
+
+.maintenance-hero h1 {
+    color: var(--secondary-color);
+    font-size: 3rem;
+}
+
+/* ======================================================== */
+/* ADICIONE ESTA REGRA ABAIXO PARA CORRIGIR O SUBTÍTULO */
+/* ======================================================== */
+.maintenance-hero p {
+    color: var(--secondary-color); /* Define a cor como branco */
+    opacity: 0.9; /* Deixa o branco um pouco suave para não competir com o título */
+    font-size: 1.2rem; /* Aumenta um pouco o tamanho para melhorar a leitura */
+    margin-top: 10px; /* Adiciona um pequeno espaço abaixo do título principal */
+}
+
+/* Grid de Serviços */
+.service-details-section {
+    padding: 80px 0;
+}
+
+.service-details-section h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 50px;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.service-card {
+    background-color: var(--secondary-color);
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border-top: 4px solid var(--primary-color);
+}
+
+.service-card h4 {
+    font-size: 1.5rem;
+    color: var(--dark-blue);
+    margin-bottom: 20px;
+}
+
+.service-card ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.service-card ul li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 25px;
+}
+
+.service-card ul li::before {
+    content: '✓';
+    color: var(--primary-color);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+/* Seção de CTA */
+.cta-section-maintenance {
+    padding: 60px 0;
+    background-color: var(--light-gray);
+    text-align: center;
+}
+
+.cta-section-maintenance h3 {
+    font-size: 1.8rem;
+}
+
 /* === RESPONSIVIDADE DAS PÁGINAS INTERNAS === */
 @media (max-width: 768px) {
     .generic-page-content,
     .page-title-section {
         padding-top: 60px; /* Espaçamento normal para mobile */
     }
+
     /* Página Sobre Nós */
     .timeline-section, .core-values-section {
         padding: 60px 0;
@@ -335,6 +429,7 @@
     .timeline-icon {
         left: -16.5px; /* Reajusta a posição do ícone */
     }
+
     /* Página de Instrumentos */
     .instrument-grid-page .category-card-content ul li::before {
     content: '•';
@@ -342,11 +437,17 @@
     margin-right: 8px;
     font-weight: bold;
     }
+
     /* Página de Planos */
     .pricing-grid {
         grid-template-columns: 1fr; /* Garante que os cards fiquem em 1 coluna */
     }
     .pricing-card.popular {
         transform: scale(1); /* Remove o efeito de escala no mobile */
+    }
+
+    /* Página de Manutenção */
+    .maintenance-hero h1 {
+        font-size: 2.2rem;
     }
 }

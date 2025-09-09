@@ -65,13 +65,16 @@ export default function HomePage() {
         </div>
       </section>
       
-      {/* SEÇÃO AULA EXPERIMENTAL */}
+      {/* SEÇÃO VIOLÃO PURO E SIMPLES */}
       <section className="trial-lesson-section">
-        <div className="container">
-          <h2>Experimente a Música na Prática</h2>
-          <p className="section-subtitle">Agende sua aula experimental gratuita e sinta a experiência de aprender na Academia Maestro. Nossos professores estão prontos para te guiar nos primeiros acordes.</p>
-          <Link href="/contato" className="cta-button large">Agendar minha Aula</Link>
-        </div>
+        {/* Este link cobrirá toda a seção, funcionando como uma camada clicável */}
+        <a
+          href="https://go.hotmart.com/I101679958C"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="banner-link"
+          aria-label="Saiba mais sobre o curso Violão Puro e Simples" 
+        ></a>
       </section>
 
       {/* SEÇÃO MAPAS DAS UNIDADES */}

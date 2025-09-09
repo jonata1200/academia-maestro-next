@@ -68,7 +68,7 @@ export default function Header() {
             <li><Link href="/">Home</Link></li>
             <li><Link href="/sobre">Sobre Nós</Link></li>
             <li><Link href="/instrumentos">Instrumentos</Link></li>
-            {/* LINK EXTERNO: Usamos <a> normal com target="_blank" */}
+            <li><Link href="/manutencao">Manutenção</Link></li>
             <li>
               <a href="https://go.hotmart.com/I101679958C" target="_blank" rel="noopener noreferrer">
                 Curso Online

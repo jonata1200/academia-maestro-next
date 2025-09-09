@@ -19,7 +19,7 @@ export default function Footer() {
               {/* CORRIGIDO: Links internos usam <Link> */}
               <li><Link href="/sobre">Sobre Nós</Link></li>
               <li><Link href="/instrumentos">Instrumentos</Link></li>
-              {/* CORRIGIDO: Link externo usa <a> */}
+              <li><Link href="/manutencao">Manutenção</Link></li>
               <li><a href="https://go.hotmart.com/I101679958C" target="_blank" rel="noopener noreferrer">Curso Online</a></li>
               <li><Link href="/contato">Contato</Link></li>
             </ul>

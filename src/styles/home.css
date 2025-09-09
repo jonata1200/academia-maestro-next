@@ -64,36 +64,38 @@
 .card-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0, 0, 20, 0.8) 0%, rgba(0, 0, 20, 0) 50%); }
 .instrument-item-card h3 { position: absolute; bottom: 20px; left: 20px; color: var(--secondary-color); font-size: 1.5rem; margin: 0; }
 
-/* --- NOVA SEÇÃO: AULA EXPERIMENTAL --- */
+/* --- SEÇÃO DO CURSO ONLINE (BANNER CLICÁVEL COM ZOOM) --- */
 .trial-lesson-section {
-    padding: 80px 0;
-    background-color: var(--dark-blue);
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://public.unsplash.com/photo-1598488035139-3a37582de47e?q=80&w=2070&auto=format=fit=crop');
+    min-height: 500px; /* Define uma altura mínima para a seção */
+    position: relative; /* ESSENCIAL para posicionar o link dentro dela */
+    overflow: hidden; /* Garante que o zoom не crie barras de rolagem */
+    cursor: pointer; /* Muda o cursor para a "mãozinha" para indicar que é clicável */
+    
+    background: 
+      url('/violao-puro-e-simples.png');
+      
     background-size: cover;
-    background-position: center;
-    text-align: center;
-    color: var(--secondary-color);
+    background-position: center center;
+    background-repeat: no-repeat;
+    
+    /* Prepara a seção para a animação de transformação (zoom) */
+    transition: transform 0.4s ease-out;
 }
 
-.trial-lesson-section h2 {
-    color: var(--secondary-color);
-    font-size: 2.8rem;
-    margin-bottom: 15px;
+/* A ANIMAÇÃO DE ZOOM ACONTECE AQUI */
+.trial-lesson-section:hover {
+    transform: scale(1.03); /* Aumenta o tamanho da seção em 3% */
 }
 
-.trial-lesson-section .section-subtitle {
-    color: rgba(255, 255, 255, 0.9);
-    margin-bottom: 40px;
-}
-
-.trial-lesson-section .cta-button.large {
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-}
-
-.trial-lesson-section .cta-button.large:hover {
-    background-color: var(--secondary-color);
-    color: var(--primary-color);
+/* REGRA PARA O LINK INVISÍVEL */
+.banner-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* O z-index garante que o link fique "acima" de outros elementos, se houver */
+    z-index: 2; 
 }
 
 
@@ -120,5 +122,16 @@
     }
     .instrument-item-card {
         flex-basis: 280px; /* Garante um bom tamanho para os cards */
+    }
+
+    .trial-lesson-section {
+        /* Reduz a altura do banner em telas menores para não ocupar muito espaço vertical */
+        min-height: 280px; 
+    }
+
+    .trial-lesson-section:hover {
+        /* Desativa a animação de zoom em dispositivos de toque, 
+           pois o efeito ":hover" não funciona da mesma forma */
+        transform: none;
     }
 }
