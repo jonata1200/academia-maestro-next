@@ -327,9 +327,13 @@
     position: relative;
     color: var(--secondary-color);
     text-align: center;
-    background-image: url('/manutencao-bg.jpg'); /* <-- SUA NOVA IMAGEM DE FUNDO */
+    background-image: url('/manutencao-bg.jpg');
     background-size: cover;
     background-position: center 60%;
+    
+    /* ADICIONE ESTA LINHA PARA CORRIGIR O BUG NO MOBILE */
+    background-repeat: no-repeat;
+
     padding: 150px 0;
     isolation: isolate;
 }
