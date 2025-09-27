@@ -2,6 +2,7 @@
 
 import { useEffect } from 'react';
 import Link from 'next/link'; // <-- ESTA É A LINHA QUE FALTAVA
+import Image from 'next/image';
 
 // Garantindo que a exportação seja 'default'
 export default function Header() { 
@@ -60,7 +61,7 @@ export default function Header() {
     <header>
       <div className="container">
         <Link href="/" className="logo">
-          <img src="/logo.png" alt="Logo Academia Maestro" />
+          <Image src="/logo.png" alt="Logo Academia Maestro" width={100} height={100} priority />
         </Link>
         
         <nav className="nav-desktop">

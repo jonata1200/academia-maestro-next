@@ -3,11 +3,13 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import Link from 'next/link'; // IMPORTADO para o botão de CTA
+import Image from 'next/image';
 
 // Imports de CSS do Swiper
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+
 
 // CORRIGIDO: usa 'export default'
 export default function InstrumentosPage() { 
@@ -56,7 +58,7 @@ export default function InstrumentosPage() {
               <div className="category-card">
                 <div className="category-card-image">
                   {/* CORRIGIDO: caminho da imagem */}
-                  <img src="/toque-violao.jpg" alt="Pessoa tocando violão" />
+                  <Image src="/toque-violao.jpg" alt="Pessoa tocando violão" fill style={{ objectFit: 'cover' }} sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" />
                 </div>
                 <div className="category-card-content">
                   <h3>Cordas</h3>
@@ -78,7 +80,7 @@ export default function InstrumentosPage() {
               <div className="category-card">
                 <div className="category-card-image">
                   {/* CORRIGIDO: caminho da imagem */}
-                  <img src="/toque-piano.webp" alt="Mãos tocando piano" />
+                  <Image src="/toque-piano.webp" alt="Mãos tocando piano" fill style={{ objectFit: 'cover' }} sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" />
                 </div>
                 <div className="category-card-content">
                   <h3>Teclas</h3>
@@ -97,7 +99,7 @@ export default function InstrumentosPage() {
               <div className="category-card">
                 <div className="category-card-image">
                   {/* CORRIGIDO: caminho da imagem */}
-                  <img src="/toque-bateria.jpg" alt="Pessoa tocando bateria" />
+                  <Image src="/toque-bateria.jpg" alt="Pessoa tocando bateria" fill style={{ objectFit: 'cover' }} sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" />
                 </div>
                 <div className="category-card-content">
                   <h3>Percussão</h3>
@@ -115,7 +117,7 @@ export default function InstrumentosPage() {
               <div className="category-card">
                 <div className="category-card-image">
                   {/* CORRIGIDO: caminho da imagem */}
-                  <img src="/toque-saxofone.jpg" alt="Pessoa tocando saxofone" />
+                  <Image src="/toque-saxofone.jpg" alt="Pessoa tocando saxofone" fill style={{ objectFit: 'cover' }} sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" />
                 </div>
                 <div className="category-card-content">
                   <h3>Sopro</h3>
@@ -133,7 +135,7 @@ export default function InstrumentosPage() {
               <div className="category-card">
                 <div className="category-card-image">
                   {/* CORRIGIDO: caminho da imagem */}
-                  <img src="/musicalizacao-infantil.png" alt="Criança em aula de musicalização infantil" />
+                  <Image src="/musicalizacao-infantil.png" alt="Criança em aula de musicalização infantil" fill style={{ objectFit: 'cover' }} sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" />
                 </div>
                 <div className="category-card-content">
                   <h3>Musicalização Infantil</h3>

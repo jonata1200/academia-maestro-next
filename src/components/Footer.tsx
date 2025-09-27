@@ -1,4 +1,5 @@
 import Link from 'next/link'; // <-- PASSO 1: IMPORTAR O LINK
+import Image from 'next/image';
 
 export default function Footer() {
   return (
@@ -8,7 +9,7 @@ export default function Footer() {
           {/* Coluna 1: Sobre */}
           <div className="footer-col">
             <Link href="/" className="footer-logo">
-              <img src="/logo.png" alt="Logo Academia Maestro" />
+              <Image src="/logo.png" alt="Logo Academia Maestro" width={80} height={80} />
             </Link>
             <p>Promovendo o ensino musical de forma simples e prática desde 1981.</p>
           </div>

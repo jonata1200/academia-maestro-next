@@ -82,9 +82,14 @@
     box-shadow: 0 8px 25px rgba(0,0,0,0.1);
 }
 
-.category-card-image img {
+.category-card-image {
+    position: relative; /* ADICIONE ESTA LINHA */
     width: 100%;
     height: 200px;
+}
+
+/* O seletor 'img' agora se aplica ao elemento gerado pelo <Image> */
+.category-card-image img {
     object-fit: cover;
 }
 

@@ -1,3 +1,12 @@
+import type { Metadata } from 'next';
+
+// ADICIONE ESTE BLOCO DE CÓDIGO
+export const metadata: Metadata = {
+  title: "Nossa História - Desde 1981 | Academia Maestro",
+  description: "Conheça a trajetória da Academia Maestro, uma referência no ensino musical em Brasília desde 1981, com mais de 15 mil alunos formados.",
+};
+// FIM DO BLOCO
+
 export default function SobrePage() {
   return (
     <main>
