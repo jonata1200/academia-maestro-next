@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
-import '../styles/style.css'; 
 import Script from 'next/script';
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import GoogleAnalytics from "@/components/GoogleAnalytics"; // PASSO 1: IMPORTAR
+import StyledComponentsRegistry from '@/lib/registry';
+import GlobalStyles from '@/components/GlobalStyles';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 
 export const metadata: Metadata = {
   // ADICIONE A LINHA ABAIXO
-  metadataBase: new URL('https://www.academiamusicamaestro.com.br'), // <-- CONFIRME SE ESTE É O DOMÍNIO FINAL
+  metadataBase: new URL('https://www.academiademusicamaestro.com.br'),
 
   title: {
     default: "Academia de Música Maestro | Aulas em Ceilândia e Sobradinho",
@@ -16,17 +17,18 @@ export const metadata: Metadata = {
   description: "Promovendo o ensino musical de forma simples e prática desde 1981. Aulas em Ceilândia e Sobradinho.",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
+export default function RootLayout({ children,}: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
     <html lang="pt-BR">
       <body>
-        <Header />
-        <main>{children}</main>
-        <Footer />
+        <StyledComponentsRegistry>
+          <GlobalStyles />
+          <Header />
+          <main>{children}</main> {/* O conteúdo da página fica aqui */}
+          <Footer />
+        </StyledComponentsRegistry>
         <GoogleAnalytics />
         
         {/* PASSO 2: COLE O SCRIPT DE DADOS ESTRUTURADOS AQUI */}

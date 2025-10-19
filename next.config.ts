@@ -1,7 +1,12 @@
+// next.config.ts
+
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  // ADICIONE ESTE BLOCO DE CÓDIGO
+  compiler: {
+    styledComponents: true,
+  },
 };
 
 export default nextConfig;

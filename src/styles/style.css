@@ -1,8 +1,0 @@
-/* ARQUIVO PRINCIPAL QUE IMPORTA TODOS OS OUTROS */
-
-@import url('global.css');
-@import url('header.css');
-@import url('components.css');
-@import url('home.css');
-@import url('pages.css');
-@import url('footer.css');

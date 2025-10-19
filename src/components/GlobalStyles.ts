@@ -1,8 +1,11 @@
-/* ========================================================
-   ESTILOS GLOBAIS (VERSÃO FINAL E CORRIGIDA)
-   ======================================================== */
+// src/components/GlobalStyles.ts
 
-:root {
+'use client';
+
+import { createGlobalStyle } from 'styled-components';
+
+const GlobalStyles = createGlobalStyle`
+  :root {
     --primary-color: #0000FF;
     --secondary-color: #FFFFFF;
     --text-color: #333;
@@ -10,15 +13,15 @@
     --light-gray: #f4f4f4;
     --dark-blue: #000033;
     --font-family: 'Poppins', sans-serif;
-}
+  }
 
-* {
+  * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
+  }
 
-body {
+  body {
     font-family: var(--font-family);
     color: var(--text-color);
     background-color: var(--secondary-color);
@@ -26,35 +29,28 @@ body {
     flex-direction: column;
     min-height: 100vh;
     overflow-x: hidden;
-}
+  }
 
-main {
+  main {
     flex-grow: 1;
-}
+  }
 
-.container {
+  .container {
     max-width: 1100px;
     margin: 0 auto;
     padding: 0 20px;
-}
+  }
 
-h1, h2, h3, h4 {
+  h1, h2, h3, h4 {
     color: var(--dark-blue);
     margin-bottom: 20px;
-}
+  }
 
-p {
+  p {
     line-height: 1.6;
     margin-bottom: 15px;
     color: var(--text-light);
-}
+  }
+`;
 
-
-/* --- RESPONSIVIDADE GLOBAL --- */
-@media (max-width: 768px) {
-    /* Ajustes no Rodapé */
-    .footer-main { text-align: center; }
-    .footer-col h4::after { margin: 0 auto; }
-    .social-links { justify-content: center; }
-    #back-to-top { bottom: 15px; right: 15px; }
-}
+export default GlobalStyles;
