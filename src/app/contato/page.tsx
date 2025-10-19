@@ -4,6 +4,11 @@ import UnitsMap from '@/components/UnitsMap'; // <-- PASSO 1: Importe o componen
 export const metadata: Metadata = {
   title: "Contato e Endereços | Academia Maestro",
   description: "Encontre nossas unidades em Ceilândia e Sobradinho. Agende sua aula experimental de música pelo WhatsApp hoje mesmo!",
+  
+  // ADICIONE ESTE BLOCO
+  alternates: {
+    canonical: '/contato',
+  },
 };
 
 export default function ContatoPage() {

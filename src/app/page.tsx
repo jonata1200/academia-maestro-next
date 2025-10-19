@@ -3,12 +3,15 @@ import Link from 'next/link';
 import Image from 'next/image';
 import UnitsMap from '@/components/UnitsMap';
 
-// ADICIONE ESTE BLOCO DE CÓDIGO
 export const metadata: Metadata = {
   title: "Academia de Música Maestro | Aulas em Ceilândia e Sobradinho",
   description: "Transforme sua vida com a música. Aulas de violão, teclado, bateria e mais para todos os níveis. Desde 1981 formando músicos.",
+  
+  // ADICIONE ESTE BLOCO
+  alternates: {
+    canonical: '/',
+  },
 };
-// FIM DO BLOCO
 
 export default function HomePage() {
   return (

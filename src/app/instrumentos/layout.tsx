@@ -1,9 +1,14 @@
 import type { Metadata } from 'next';
-import Script from 'next/script'; // <-- Importe o Script aqui também
+import Script from 'next/script';
 
 export const metadata: Metadata = {
   title: "Cursos de Instrumentos Musicais | Academia Maestro",
   description: "Aprenda violão, guitarra, piano, bateria, saxofone e mais. Cursos para todos os níveis em Ceilândia e Sobradinho. Comece sua jornada musical.",
+  
+  // ADICIONE ESTE BLOCO
+  alternates: {
+    canonical: '/instrumentos',
+  },
 };
 
 export default function InstrumentosLayout({

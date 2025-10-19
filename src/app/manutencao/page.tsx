@@ -1,11 +1,14 @@
 import type { Metadata } from 'next';
 
-// ADICIONE ESTE BLOCO DE CÓDIGO
 export const metadata: Metadata = {
   title: "Conserto e Manutenção de Instrumentos | Luthieria Maestro",
   description: "Serviços de luthieria profissional em Brasília. Regulagem, reparos elétricos e estruturais para guitarras, baixos e outros instrumentos.",
+  
+  // ADICIONE ESTE BLOCO
+  alternates: {
+    canonical: '/manutencao',
+  },
 };
-// FIM DO BLOCO
 
 export default function ManutencaoPage() {
   const mensagemWhatsapp = encodeURIComponent("Olá! Vi no site que vocês fazem conserto e manutenção de instrumentos e gostaria de um orçamento.");

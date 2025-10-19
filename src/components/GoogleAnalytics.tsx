@@ -3,7 +3,7 @@
 import Script from 'next/script';
 
 const GoogleAnalytics = () => {
-  const gaId = process.env.NEXT_PUBLIC_GA_ID;
+  const gaId = "G-55HWK9LCEY";
 
   // Renderiza o componente apenas se o GA_ID estiver definido
   if (!gaId) {

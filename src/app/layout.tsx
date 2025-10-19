@@ -6,9 +6,12 @@ import Footer from "@/components/Footer";
 import GoogleAnalytics from "@/components/GoogleAnalytics"; // PASSO 1: IMPORTAR
 
 export const metadata: Metadata = {
+  // ADICIONE A LINHA ABAIXO
+  metadataBase: new URL('https://www.academiamusicamaestro.com.br'), // <-- CONFIRME SE ESTE É O DOMÍNIO FINAL
+
   title: {
-    default: "Academia de Música Maestro | Aulas em Ceilândia e Sobradinho", // Título para a Home Page
-    template: "%s | Academia Maestro", // %s será substituído pelo título da página filha
+    default: "Academia de Música Maestro | Aulas em Ceilândia e Sobradinho",
+    template: "%s | Academia Maestro",
   },
   description: "Promovendo o ensino musical de forma simples e prática desde 1981. Aulas em Ceilândia e Sobradinho.",
 };
