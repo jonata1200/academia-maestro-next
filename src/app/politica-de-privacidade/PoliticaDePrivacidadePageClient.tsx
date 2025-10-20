@@ -1,6 +1,6 @@
 // src/app/politica-de-privacidade/PoliticaDePrivacidadePageClient.tsx
 
-'use client'; // <-- Diretiva 'use client'
+'use client';
 
 import React from 'react';
 import styled from 'styled-components';
@@ -8,6 +8,7 @@ import styled from 'styled-components';
 // ========================================================
 // ESTILOS
 // ========================================================
+
 const PageWrapper = styled.div`
   padding: 180px 0 80px;
 `;
@@ -18,22 +19,29 @@ const LegalPageContainer = styled.div`
   padding: 0 20px;
   text-align: left;
   line-height: 1.8;
+  color: var(--text-light);
 
-  h1 {
-    text-align: center;
-    margin-bottom: 40px;
-    font-size: 2.5rem;
-  }
+  h1 { text-align: center; margin-bottom: 40px; font-size: 2.5rem; color: var(--dark-blue); }
+  h2 { font-size: 1.8rem; margin-top: 40px; margin-bottom: 20px; border-bottom: 2px solid #eee; padding-bottom: 10px; color: var(--dark-blue); }
+  h3 { font-size: 1.4rem; margin-top: 25px; margin-bottom: 15px; color: var(--dark-blue); }
+  p { margin-bottom: 20px; }
+  ul, ol { padding-left: 25px; margin-bottom: 20px; }
+  li { margin-bottom: 10px; }
+  strong { font-weight: 600; color: var(--text-color); }
+  a { color: var(--primary-color); text-decoration: underline; font-weight: 600; &:hover { text-decoration: none; } }
 `;
 
+// ========================================================
+// COMPONENTE
+// ========================================================
 export default function PoliticaDePrivacidadePageClient() {
   const nomeEmpresa = "Academia de Música Maestro";
-  const emailContatoDPO = "privacidade@academiamusicamaestro.com.br"; // <-- SUBSTITUA por um e-mail real
-  const dataVigencia = "18 de Outubro de 2025"; // <-- SUBSTITUA PELA DATA ATUAL
+  const emailContatoDPO = "privacidade@academiamusicamaestro.com.br";
+  const dataVigencia = "18 de Outubro de 2025";
 
   return (
-    <main className="generic-page-content">
-      <div className="container legal-page-container">
+    <PageWrapper>
+      <LegalPageContainer> {/* <-- GARANTE QUE OS ESTILOS SEJAM APLICADOS */}
         <h1>Política de Privacidade</h1>
         <p><strong>Última atualização:</strong> {dataVigencia}</p>
 
@@ -47,26 +55,9 @@ export default function PoliticaDePrivacidadePageClient() {
             <li><strong>Dados de Navegação (Endereço IP, tipo de navegador, páginas visitadas):</strong> Coletados automaticamente através de cookies e serviços de terceiros como o Google Analytics, com a finalidade de analisar estatísticas de uso para otimização do site e melhoria da experiência do usuário.</li>
         </ol>
 
-        <h2>Artigo 3 - Base Legal para o Tratamento</h2>
-        <p>O tratamento dos seus dados é realizado com base no seu consentimento (Art. 7º, I, LGPD), fornecido de forma livre e inequívoca ao nos contatar, e no legítimo interesse da Controladora (Art. 7º, IX, LGPD) para análise e melhoria dos nossos serviços.</p>
-        
-        <h2>Artigo 4 - Compartilhamento de Dados</h2>
-        <p>Seus dados pessoais não serão vendidos ou alugados. O compartilhamento ocorre apenas com operadores essenciais para nossa atividade, como plataformas de análise de dados (Google Analytics), que estão contratualmente obrigados a manter a confidencialidade e segurança das informações.</p>
-
         <h2>Artigo 5 - Direitos do Titular dos Dados</h2>
-        <p>Conforme a LGPD, você tem o direito de solicitar a qualquer momento:</p>
-        <ul>
-          <li>A confirmação da existência de tratamento de seus dados;</li>
-          <li>O acesso aos seus dados;</li>
-          <li>A correção de dados incompletos, inexatos ou desatualizados;</li>
-          <li>A eliminação de dados pessoais desnecessários ou tratados em desconformidade com a LGPD;</li>
-          <li>A revogação do consentimento.</li>
-        </ul>
-        <p>Para exercer seus direitos, entre em contato com nosso Encarregado de Proteção de Dados (DPO) através do e-mail: <strong>{emailContatoDPO}</strong>.</p>
-
-        <h2>Artigo 6 - Alterações nesta Política</h2>
-        <p>Reservamo-nos o direito de modificar esta Política de Privacidade a qualquer momento. As alterações entrarão em vigor imediatamente após sua publicação no site.</p>
-      </div>
-    </main>
+        <p>Conforme a LGPD, você tem o direito de solicitar a qualquer momento a confirmação, acesso, correção ou eliminação de seus dados. Para exercer seus direitos, entre em contato com nosso Encarregado de Proteção de Dados (DPO) através do e-mail: <strong>{emailContatoDPO}</strong>.</p>
+      </LegalPageContainer>
+    </PageWrapper>
   );
 }
