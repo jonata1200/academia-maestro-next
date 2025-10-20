@@ -36,7 +36,6 @@ const LegalPageContainer = styled.div`
 // ========================================================
 export default function PoliticaDePrivacidadePageClient() {
   const nomeEmpresa = "Academia de Música Maestro";
-  const emailContatoDPO = "privacidade@academiamusicamaestro.com.br";
   const dataVigencia = "18 de Outubro de 2025";
 
   return (
@@ -46,7 +45,7 @@ export default function PoliticaDePrivacidadePageClient() {
         <p><strong>Última atualização:</strong> {dataVigencia}</p>
 
         <h2>Artigo 1 - Disposições Gerais</h2>
-        <p>Esta Política de Privacidade visa informar como a {nomeEmpresa}, doravante denominada "Controladora", coleta, utiliza e protege os dados pessoais dos usuários ("Você") que acessam nosso site, em conformidade com a Lei nº 13.709/2018 (Lei Geral de Proteção de Dados Pessoais - LGPD).</p>
+        <p>Esta Política de Privacidade visa informar como a {nomeEmpresa}, coleta, utiliza e protege os dados pessoais dos usuários ("Você") que acessam nosso site, em conformidade com a Lei nº 13.709/2018 (Lei Geral de Proteção de Dados Pessoais - LGPD).</p>
 
         <h2>Artigo 2 - Dados Coletados e Finalidade</h2>
         <p>A Controladora coleta os seguintes dados para as finalidades especificadas:</p>
@@ -55,8 +54,8 @@ export default function PoliticaDePrivacidadePageClient() {
             <li><strong>Dados de Navegação (Endereço IP, tipo de navegador, páginas visitadas):</strong> Coletados automaticamente através de cookies e serviços de terceiros como o Google Analytics, com a finalidade de analisar estatísticas de uso para otimização do site e melhoria da experiência do usuário.</li>
         </ol>
 
-        <h2>Artigo 5 - Direitos do Titular dos Dados</h2>
-        <p>Conforme a LGPD, você tem o direito de solicitar a qualquer momento a confirmação, acesso, correção ou eliminação de seus dados. Para exercer seus direitos, entre em contato com nosso Encarregado de Proteção de Dados (DPO) através do e-mail: <strong>{emailContatoDPO}</strong>.</p>
+        <h2>Artigo 3 - Direitos do Titular dos Dados</h2>
+        <p>Conforme a LGPD, você tem o direito de solicitar a qualquer momento a confirmação, acesso, correção ou eliminação de seus dados. Para exercer seus direitos, entre em contato com nosso Encarregado de Proteção de Dados (DPO).</p>
       </LegalPageContainer>
     </PageWrapper>
   );

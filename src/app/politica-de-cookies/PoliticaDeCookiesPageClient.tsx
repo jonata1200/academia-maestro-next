@@ -4,7 +4,6 @@
 
 import React from 'react';
 import styled from 'styled-components';
-import Link from 'next/link';
 
 // ========================================================
 // ESTILOS
@@ -58,7 +57,7 @@ export default function PoliticaDeCookiesPageClient() {
         </ul>
 
         <h2>Seção 3 - Gestão de Cookies</h2>
-        <p>Você pode gerenciar e/ou deletar cookies a qualquer momento através das configurações do seu navegador. Para mais detalhes, consulte nossa <Link href="/politica-de-privacidade">Política de Privacidade</Link>.</p>
+        <p>Você pode gerenciar e/ou deletar cookies a qualquer momento através das configurações do seu navegador.</p>
       </LegalPageContainer>
     </PageWrapper>
   );

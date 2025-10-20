@@ -36,7 +36,7 @@ const LegalPageContainer = styled.div`
 // ========================================================
 export default function TermosDeUsoPageClient() {
   const nomeEmpresa = "Academia de Música Maestro";
-  const urlSite = "https://www.academiamusicamaestro.com.br";
+  const urlSite = "https://www.academiademusicamaestro.com.br";
 
   return (
     <PageWrapper>
@@ -52,7 +52,7 @@ export default function TermosDeUsoPageClient() {
         <h2>Cláusula 3ª - Das Responsabilidades</h2>
         <p>Você concorda em utilizar o site de forma lícita. A {nomeEmpresa} não se responsabiliza por danos decorrentes do uso indevido do site, interrupções na operação ou conteúdo de sites de terceiros.</p>
         
-        <h2>Cláusula 5ª - Legislação Aplicável e Foro</h2>
+        <h2>Cláusula 4ª - Legislação Aplicável e Foro</h2>
         <p>Estes Termos serão regidos pelas leis da República Federativa do Brasil. Fica eleito o foro da Comarca de Brasília, Distrito Federal, para dirimir quaisquer controvérsias.</p>
       </LegalPageContainer>
     </PageWrapper>
