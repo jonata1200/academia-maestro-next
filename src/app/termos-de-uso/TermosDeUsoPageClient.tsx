@@ -44,7 +44,7 @@ export default function TermosDeUsoPageClient() {
         <h1>Termos e Condições de Uso</h1>
 
         <h2>Cláusula 1ª - Objeto</h2>
-        <p>Estes Termos e Condições de Uso regem o acesso e a utilização do website {urlSite}, de propriedade da {nomeEmpresa}, por parte de seus usuários ("Você"). A utilização do site implica na aceitação plena e sem reservas de todos os termos aqui dispostos.</p>
+        <p>Estes Termos e Condições de Uso regem o acesso e a utilização do website {urlSite}, de propriedade da {nomeEmpresa}, por parte de seus usuários (Você). A utilização do site implica na aceitação plena e sem reservas de todos os termos aqui dispostos.</p>
 
         <h2>Cláusula 2ª - Propriedade Intelectual</h2>
         <p>Todo o conteúdo exibido no site, incluindo textos, gráficos, logos e imagens, é de propriedade exclusiva da {nomeEmpresa} e é protegido pelas leis de direitos autorais. É vedada a reprodução ou modificação de qualquer conteúdo sem autorização prévia e expressa.</p>

@@ -3,7 +3,6 @@
 'use client';
 
 import React from 'react';
-import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import styled, { keyframes } from 'styled-components';

@@ -45,7 +45,7 @@ export default function PoliticaDePrivacidadePageClient() {
         <p><strong>Última atualização:</strong> {dataVigencia}</p>
 
         <h2>Artigo 1 - Disposições Gerais</h2>
-        <p>Esta Política de Privacidade visa informar como a {nomeEmpresa}, coleta, utiliza e protege os dados pessoais dos usuários ("Você") que acessam nosso site, em conformidade com a Lei nº 13.709/2018 (Lei Geral de Proteção de Dados Pessoais - LGPD).</p>
+        <p>Esta Política de Privacidade visa informar como a {nomeEmpresa}, coleta, utiliza e protege os dados pessoais dos usuários (Você) que acessam nosso site, em conformidade com a Lei nº 13.709/2018 (Lei Geral de Proteção de Dados Pessoais - LGPD).</p>
 
         <h2>Artigo 2 - Dados Coletados e Finalidade</h2>
         <p>A Controladora coleta os seguintes dados para as finalidades especificadas:</p>
