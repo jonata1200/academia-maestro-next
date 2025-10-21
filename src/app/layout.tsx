@@ -5,6 +5,7 @@ import GlobalStyles from '@/components/GlobalStyles';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import GoogleAnalytics from "@/components/GoogleAnalytics";
+import CookieBanner from '@/components/CookieBanner';
 
 export const metadata: Metadata = {
   // ADICIONE A LINHA ABAIXO
@@ -28,6 +29,7 @@ export default function RootLayout({ children,}: Readonly<{
           <Header />
           <main>{children}</main> {/* O conteúdo da página fica aqui */}
           <Footer />
+          <CookieBanner />
         </StyledComponentsRegistry>
         <GoogleAnalytics />
         
