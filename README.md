@@ -38,10 +38,10 @@ O site apresenta informações sobre os cursos de instrumentos musicais, localiz
 ![Sobre Nós](public/screenshots/sobre-nos.png) <!-- Insira aqui um print da página "Sobre Nós" mostrando a história da escola -->
 
 ### Instrumentos
-![Instrumentos](public/screenshots/instrumentos.jpg) <!-- Insira aqui um print da página de instrumentos com o carrossel horizontal -->
+![Instrumentos](public/screenshots/instrumentos.png) <!-- Insira aqui um print da página de instrumentos com o carrossel horizontal -->
 
 ### Manutenção
-![Manutenção](public/screenshots/manutencao.jpg) <!-- Insira aqui um print da página de manutenção mostrando os serviços de luthieria -->
+![Manutenção](public/screenshots/manutencao.png) <!-- Insira aqui um print da página de manutenção mostrando os serviços de luthieria -->
 
 ### Contato
 ![Contato](public/screenshots/contato.png) <!-- Insira aqui um print da página de contato mostrando os mapas das unidades -->
