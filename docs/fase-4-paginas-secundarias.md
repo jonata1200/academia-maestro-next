@@ -5,7 +5,7 @@
 Migrar as páginas restantes do site.
 
 **Estimativa de tempo**: 6-8 horas  
-**Status**: 🟡 Aguardando início
+**Status**: ✅ Concluída
 
 **Pré-requisito**: [FASE 3](./fase-3-paginas-principais.md) deve estar completa
 
@@ -13,7 +13,7 @@ Migrar as páginas restantes do site.
 
 ## ✅ Checklist
 
-- [ ] **4.1** Migrar `src/app/contato/ContatoPageClient.tsx`
+- [x] **4.1** Migrar `src/app/contato/ContatoPageClient.tsx`
   - Converter hero section
     - Background image e overlay
     - Padding e tipografia
@@ -25,7 +25,7 @@ Migrar as páginas restantes do site.
   - Verificar que os mapas do Google ainda funcionam
   - Remover imports do Styled Components
 
-- [ ] **4.2** Migrar `src/app/manutencao/ManutencaoPageClient.tsx`
+- [x] **4.2** Migrar `src/app/manutencao/ManutencaoPageClient.tsx`
   - Converter hero section
     - Background image e overlay
     - Padding e tipografia
@@ -39,7 +39,7 @@ Migrar as páginas restantes do site.
   - Testar layout e responsividade
   - Remover imports do Styled Components
 
-- [ ] **4.3** Migrar `src/app/politica-de-privacidade/PoliticaDePrivacidadePageClient.tsx`
+- [x] **4.3** Migrar `src/app/politica-de-privacidade/PoliticaDePrivacidadePageClient.tsx`
   - Converter layout de página de política
     - Container e max-width
     - Padding e espaçamentos
@@ -51,7 +51,7 @@ Migrar as páginas restantes do site.
   - Verificar que o conteúdo está bem formatado
   - Remover imports do Styled Components
 
-- [ ] **4.4** Migrar `src/app/termos-de-uso/TermosDeUsoPageClient.tsx`
+- [x] **4.4** Migrar `src/app/termos-de-uso/TermosDeUsoPageClient.tsx`
   - Converter layout de página de termos
     - Container e max-width
     - Padding e espaçamentos
@@ -63,7 +63,7 @@ Migrar as páginas restantes do site.
   - Verificar que o conteúdo está bem formatado
   - Remover imports do Styled Components
 
-- [ ] **4.5** Migrar `src/app/politica-de-cookies/PoliticaDeCookiesPageClient.tsx`
+- [x] **4.5** Migrar `src/app/politica-de-cookies/PoliticaDeCookiesPageClient.tsx`
   - Converter layout de página de cookies
     - Container e max-width
     - Padding e espaçamentos

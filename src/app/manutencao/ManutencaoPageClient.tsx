@@ -3,224 +3,127 @@
 'use client';
 
 import React from 'react';
-import styled from 'styled-components';
 
-// ========================================================
-// ESTILOS
-// ========================================================
-
-const MaintenanceHero = styled.section`
-  position: relative;
-  color: var(--secondary-color);
-  text-align: center;
-  background-image: url('/manutencao-bg.jpg');
-  background-size: cover;
-  background-position: center 60%;
-  background-repeat: no-repeat;
-  padding: 230px 20px 150px; /* Padding ajustado para header fixo */
-  isolation: isolate;
-
-  h1 { color: var(--secondary-color); font-size: 3rem; }
-  p { color: rgba(255, 255, 255, 0.9); font-size: 1.2rem; }
-
-  @media(max-width: 768px) {
-    padding: 180px 20px 100px;
-    h1 { font-size: 2.2rem; }
-  }
-`;
-
-const HeroOverlay = styled.div`
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, rgba(0, 0, 51, 0.7) 0%, rgba(0, 0, 51, 0.5) 100%);
-  z-index: -1;
-`;
-
-const GenericSection = styled.section`
-  padding: 80px 0;
-  text-align: center;
-  h2 { font-size: 2.2rem; margin-bottom: 50px; }
-`;
-
-const WhyChooseUsSection = styled(GenericSection)`
-  background-color: var(--light-gray);
-`;
-
-const FeaturesGrid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-`;
-
-const FeatureCard = styled.div`
-  background: var(--secondary-color);
-  padding: 30px;
-  border-radius: 12px;
-  text-align: center;
-  border: 1px solid #eee;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-
-  .feature-icon {
-    font-size: 2rem;
-    width: 64px;
-    height: 64px;
-    margin: 0 auto 20px;
-    background-color: #e8e8ff;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  h3 {
-    font-size: 1.5rem;
-    color: var(--primary-color);
-    margin-bottom: 15px;
-  }
-`;
-
-const ServiceDetailsSection = styled(GenericSection)``;
-
-const ServiceGrid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-`;
-
-const ServiceCard = styled.div`
-  background-color: var(--secondary-color);
-  padding: 30px;
-  border-radius: 12px;
-  border: 1px solid #e0e0e0;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-  border-top: 4px solid var(--primary-color);
-  text-align: left;
-
-  h4 { font-size: 1.5rem; color: var(--dark-blue); margin-bottom: 20px; }
-  ul { list-style: none; padding: 0; }
-  li {
-    margin-bottom: 10px;
-    position: relative;
-    padding-left: 25px;
-    &::before {
-      content: '✓';
-      color: var(--primary-color);
-      font-weight: bold;
-      position: absolute;
-      left: 0;
-    }
-  }
-`;
-
-const CtaSection = styled.section`
-  padding: 60px 0;
-  background-color: var(--light-gray);
-  text-align: center;
-
-  h3 { font-size: 1.8rem; }
-`;
-
-const CtaButton = styled.a`
-  background-color: var(--primary-color);
-  color: var(--secondary-color);
-  padding: 15px 35px;
-  font-size: 18px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  display: inline-block;
-  transition: transform 0.3s, background-color 0.3s;
-  box-shadow: 0 4px 15px rgba(0, 0, 255, 0.2);
-
-  &:hover {
-    transform: translateY(-3px);
-    background-color: #0000cc;
-  }
-`;
-
-// ========================================================
-// COMPONENTE
-// ========================================================
 export default function ManutencaoPageClient() {
   const mensagemWhatsapp = encodeURIComponent("Olá! Vi no site que vocês fazem conserto e manutenção de instrumentos e gostaria de um orçamento.");
   const whatsappLink = `https://wa.me/5561996392573?text=${mensagemWhatsapp}`;
 
   return (
     <>
-      <MaintenanceHero>
-        <HeroOverlay />
+      {/* Hero Section */}
+      <section className="relative text-white text-center bg-[url('/manutencao-bg.jpg')] bg-cover bg-[center_60%] bg-no-repeat pt-[230px] pb-[150px] px-5 isolate md:pt-[180px] md:pb-[100px]">
+        <div className="absolute inset-0 bg-gradient-to-br from-dark-blue/70 to-dark-blue/50 -z-10"></div>
         <div className="container">
-          <h1>Conserto e Manutenção de Instrumentos</h1>
-          <p>Cuidado profissional para que sua paixão pela música nunca pare.</p>
+          <h1 className="text-white text-5xl md:text-[3rem] mb-4">Conserto e Manutenção de Instrumentos</h1>
+          <p className="text-white/90 text-xl md:text-[1.2rem]">Cuidado profissional para que sua paixão pela música nunca pare.</p>
         </div>
-      </MaintenanceHero>
+      </section>
 
-      <WhyChooseUsSection>
+      {/* Seção "Por que escolher a Maestro?" */}
+      <section className="py-20 text-center bg-light-gray">
         <div className="container">
-          <h2>Por que escolher a Maestro?</h2>
-          <FeaturesGrid>
-            <FeatureCard>
-              <div className="feature-icon"><span>🛠️</span></div>
-              <h3>Técnicos Especializados</h3>
+          <h2 className="text-[2.2rem] mb-12">Por que escolher a Maestro?</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-white p-8 rounded-xl text-center border border-gray-200 shadow-[0_4px_15px_rgba(0,0,0,0.05)]">
+              <div className="text-4xl w-16 h-16 mx-auto mb-5 bg-[#e8e8ff] rounded-full flex justify-center items-center">
+                <span>🛠️</span>
+              </div>
+              <h3 className="text-2xl text-primary mb-4">Técnicos Especializados</h3>
               <p>Nossa equipe possui anos de experiência com todos os tipos de instrumentos.</p>
-            </FeatureCard>
-            <FeatureCard>
-              <div className="feature-icon"><span>⚙️</span></div>
-              <h3>Peças de Qualidade</h3>
+            </div>
+            <div className="bg-white p-8 rounded-xl text-center border border-gray-200 shadow-[0_4px_15px_rgba(0,0,0,0.05)]">
+              <div className="text-4xl w-16 h-16 mx-auto mb-5 bg-[#e8e8ff] rounded-full flex justify-center items-center">
+                <span>⚙️</span>
+              </div>
+              <h3 className="text-2xl text-primary mb-4">Peças de Qualidade</h3>
               <p>Utilizamos apenas componentes e peças de reposição de alta qualidade e confiança.</p>
-            </FeatureCard>
-            <FeatureCard>
-              <div className="feature-icon"><span>✅</span></div>
-              <h3>Serviço com Garantia</h3>
+            </div>
+            <div className="bg-white p-8 rounded-xl text-center border border-gray-200 shadow-[0_4px_15px_rgba(0,0,0,0.05)]">
+              <div className="text-4xl w-16 h-16 mx-auto mb-5 bg-[#e8e8ff] rounded-full flex justify-center items-center">
+                <span>✅</span>
+              </div>
+              <h3 className="text-2xl text-primary mb-4">Serviço com Garantia</h3>
               <p>Todos os nossos reparos e manutenções possuem garantia, para sua total tranquilidade.</p>
-            </FeatureCard>
-          </FeaturesGrid>
+            </div>
+          </div>
         </div>
-      </WhyChooseUsSection>
+      </section>
 
-      <ServiceDetailsSection>
+      {/* Seção de Serviços Detalhados */}
+      <section className="py-20 text-center">
         <div className="container">
-          <h2>Nossos Serviços Detalhados</h2>
-          <ServiceGrid>
-            <ServiceCard>
-              <h4>Regulagem e Setup</h4>
-              <ul>
-                <li>Regulagem completa de guitarras e baixos</li>
-                <li>Ajuste de altura de cordas e oitavas</li>
-                <li>Troca e ajuste de pestana e rastilho</li>
-                <li>Retífica e troca de trastes</li>
+          <h2 className="text-[2.2rem] mb-12">Nossos Serviços Detalhados</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-white p-8 rounded-xl border border-gray-300 shadow-[0_4px_15px_rgba(0,0,0,0.05)] border-t-4 border-t-primary text-left">
+              <h4 className="text-2xl text-dark-blue mb-5">Regulagem e Setup</h4>
+              <ul className="list-none p-0">
+                <li className="mb-2.5 relative pl-6 before:content-['✓'] before:text-primary before:font-bold before:absolute before:left-0">
+                  Regulagem completa de guitarras e baixos
+                </li>
+                <li className="mb-2.5 relative pl-6 before:content-['✓'] before:text-primary before:font-bold before:absolute before:left-0">
+                  Ajuste de altura de cordas e oitavas
+                </li>
+                <li className="mb-2.5 relative pl-6 before:content-['✓'] before:text-primary before:font-bold before:absolute before:left-0">
+                  Troca e ajuste de pestana e rastilho
+                </li>
+                <li className="mb-2.5 relative pl-6 before:content-['✓'] before:text-primary before:font-bold before:absolute before:left-0">
+                  Retífica e troca de trastes
+                </li>
               </ul>
-            </ServiceCard>
-            <ServiceCard>
-              <h4>Elétrica e Captadores</h4>
-              <ul>
-                <li>Manutenção e troca de captadores</li>
-                <li>Troca de potenciômetros, chaves e jacks</li>
-                <li>Blindagem de cavidades elétricas</li>
-                <li>Instalação de circuitos ativos e pré-amps</li>
+            </div>
+            <div className="bg-white p-8 rounded-xl border border-gray-300 shadow-[0_4px_15px_rgba(0,0,0,0.05)] border-t-4 border-t-primary text-left">
+              <h4 className="text-2xl text-dark-blue mb-5">Elétrica e Captadores</h4>
+              <ul className="list-none p-0">
+                <li className="mb-2.5 relative pl-6 before:content-['✓'] before:text-primary before:font-bold before:absolute before:left-0">
+                  Manutenção e troca de captadores
+                </li>
+                <li className="mb-2.5 relative pl-6 before:content-['✓'] before:text-primary before:font-bold before:absolute before:left-0">
+                  Troca de potenciômetros, chaves e jacks
+                </li>
+                <li className="mb-2.5 relative pl-6 before:content-['✓'] before:text-primary before:font-bold before:absolute before:left-0">
+                  Blindagem de cavidades elétricas
+                </li>
+                <li className="mb-2.5 relative pl-6 before:content-['✓'] before:text-primary before:font-bold before:absolute before:left-0">
+                  Instalação de circuitos ativos e pré-amps
+                </li>
               </ul>
-            </ServiceCard>
-            <ServiceCard>
-              <h4>Reparos Estruturais</h4>
-              <ul>
-                <li>Colagem de headstock e cavalete</li>
-                <li>Reparos em rachaduras no tampo e corpo</li>
-                <li>Revisão e hidratação da escala</li>
-                <li>Limpeza e polimento geral do instrumento</li>
+            </div>
+            <div className="bg-white p-8 rounded-xl border border-gray-300 shadow-[0_4px_15px_rgba(0,0,0,0.05)] border-t-4 border-t-primary text-left">
+              <h4 className="text-2xl text-dark-blue mb-5">Reparos Estruturais</h4>
+              <ul className="list-none p-0">
+                <li className="mb-2.5 relative pl-6 before:content-['✓'] before:text-primary before:font-bold before:absolute before:left-0">
+                  Colagem de headstock e cavalete
+                </li>
+                <li className="mb-2.5 relative pl-6 before:content-['✓'] before:text-primary before:font-bold before:absolute before:left-0">
+                  Reparos em rachaduras no tampo e corpo
+                </li>
+                <li className="mb-2.5 relative pl-6 before:content-['✓'] before:text-primary before:font-bold before:absolute before:left-0">
+                  Revisão e hidratação da escala
+                </li>
+                <li className="mb-2.5 relative pl-6 before:content-['✓'] before:text-primary before:font-bold before:absolute before:left-0">
+                  Limpeza e polimento geral do instrumento
+                </li>
               </ul>
-            </ServiceCard>
-          </ServiceGrid>
+            </div>
+          </div>
         </div>
-      </ServiceDetailsSection>
+      </section>
       
-      <CtaSection>
+      {/* Seção CTA */}
+      <section className="py-16 bg-light-gray text-center">
         <div className="container">
-          <h3>Pronto para dar vida nova ao seu instrumento?</h3>
-          <p>Entre em contato pelo WhatsApp e solicite um orçamento sem compromisso.</p>
-          <CtaButton href={whatsappLink} target="_blank" rel="noopener noreferrer">
+          <h3 className="text-[1.8rem] mb-4">Pronto para dar vida nova ao seu instrumento?</h3>
+          <p className="mb-6">Entre em contato pelo WhatsApp e solicite um orçamento sem compromisso.</p>
+          <a
+            href={whatsappLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-primary text-white py-4 px-9 text-lg rounded-lg no-underline font-semibold inline-block transition-all duration-300 shadow-[0_4px_15px_rgba(0,0,255,0.2)] hover:-translate-y-1 hover:bg-[#0000cc]"
+          >
             Falar com um Especialista
-          </CtaButton>
+          </a>
         </div>
-      </CtaSection>
+      </section>
     </>
   );
 }
