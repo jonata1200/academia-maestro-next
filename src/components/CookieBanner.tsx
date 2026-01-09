@@ -4,85 +4,6 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import styled, { keyframes } from 'styled-components';
-
-// ========================================================
-// ESTILOS
-// ========================================================
-
-const slideUp = keyframes`
-  from {
-    transform: translateY(100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-`;
-
-const BannerWrapper = styled.div`
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: var(--dark-blue);
-  color: rgba(255, 255, 255, 0.9);
-  padding: 15px 20px;
-  z-index: 1000;
-  animation: ${slideUp} 0.5s ease-out;
-  box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.1);
-
-  .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-
-    @media (max-width: 768px) {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 15px;
-    }
-  }
-`;
-
-const BannerContent = styled.p`
-  margin: 0;
-  font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.9);
-
-  a {
-    color: var(--secondary-color);
-    text-decoration: underline;
-    font-weight: 600;
-    
-    &:hover {
-      text-decoration: none;
-    }
-  }
-`;
-
-const AcceptButton = styled.button`
-  background-color: var(--primary-color);
-  color: var(--secondary-color);
-  border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  font-weight: 600;
-  cursor: pointer;
-  white-space: nowrap; /* Impede que o texto quebre */
-  transition: transform 0.2s, background-color 0.2s;
-
-  &:hover {
-    transform: translateY(-2px);
-    background-color: #0000cc;
-  }
-`;
-
-// ========================================================
-// COMPONENTE
-// ========================================================
 
 export default function CookieBanner() {
   const [showBanner, setShowBanner] = useState(false);
@@ -110,15 +31,18 @@ export default function CookieBanner() {
   }
 
   return (
-    <BannerWrapper>
-      <div className="container">
-        <BannerContent>
-          Nós utilizamos cookies para melhorar sua experiência de navegação e analisar o tráfego do site. Ao continuar, você concorda com a nossa <Link href="/politica-de-cookies">Política de Cookies</Link>.
-        </BannerContent>
-        <AcceptButton onClick={handleAccept}>
+    <div className="fixed bottom-0 left-0 w-full bg-dark-blue text-white/90 py-4 px-5 z-[1000] animate-slide-up shadow-[0_-4px_15px_rgba(0,0,0,0.1)]">
+      <div className="max-w-container mx-auto px-5 flex justify-between items-center gap-5 md:flex-row flex-col md:items-center items-start md:gap-5 gap-4">
+        <p className="m-0 text-sm text-white/90">
+          Nós utilizamos cookies para melhorar sua experiência de navegação e analisar o tráfego do site. Ao continuar, você concorda com a nossa <Link href="/politica-de-cookies" className="text-white underline font-semibold hover:no-underline">Política de Cookies</Link>.
+        </p>
+        <button
+          onClick={handleAccept}
+          className="bg-primary text-secondary border-none rounded-md py-2.5 px-5 font-semibold cursor-pointer whitespace-nowrap transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#0000cc]"
+        >
           Aceitar e Fechar
-        </AcceptButton>
+        </button>
       </div>
-    </BannerWrapper>
+    </div>
   );
 }
