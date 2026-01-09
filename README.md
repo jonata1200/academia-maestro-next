@@ -3,7 +3,7 @@
 ![Next.js](https://img.shields.io/badge/Next.js-15.5.2-black?style=flat-square&logo=next.js)
 ![React](https://img.shields.io/badge/React-19.1.0-61DAFB?style=flat-square&logo=react)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=flat-square&logo=typescript)
-![Styled Components](https://img.shields.io/badge/Styled%20Components-6.1.19-DB7093?style=flat-square&logo=styled-components)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-3.4-38B2AC?style=flat-square&logo=tailwind-css)
 ![License](https://img.shields.io/badge/license-Private-red?style=flat-square)
 
 ## 📋 Descrição do Projeto
@@ -99,8 +99,8 @@ O site apresenta informações sobre os cursos de instrumentos musicais, localiz
 - **[TypeScript 5.x](https://www.typescriptlang.org/)**: Superset JavaScript com tipagem estática
 
 ### Estilização
-- **[Styled Components 6.1.19](https://styled-components.com/)**: CSS-in-JS com suporte a temas e props dinâmicas
-- **CSS Global**: Variáveis CSS customizadas para cores e espaçamentos
+- **[Tailwind CSS 3.4](https://tailwindcss.com/)**: Framework CSS utility-first para desenvolvimento rápido e responsivo
+- **CSS Global**: Variáveis CSS customizadas para cores e espaçamentos, além de animações customizadas
 
 ### Bibliotecas Auxiliares
 - **[Swiper 11.2.10](https://swiperjs.com/)**: Biblioteca para carrosséis e sliders (preparado para uso futuro)
@@ -153,7 +153,7 @@ npm install
 Este comando irá instalar todas as dependências listadas no `package.json`, incluindo:
 - Next.js, React e React DOM
 - TypeScript e tipos
-- Styled Components
+- Tailwind CSS, PostCSS e Autoprefixer
 - Swiper
 - ESLint e configurações
 
@@ -285,10 +285,9 @@ academia-maestro-next/
 │   │   ├── CookieBanner.tsx        # Banner de consentimento de cookies
 │   │   ├── GoogleAnalytics.tsx     # Integração com GA4
 │   │   ├── UnitsMap.tsx            # Componente de mapas das unidades
-│   │   └── GlobalStyles.ts         # Estilos globais via Styled Components
-│   │
-│   └── lib/
-│       └── registry.tsx            # Registry para Styled Components (SSR)
+│
+├── tailwind.config.ts          # Configuração do Tailwind CSS
+├── postcss.config.js           # Configuração do PostCSS
 │
 ├── .next/                           # Build de produção (gerado automaticamente)
 ├── node_modules/                    # Dependências (gerado automaticamente)
@@ -309,7 +308,8 @@ academia-maestro-next/
 
 - **`public/`**: Arquivos estáticos servidos diretamente pelo Next.js. Imagens, ícones e outros assets são referenciados com caminhos absolutos começando com `/`.
 
-- **`src/lib/`**: Utilitários e configurações compartilhadas, como o registry do Styled Components para suporte a Server-Side Rendering.
+- **`tailwind.config.ts`**: Configuração do Tailwind CSS com tema customizado, cores, fontes e animações.
+- **`postcss.config.js`**: Configuração do PostCSS com plugins do Tailwind CSS e Autoprefixer.
 
 ---
 

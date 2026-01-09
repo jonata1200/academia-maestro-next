@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
 import Script from 'next/script';
-import StyledComponentsRegistry from '@/lib/registry';
-import GlobalStyles from '@/components/GlobalStyles';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import GoogleAnalytics from "@/components/GoogleAnalytics";
@@ -24,13 +22,10 @@ export default function RootLayout({ children,}: Readonly<{
   return (
     <html lang="pt-BR">
       <body>
-        <StyledComponentsRegistry>
-          <GlobalStyles />
-          <Header />
-          <main>{children}</main> {/* O conteúdo da página fica aqui */}
-          <Footer />
-          <CookieBanner />
-        </StyledComponentsRegistry>
+        <Header />
+        <main>{children}</main> {/* O conteúdo da página fica aqui */}
+        <Footer />
+        <CookieBanner />
         <GoogleAnalytics />
         
         {/* PASSO 2: COLE O SCRIPT DE DADOS ESTRUTURADOS AQUI */}

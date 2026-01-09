@@ -130,10 +130,4 @@ p {
 }
 
 /* --- RESPONSIVIDADE GLOBAL --- */
-@media (max-width: 768px) {
-    /* Ajustes no Rodapé */
-    .footer-main { text-align: center; }
-    .footer-col h4::after { margin: 0 auto; }
-    .social-links { justify-content: center; }
-    #back-to-top { bottom: 15px; right: 15px; }
-}
+/* Estilos responsivos específicos podem ser adicionados aqui se necessário */
