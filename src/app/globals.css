@@ -2,6 +2,10 @@
    ESTILOS GLOBAIS (VERSÃO FINAL E CORRIGIDA)
    ======================================================== */
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
     --primary-color: #0000FF;
     --secondary-color: #FFFFFF;
