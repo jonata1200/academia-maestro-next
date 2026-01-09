@@ -91,6 +91,44 @@ p {
   transform: rotate(-45deg) translate(7px, -7px);
 }
 
+/* --- ESTILOS CUSTOMIZADOS DO SWIPER --- */
+.swiper-pagination {
+  bottom: 10px !important;
+}
+.swiper-pagination-bullet {
+  background-color: rgba(0, 0, 255, 0.3) !important;
+  opacity: 1 !important;
+}
+.swiper-pagination-bullet-active {
+  background-color: var(--primary-color) !important;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  color: var(--primary-color) !important;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  width: 44px !important;
+  height: 44px !important;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  top: 50%;
+  transform: translateY(-50%);
+}
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background-color: var(--primary-color);
+  color: var(--secondary-color) !important;
+}
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 18px !important;
+  font-weight: bold;
+}
+
+/* --- ANIMAÇÃO DE SCROLL INFINITO --- */
+.instrument-scroller:hover .scroller-inner {
+  animation-play-state: paused;
+}
+
 /* --- RESPONSIVIDADE GLOBAL --- */
 @media (max-width: 768px) {
     /* Ajustes no Rodapé */

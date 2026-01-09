@@ -5,7 +5,7 @@
 Migrar as páginas mais importantes e complexas do site.
 
 **Estimativa de tempo**: 12-16 horas  
-**Status**: 🟡 Aguardando início
+**Status**: ✅ Concluída
 
 **Pré-requisito**: [FASE 2](./fase-2-componentes-base.md) deve estar completa
 
@@ -13,7 +13,7 @@ Migrar as páginas mais importantes e complexas do site.
 
 ## ✅ Checklist
 
-- [ ] **3.1** Migrar `src/app/HomePageClient.tsx`
+- [x] **3.1** Migrar `src/app/HomePageClient.tsx`
   - Converter `HeroSection` e `HeroOverlay`
     - Background image com overlay gradiente
     - Padding responsivo
@@ -47,7 +47,7 @@ Migrar as páginas mais importantes e complexas do site.
   - Testar todas as seções e interações
   - Remover imports do Styled Components
 
-- [ ] **3.2** Migrar `src/app/instrumentos/InstrumentosPageClient.tsx`
+- [x] **3.2** Migrar `src/app/instrumentos/InstrumentosPageClient.tsx`
   - Converter hero section
     - Background image e overlay
     - Padding e tipografia
@@ -63,7 +63,7 @@ Migrar as páginas mais importantes e complexas do site.
   - Testar responsividade
   - Remover imports do Styled Components
 
-- [ ] **3.3** Migrar `src/app/sobre/SobrePageClient.tsx`
+- [x] **3.3** Migrar `src/app/sobre/SobrePageClient.tsx`
   - Converter hero section
     - Background image e overlay
     - Padding e tipografia
