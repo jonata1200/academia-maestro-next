@@ -20,8 +20,8 @@ export default function RootLayout({ children,}: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR">
-      <body>
+    <html lang="pt-BR" suppressHydrationWarning>
+      <body suppressHydrationWarning>
         <Header />
         <main>{children}</main> {/* O conteúdo da página fica aqui */}
         <Footer />

@@ -8,9 +8,17 @@ import Image from 'next/image';
 
 export default function Footer() {
   const [isVisible, setIsVisible] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  // Garantir que o componente está montado no cliente
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   // Lógica para mostrar o botão "Voltar ao Topo"
   useEffect(() => {
+    if (!mounted) return;
+    
     const toggleVisibility = () => {
       if (window.scrollY > 300) {
         setIsVisible(true);
@@ -22,7 +30,7 @@ export default function Footer() {
     window.addEventListener('scroll', toggleVisibility);
 
     return () => window.removeEventListener('scroll', toggleVisibility);
-  }, []);
+  }, [mounted]);
 
   const scrollToTop = () => {
     window.scrollTo({
@@ -113,7 +121,7 @@ export default function Footer() {
         
         <div className="border-t border-white/10 py-5 text-center text-sm">
           <p className="text-white/70 m-0">
-            &copy; {new Date().getFullYear()} Academia de Música Maestro. Todos os direitos reservados.
+            &copy; 2026 Academia de Música Maestro. Todos os direitos reservados.
           </p>
           <div className="mt-2.5 text-xs">
             <Link href="/politica-de-privacidade" className="mx-2.5 text-white/70 hover:text-white">

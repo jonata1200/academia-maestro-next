@@ -11,16 +11,24 @@ import clsx from 'clsx';
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const pathname = usePathname();
+
+  // Garantir que o componente está montado no cliente
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   // Lógica para detectar o scroll da página
   useEffect(() => {
+    if (!mounted) return;
+    
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [mounted]);
 
   // Lógica para fechar o menu e controlar o scroll do body
   useEffect(() => {
@@ -32,7 +40,8 @@ export default function Header() {
   };
 
   // Determina se os estilos de topo da home devem ser aplicados
-  const isHomePageTop = pathname === '/' && !isScrolled && !isMenuOpen;
+  // Só aplica após montagem no cliente para evitar diferenças de hidratação
+  const isHomePageTop = mounted && pathname === '/' && !isScrolled && !isMenuOpen;
 
   return (
     <header
