@@ -52,19 +52,19 @@ export default function SobrePageClient() {
         <div className="container">
           <h2 className="text-center text-dark-blue text-[2.2rem] mb-10">Nossos Pilares</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
-            <div className="bg-white p-8 rounded-xl border border-gray-200 text-center shadow-[0_4px_15px_rgba(0,0,0,0.05)]">
+            <div className="bg-white p-8 rounded-xl border border-gray-200 text-center shadow-[0_4px_15px_rgba(0,0,0,0.05)] transition-all duration-300 border-t-[3px] border-t-transparent hover:-translate-y-2.5 hover:shadow-[0_12px_25px_rgba(0,0,0,0.08)] hover:border-t-primary group">
               <h4 className="text-primary text-2xl font-bold border-b-2 border-primary pb-2.5 mt-0 mb-5 inline-block">
                 Missão
               </h4>
               <p className="text-text-light">Promover o ensino musical de forma simples e prática, superando as expectativas.</p>
             </div>
-            <div className="bg-white p-8 rounded-xl border border-gray-200 text-center shadow-[0_4px_15px_rgba(0,0,0,0.05)]">
+            <div className="bg-white p-8 rounded-xl border border-gray-200 text-center shadow-[0_4px_15px_rgba(0,0,0,0.05)] transition-all duration-300 border-t-[3px] border-t-transparent hover:-translate-y-2.5 hover:shadow-[0_12px_25px_rgba(0,0,0,0.08)] hover:border-t-primary group">
               <h4 className="text-primary text-2xl font-bold border-b-2 border-primary pb-2.5 mt-0 mb-5 inline-block">
                 Visão
               </h4>
               <p className="text-text-light">Conscientizar sobre a importância da música para a qualidade e o estilo de vida.</p>
             </div>
-            <div className="bg-white p-8 rounded-xl border border-gray-200 text-center shadow-[0_4px_15px_rgba(0,0,0,0.05)]">
+            <div className="bg-white p-8 rounded-xl border border-gray-200 text-center shadow-[0_4px_15px_rgba(0,0,0,0.05)] transition-all duration-300 border-t-[3px] border-t-transparent hover:-translate-y-2.5 hover:shadow-[0_12px_25px_rgba(0,0,0,0.08)] hover:border-t-primary group">
               <h4 className="text-primary text-2xl font-bold border-b-2 border-primary pb-2.5 mt-0 mb-5 inline-block">
                 Valores
               </h4>

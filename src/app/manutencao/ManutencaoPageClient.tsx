@@ -24,21 +24,21 @@ export default function ManutencaoPageClient() {
         <div className="container">
           <h2 className="text-[2.2rem] mb-12">Por que escolher a Maestro?</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white p-8 rounded-xl text-center border border-gray-200 shadow-[0_4px_15px_rgba(0,0,0,0.05)]">
+            <div className="bg-white p-8 rounded-xl text-center border border-gray-200 shadow-[0_4px_15px_rgba(0,0,0,0.05)] transition-all duration-300 border-t-[3px] border-t-transparent hover:-translate-y-2.5 hover:shadow-[0_12px_25px_rgba(0,0,0,0.08)] hover:border-t-primary group">
               <div className="text-4xl w-16 h-16 mx-auto mb-5 bg-[#e8e8ff] rounded-full flex justify-center items-center">
                 <span>🛠️</span>
               </div>
               <h3 className="text-2xl text-primary mb-4">Técnicos Especializados</h3>
               <p>Nossa equipe possui anos de experiência com todos os tipos de instrumentos.</p>
             </div>
-            <div className="bg-white p-8 rounded-xl text-center border border-gray-200 shadow-[0_4px_15px_rgba(0,0,0,0.05)]">
+            <div className="bg-white p-8 rounded-xl text-center border border-gray-200 shadow-[0_4px_15px_rgba(0,0,0,0.05)] transition-all duration-300 border-t-[3px] border-t-transparent hover:-translate-y-2.5 hover:shadow-[0_12px_25px_rgba(0,0,0,0.08)] hover:border-t-primary group">
               <div className="text-4xl w-16 h-16 mx-auto mb-5 bg-[#e8e8ff] rounded-full flex justify-center items-center">
                 <span>⚙️</span>
               </div>
               <h3 className="text-2xl text-primary mb-4">Peças de Qualidade</h3>
               <p>Utilizamos apenas componentes e peças de reposição de alta qualidade e confiança.</p>
             </div>
-            <div className="bg-white p-8 rounded-xl text-center border border-gray-200 shadow-[0_4px_15px_rgba(0,0,0,0.05)]">
+            <div className="bg-white p-8 rounded-xl text-center border border-gray-200 shadow-[0_4px_15px_rgba(0,0,0,0.05)] transition-all duration-300 border-t-[3px] border-t-transparent hover:-translate-y-2.5 hover:shadow-[0_12px_25px_rgba(0,0,0,0.08)] hover:border-t-primary group">
               <div className="text-4xl w-16 h-16 mx-auto mb-5 bg-[#e8e8ff] rounded-full flex justify-center items-center">
                 <span>✅</span>
               </div>
@@ -54,7 +54,7 @@ export default function ManutencaoPageClient() {
         <div className="container">
           <h2 className="text-[2.2rem] mb-12">Nossos Serviços Detalhados</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white p-8 rounded-xl border border-gray-300 shadow-[0_4px_15px_rgba(0,0,0,0.05)] border-t-4 border-t-primary text-left">
+            <div className="bg-white p-8 rounded-xl border border-gray-300 shadow-[0_4px_15px_rgba(0,0,0,0.05)] border-t-4 border-t-primary text-left transition-all duration-300 hover:-translate-y-2.5 hover:shadow-[0_12px_25px_rgba(0,0,0,0.08)] group">
               <h4 className="text-2xl text-dark-blue mb-5">Regulagem e Setup</h4>
               <ul className="list-none p-0">
                 <li className="mb-2.5 relative pl-6 before:content-['✓'] before:text-primary before:font-bold before:absolute before:left-0">
@@ -71,7 +71,7 @@ export default function ManutencaoPageClient() {
                 </li>
               </ul>
             </div>
-            <div className="bg-white p-8 rounded-xl border border-gray-300 shadow-[0_4px_15px_rgba(0,0,0,0.05)] border-t-4 border-t-primary text-left">
+            <div className="bg-white p-8 rounded-xl border border-gray-300 shadow-[0_4px_15px_rgba(0,0,0,0.05)] border-t-4 border-t-primary text-left transition-all duration-300 hover:-translate-y-2.5 hover:shadow-[0_12px_25px_rgba(0,0,0,0.08)] group">
               <h4 className="text-2xl text-dark-blue mb-5">Elétrica e Captadores</h4>
               <ul className="list-none p-0">
                 <li className="mb-2.5 relative pl-6 before:content-['✓'] before:text-primary before:font-bold before:absolute before:left-0">
@@ -88,7 +88,7 @@ export default function ManutencaoPageClient() {
                 </li>
               </ul>
             </div>
-            <div className="bg-white p-8 rounded-xl border border-gray-300 shadow-[0_4px_15px_rgba(0,0,0,0.05)] border-t-4 border-t-primary text-left">
+            <div className="bg-white p-8 rounded-xl border border-gray-300 shadow-[0_4px_15px_rgba(0,0,0,0.05)] border-t-4 border-t-primary text-left transition-all duration-300 hover:-translate-y-2.5 hover:shadow-[0_12px_25px_rgba(0,0,0,0.08)] group">
               <h4 className="text-2xl text-dark-blue mb-5">Reparos Estruturais</h4>
               <ul className="list-none p-0">
                 <li className="mb-2.5 relative pl-6 before:content-['✓'] before:text-primary before:font-bold before:absolute before:left-0">
