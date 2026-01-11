@@ -11,10 +11,10 @@ export default function ManutencaoPageClient() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative text-white text-center bg-[url('/manutencao-bg.jpg')] bg-cover bg-[center_60%] bg-no-repeat pt-[220px] pb-[120px] px-5 isolate md:pt-[220px] md:pb-[120px] md:px-5">
+      <section className="relative text-white text-center bg-[url('/manutencao-bg.jpg')] bg-cover bg-[center_60%] bg-no-repeat flex flex-col items-center justify-center min-h-[400px] px-5 isolate md:pt-[220px] md:pb-[120px] md:px-5 md:flex-none md:min-h-0">
         <div className="absolute inset-0 bg-gradient-to-br from-dark-blue/70 to-dark-blue/50 -z-10"></div>
-        <div className="container">
-          <h1 className="text-white text-3xl md:text-[3rem] mb-4 font-bold">Conserto e Manutenção de Instrumentos</h1>
+        <div className="container relative z-10">
+          <h1 className="text-white text-3xl md:text-[3rem] mb-4 font-bold"><span className="hidden md:inline">Conserto e </span>Manutenção de Instrumentos</h1>
           <p className="text-white/90 text-xl md:text-[1.2rem]">Cuidado profissional para que sua paixão pela música nunca pare.</p>
         </div>
       </section>
