@@ -68,7 +68,7 @@ export default function Header() {
               'h-20 w-auto block transition-all duration-300',
               isHomePageTop
                 ? 'brightness-0 invert'
-                : 'invert-[15%] sepia-[99%] saturate-[6970%] hue-rotate-[241deg] brightness-[94%] contrast-[143%]'
+                : ''
             )}
           />
         </Link>
@@ -150,25 +150,6 @@ export default function Header() {
               >
                 Manutenção
               </Link>
-            </li>
-            <li>
-              <a
-                href="https://go.hotmart.com/I101679958C"
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={handleLinkClick}
-                className={clsx(
-                  'no-underline font-semibold text-base pb-2 relative transition-colors duration-300',
-                  'after:content-[""] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-primary after:origin-center after:transition-transform after:duration-300 after:scale-x-0',
-                  'hover:after:scale-x-100 hover:text-primary',
-                  isHomePageTop && !isMenuOpen
-                    ? 'text-white hover:text-white'
-                    : 'text-text-color',
-                  isMenuOpen && 'text-text-color text-xl'
-                )}
-              >
-                Curso Online
-              </a>
             </li>
             <li>
               <Link

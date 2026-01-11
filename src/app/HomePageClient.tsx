@@ -92,17 +92,6 @@ export default function HomePageClient() {
           </Link>
         </div>
       </section>
-      
-      {/* Seção Banner Clicável (Curso Online) */}
-      <section className="min-h-[500px] md:min-h-[280px] relative overflow-hidden cursor-pointer bg-[url('/violao-puro-e-simples.png')] bg-cover bg-center bg-no-repeat transition-transform duration-300 md:hover:scale-[1.03]">
-        <a
-          href="https://go.hotmart.com/I101679958C"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Saiba mais sobre o curso Violão Puro e Simples"
-          className="absolute top-0 left-0 w-full h-full z-[2]"
-        />
-      </section>
 
       {/* Seção de Localização */}
       <section className="py-20 md:py-16 text-center">

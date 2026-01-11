@@ -73,11 +73,6 @@ export default function Footer() {
                 </Link>
               </li>
               <li className="mb-3 text-white/90">
-                <a href="https://go.hotmart.com/I101679958C" target="_blank" rel="noopener noreferrer" className="no-underline text-white/90 transition-all duration-300 relative pb-1 hover:text-white">
-                  Curso Online
-                </a>
-              </li>
-              <li className="mb-3 text-white/90">
                 <Link href="/contato" className="no-underline text-white/90 transition-all duration-300 relative pb-1 hover:text-white">
                   Contato
                 </Link>
