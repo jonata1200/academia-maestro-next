@@ -13,7 +13,7 @@
     --text-light: #555;
     --light-gray: #f4f4f4;
     --dark-blue: #000033;
-    --font-family: 'Poppins', sans-serif;
+    --font-family: var(--font-poppins, 'Poppins', sans-serif);
 }
 
 * {

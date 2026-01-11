@@ -3,10 +3,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // ADICIONE ESTE BLOCO DE CÓDIGO
-  compiler: {
-    styledComponents: true,
-  },
+  // Configuração do Next.js
 };
 
 export default nextConfig;

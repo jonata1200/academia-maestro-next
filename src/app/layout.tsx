@@ -1,9 +1,18 @@
 import type { Metadata } from "next";
 import Script from 'next/script';
+import { Poppins } from 'next/font/google';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import CookieBanner from '@/components/CookieBanner';
+import './globals.css';
+
+const poppins = Poppins({
+  weight: ['400', '500', '600', '700'],
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-poppins',
+});
 
 export const metadata: Metadata = {
   // ADICIONE A LINHA ABAIXO
@@ -20,8 +29,8 @@ export default function RootLayout({ children,}: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR" suppressHydrationWarning>
-      <body suppressHydrationWarning>
+    <html lang="pt-BR" suppressHydrationWarning className={poppins.variable}>
+      <body suppressHydrationWarning className={poppins.className}>
         <Header />
         <main>{children}</main> {/* O conteúdo da página fica aqui */}
         <Footer />
