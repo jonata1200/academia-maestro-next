@@ -9,27 +9,27 @@ export default function PoliticaDeCookiesPageClient() {
   return (
     <div className="pt-[180px] pb-20">
       <div className="max-w-[800px] mx-auto px-5 text-left leading-relaxed text-text-light">
-        <h1 className="text-center mb-10 text-[2.5rem] text-dark-blue">Política de Cookies</h1>
+        <h1 className="text-center mb-10 text-[2.5rem] text-dark-blue font-bold">Política de Cookies</h1>
         
-        <h2 className="text-[1.8rem] mt-10 mb-5 border-b-2 border-gray-200 pb-2.5 text-dark-blue">Seção 1 - O que são Cookies?</h2>
+        <h2 className="text-[1.8rem] mt-10 mb-5 border-b-2 border-gray-200 pb-2.5 text-dark-blue font-bold">Seção 1 - O que são Cookies?</h2>
         <p className="mb-5">
           Cookies são pequenos arquivos de texto que um site armazena no seu dispositivo ao visitá-lo. Eles são utilizados para diversas finalidades, como lembrar suas preferências, ajudar na navegação entre páginas e coletar dados estatísticos.
         </p>
 
-        <h2 className="text-[1.8rem] mt-10 mb-5 border-b-2 border-gray-200 pb-2.5 text-dark-blue">Seção 2 - Tipos de Cookies Utilizados</h2>
+        <h2 className="text-[1.8rem] mt-10 mb-5 border-b-2 border-gray-200 pb-2.5 text-dark-blue font-bold">Seção 2 - Tipos de Cookies Utilizados</h2>
         <p className="mb-5">Nosso site utiliza os seguintes tipos de cookies:</p>
         
-        <h3 className="text-[1.4rem] mt-6 mb-4 text-dark-blue">2.1. Cookies de Análise ou Desempenho</h3>
+        <h3 className="text-[1.4rem] mt-6 mb-4 text-dark-blue font-bold">2.1. Cookies de Análise ou Desempenho</h3>
         <p className="mb-5">
           Estes cookies nos ajudam a entender como os visitantes interagem com o site, coletando e relatando informações de forma anônima. Isso nos permite otimizar a estrutura e o conteúdo.
         </p>
         
-        <h3 className="text-[1.4rem] mt-6 mb-4 text-dark-blue">2.2. Cookies de Terceiros</h3>
+        <h3 className="text-[1.4rem] mt-6 mb-4 text-dark-blue font-bold">2.2. Cookies de Terceiros</h3>
         <p className="mb-5">
           Estes cookies são definidos por um domínio diferente do que você está visitando, geralmente por meio de conteúdo incorporado, como mapas.
         </p>
         
-        <h3 className="text-[1.4rem] mt-6 mb-4 text-dark-blue">Tabela de Cookies</h3>
+        <h3 className="text-[1.4rem] mt-6 mb-4 text-dark-blue font-bold">Tabela de Cookies</h3>
         <div className="overflow-x-auto">
           <table className="w-full border-collapse mt-5">
             <thead>
@@ -63,7 +63,7 @@ export default function PoliticaDeCookiesPageClient() {
           </table>
         </div>
 
-        <h2 className="text-[1.8rem] mt-10 mb-5 border-b-2 border-gray-200 pb-2.5 text-dark-blue">Seção 3 - Como Gerenciar Cookies</h2>
+        <h2 className="text-[1.8rem] mt-10 mb-5 border-b-2 border-gray-200 pb-2.5 text-dark-blue font-bold">Seção 3 - Como Gerenciar Cookies</h2>
         <p className="mb-5">
           Você pode controlar ou recusar o uso de cookies através das configurações do seu navegador. A recusa de cookies pode, no entanto, afetar a funcionalidade de algumas partes do nosso site. Para obter instruções detalhadas, consulte os links abaixo:
         </p>

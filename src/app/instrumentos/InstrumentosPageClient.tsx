@@ -17,7 +17,7 @@ export default function InstrumentosPageClient() {
   return (
     <div className="pt-[180px] pb-20">
       <div className="container">
-        <h1 className="text-center text-[2.8rem] mb-4">Nossos Cursos de Instrumentos</h1>
+        <h1 className="text-center text-[2.8rem] mb-4 font-bold">Nossos Cursos de Instrumentos</h1>
         <p className="text-center max-w-[700px] mx-auto mb-16 text-xl">
           Do clássico ao popular, do acústico ao elétrico. Deslize para explorar nossas categorias e comece sua jornada musical.
         </p>
@@ -45,7 +45,7 @@ export default function InstrumentosPageClient() {
                   <Image src="/toque-violao.jpg" alt="Pessoa tocando violão" fill style={{ objectFit: 'cover' }} sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" />
                 </div>
                 <div className="p-6 flex-grow">
-                  <h3 className="text-primary text-2xl m-0 mb-4">Cordas</h3>
+                  <h3 className="text-primary text-2xl m-0 mb-4 font-bold">Cordas</h3>
                   <ul className="list-none p-0 columns-2 gap-5">
                     <li className="mb-2 text-text-light before:content-['•'] before:text-primary before:mr-2 before:font-bold">Violão</li>
                     <li className="mb-2 text-text-light before:content-['•'] before:text-primary before:mr-2 before:font-bold">Viola</li>
@@ -65,7 +65,7 @@ export default function InstrumentosPageClient() {
                   <Image src="/toque-piano.webp" alt="Mãos tocando piano" fill style={{ objectFit: 'cover' }} sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" />
                 </div>
                 <div className="p-6 flex-grow">
-                  <h3 className="text-primary text-2xl m-0 mb-4">Teclas</h3>
+                  <h3 className="text-primary text-2xl m-0 mb-4 font-bold">Teclas</h3>
                   <ul className="list-none p-0">
                     <li className="mb-2 text-text-light before:content-['•'] before:text-primary before:mr-2 before:font-bold">Teclado</li>
                     <li className="mb-2 text-text-light before:content-['•'] before:text-primary before:mr-2 before:font-bold">Piano Popular</li>
@@ -82,7 +82,7 @@ export default function InstrumentosPageClient() {
                   <Image src="/toque-bateria.jpg" alt="Pessoa tocando bateria" fill style={{ objectFit: 'cover' }} sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" />
                 </div>
                 <div className="p-6 flex-grow">
-                  <h3 className="text-primary text-2xl m-0 mb-4">Percussão</h3>
+                  <h3 className="text-primary text-2xl m-0 mb-4 font-bold">Percussão</h3>
                   <ul className="list-none p-0">
                     <li className="mb-2 text-text-light before:content-['•'] before:text-primary before:mr-2 before:font-bold">Bateria</li>
                     <li className="mb-2 text-text-light before:content-['•'] before:text-primary before:mr-2 before:font-bold">Cajón</li>
@@ -98,7 +98,7 @@ export default function InstrumentosPageClient() {
                   <Image src="/toque-saxofone.jpg" alt="Pessoa tocando saxofone" fill style={{ objectFit: 'cover' }} sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" />
                 </div>
                 <div className="p-6 flex-grow">
-                  <h3 className="text-primary text-2xl m-0 mb-4">Sopro</h3>
+                  <h3 className="text-primary text-2xl m-0 mb-4 font-bold">Sopro</h3>
                   <ul className="list-none p-0">
                     <li className="mb-2 text-text-light before:content-['•'] before:text-primary before:mr-2 before:font-bold">Flauta Transversal</li>
                     <li className="mb-2 text-text-light before:content-['•'] before:text-primary before:mr-2 before:font-bold">Saxofone</li>
@@ -114,7 +114,7 @@ export default function InstrumentosPageClient() {
                   <Image src="/musicalizacao-infantil.png" alt="Criança em aula de musicalização infantil" fill style={{ objectFit: 'cover' }} sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" />
                 </div>
                 <div className="p-6 flex-grow">
-                  <h3 className="text-primary text-2xl m-0 mb-4">Musicalização Infantil</h3>
+                  <h3 className="text-primary text-2xl m-0 mb-4 font-bold">Musicalização Infantil</h3>
                   <p className="text-text-light leading-relaxed">
                     Um programa especial para crianças de 2 a 6 anos, incluindo crianças e adolescentes atípicos.
                   </p>

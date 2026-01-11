@@ -23,7 +23,7 @@ export default function HomePageClient() {
       <section className="relative text-white text-center bg-[url('https://images.pexels.com/photos/164821/pexels-photo-164821.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop')] bg-cover bg-center pt-[220px] pb-[120px] px-5 isolate md:pt-[220px] md:pb-[120px] md:px-5">
         <div className="absolute inset-0 bg-gradient-to-br from-dark-blue/80 via-[rgba(0,0,102,0.6)] to-dark-blue/80 -z-10"></div>
         <div className="container">
-          <h1 className="text-white text-5xl md:text-[3.2rem] mb-4">A Música Transforma Vidas. Comece a Sua Transformação.</h1>
+          <h1 className="text-white text-5xl md:text-[3.2rem] mb-4 font-bold">A Música Transforma Vidas. Comece a Sua Transformação.</h1>
           <p className="text-white/90 text-xl md:text-[1.3rem]">Ensino musical de forma simples e prática, desde 1981.</p>
         </div>
       </section>
