@@ -17,7 +17,7 @@ export default function InstrumentosPageClient() {
   return (
     <div className="pt-[180px] pb-20">
       <div className="container">
-        <h1 className="text-center text-[2.8rem] mb-4 font-bold">Nossos Cursos de Instrumentos</h1>
+        <h1 className="text-center text-[2.8rem] mb-4 font-bold">Instrumentos Ensinados</h1>
         <p className="text-center max-w-[700px] mx-auto mb-16 text-xl">
           Do clássico ao popular, do acústico ao elétrico. Deslize para explorar nossas categorias e comece sua jornada musical.
         </p>

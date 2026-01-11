@@ -14,7 +14,7 @@ export default function ManutencaoPageClient() {
       <section className="relative text-white text-center bg-[url('/manutencao-bg.jpg')] bg-cover bg-[center_60%] bg-no-repeat pt-[220px] pb-[120px] px-5 isolate md:pt-[220px] md:pb-[120px] md:px-5">
         <div className="absolute inset-0 bg-gradient-to-br from-dark-blue/70 to-dark-blue/50 -z-10"></div>
         <div className="container">
-          <h1 className="text-white text-5xl md:text-[3rem] mb-4 font-bold">Conserto e Manutenção de Instrumentos</h1>
+          <h1 className="text-white text-3xl md:text-[3rem] mb-4 font-bold">Conserto e Manutenção de Instrumentos</h1>
           <p className="text-white/90 text-xl md:text-[1.2rem]">Cuidado profissional para que sua paixão pela música nunca pare.</p>
         </div>
       </section>

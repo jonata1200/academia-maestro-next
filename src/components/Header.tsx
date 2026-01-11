@@ -182,22 +182,19 @@ export default function Header() {
           <span
             className={clsx(
               'menu-bar',
-              isHeroPageTop && !isMenuOpen ? 'bg-white' : 'bg-dark-blue',
-              isMenuOpen && 'bg-dark-blue'
+              isHeroPageTop && !isMenuOpen ? 'bg-white' : 'bg-dark-blue'
             )}
           ></span>
           <span
             className={clsx(
               'menu-bar',
-              isHeroPageTop && !isMenuOpen ? 'bg-white' : 'bg-dark-blue',
-              isMenuOpen && 'bg-dark-blue'
+              isHeroPageTop && !isMenuOpen ? 'bg-white' : 'bg-dark-blue'
             )}
           ></span>
           <span
             className={clsx(
               'menu-bar',
-              isHeroPageTop && !isMenuOpen ? 'bg-white' : 'bg-dark-blue',
-              isMenuOpen && 'bg-dark-blue'
+              isHeroPageTop && !isMenuOpen ? 'bg-white' : 'bg-dark-blue'
             )}
           ></span>
         </button>
