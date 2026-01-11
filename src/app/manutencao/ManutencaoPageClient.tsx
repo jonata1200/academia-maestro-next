@@ -11,7 +11,7 @@ export default function ManutencaoPageClient() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative text-white text-center bg-[url('/manutencao-bg.jpg')] bg-cover bg-[center_60%] bg-no-repeat pt-[230px] pb-[150px] px-5 isolate md:pt-[180px] md:pb-[100px]">
+      <section className="relative text-white text-center bg-[url('/manutencao-bg.jpg')] bg-cover bg-[center_60%] bg-no-repeat pt-[220px] pb-[120px] px-5 isolate md:pt-[220px] md:pb-[120px] md:px-5">
         <div className="absolute inset-0 bg-gradient-to-br from-dark-blue/70 to-dark-blue/50 -z-10"></div>
         <div className="container">
           <h1 className="text-white text-5xl md:text-[3rem] mb-4">Conserto e Manutenção de Instrumentos</h1>

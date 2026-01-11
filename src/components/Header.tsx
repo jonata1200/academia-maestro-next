@@ -39,15 +39,15 @@ export default function Header() {
     setIsMenuOpen(false);
   };
 
-  // Determina se os estilos de topo da home devem ser aplicados
+  // Determina se os estilos de topo da home/manutenção devem ser aplicados
   // Só aplica após montagem no cliente para evitar diferenças de hidratação
-  const isHomePageTop = mounted && pathname === '/' && !isScrolled && !isMenuOpen;
+  const isHeroPageTop = mounted && (pathname === '/' || pathname === '/manutencao') && !isScrolled && !isMenuOpen;
 
   return (
     <header
       className={clsx(
         'fixed top-0 left-0 w-full z-[999] h-[100px] transition-all duration-300',
-        isHomePageTop
+        isHeroPageTop
           ? 'bg-transparent border-transparent shadow-none'
           : 'bg-white border-b border-gray-200 shadow-[0_4px_20px_rgba(0,0,0,0.05)]'
       )}
@@ -66,7 +66,7 @@ export default function Header() {
             priority
             className={clsx(
               'h-20 w-auto block transition-all duration-300',
-              isHomePageTop
+              isHeroPageTop
                 ? 'brightness-0 invert'
                 : ''
             )}
@@ -91,7 +91,7 @@ export default function Header() {
                   'no-underline font-semibold text-base pb-2 relative transition-colors duration-300',
                   'after:content-[""] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-primary after:origin-center after:transition-transform after:duration-300 after:scale-x-0',
                   'hover:after:scale-x-100 hover:text-primary',
-                  isHomePageTop && !isMenuOpen
+                  isHeroPageTop && !isMenuOpen
                     ? 'text-white hover:text-white'
                     : 'text-text-color',
                   isMenuOpen && 'text-text-color text-xl'
@@ -108,7 +108,7 @@ export default function Header() {
                   'no-underline font-semibold text-base pb-2 relative transition-colors duration-300',
                   'after:content-[""] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-primary after:origin-center after:transition-transform after:duration-300 after:scale-x-0',
                   'hover:after:scale-x-100 hover:text-primary',
-                  isHomePageTop && !isMenuOpen
+                  isHeroPageTop && !isMenuOpen
                     ? 'text-white hover:text-white'
                     : 'text-text-color',
                   isMenuOpen && 'text-text-color text-xl'
@@ -125,7 +125,7 @@ export default function Header() {
                   'no-underline font-semibold text-base pb-2 relative transition-colors duration-300',
                   'after:content-[""] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-primary after:origin-center after:transition-transform after:duration-300 after:scale-x-0',
                   'hover:after:scale-x-100 hover:text-primary',
-                  isHomePageTop && !isMenuOpen
+                  isHeroPageTop && !isMenuOpen
                     ? 'text-white hover:text-white'
                     : 'text-text-color',
                   isMenuOpen && 'text-text-color text-xl'
@@ -142,7 +142,7 @@ export default function Header() {
                   'no-underline font-semibold text-base pb-2 relative transition-colors duration-300',
                   'after:content-[""] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-primary after:origin-center after:transition-transform after:duration-300 after:scale-x-0',
                   'hover:after:scale-x-100 hover:text-primary',
-                  isHomePageTop && !isMenuOpen
+                  isHeroPageTop && !isMenuOpen
                     ? 'text-white hover:text-white'
                     : 'text-text-color',
                   isMenuOpen && 'text-text-color text-xl'
@@ -159,7 +159,7 @@ export default function Header() {
                   'no-underline font-semibold text-base pb-2 relative transition-colors duration-300',
                   'after:content-[""] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-primary after:origin-center after:transition-transform after:duration-300 after:scale-x-0',
                   'hover:after:scale-x-100 hover:text-primary',
-                  isHomePageTop && !isMenuOpen
+                  isHeroPageTop && !isMenuOpen
                     ? 'text-white hover:text-white'
                     : 'text-text-color',
                   isMenuOpen && 'text-text-color text-xl'
@@ -182,21 +182,21 @@ export default function Header() {
           <span
             className={clsx(
               'menu-bar',
-              isHomePageTop && !isMenuOpen ? 'bg-white' : 'bg-dark-blue',
+              isHeroPageTop && !isMenuOpen ? 'bg-white' : 'bg-dark-blue',
               isMenuOpen && 'bg-dark-blue'
             )}
           ></span>
           <span
             className={clsx(
               'menu-bar',
-              isHomePageTop && !isMenuOpen ? 'bg-white' : 'bg-dark-blue',
+              isHeroPageTop && !isMenuOpen ? 'bg-white' : 'bg-dark-blue',
               isMenuOpen && 'bg-dark-blue'
             )}
           ></span>
           <span
             className={clsx(
               'menu-bar',
-              isHomePageTop && !isMenuOpen ? 'bg-white' : 'bg-dark-blue',
+              isHeroPageTop && !isMenuOpen ? 'bg-white' : 'bg-dark-blue',
               isMenuOpen && 'bg-dark-blue'
             )}
           ></span>
