@@ -319,7 +319,7 @@ Este projeto é **privado** e de propriedade da **Academia de Música Maestro**.
 
 ---
 
-## 👤 Autor
+## 👤 Cliente
 
 **Academia de Música Maestro**
 
@@ -342,11 +342,40 @@ Este projeto é **privado** e de propriedade da **Academia de Música Maestro**.
 
 ---
 
-## 🙏 Agradecimentos
+## 💻 Desenvolvimento
 
-Agradecemos a todos os alunos, professores e colaboradores que fazem da Academia Maestro uma referência no ensino musical em Brasília há mais de 40 anos.
+Este site foi desenvolvido como **prestação de serviço** por:
+
+**Jonata Jesus**
+- **Função**: Desenvolvedor Front-End
+- **Especialização**: Desenvolvimento Web Moderno com React, Next.js e TypeScript
+- **Projeto**: Site institucional da Academia de Música Maestro
+
+### 🎯 Sobre o Desenvolvimento
+
+O projeto foi desenvolvido utilizando as mais modernas tecnologias e melhores práticas do mercado:
+
+- **Framework**: Next.js 15 com App Router para performance otimizada
+- **Interface**: React 19 com TypeScript para código robusto e tipado
+- **Estilização**: Tailwind CSS para design responsivo e moderno
+- **SEO**: Otimização completa para mecanismos de busca
+- **Performance**: SSR/SSG para carregamento rápido e melhor experiência do usuário
+- **Conformidade**: Implementação de LGPD com políticas de privacidade e cookies
+- **Analytics**: Integração com Google Analytics 4 para análise de tráfego
+
+### 🚀 Entregáveis
+
+- ✅ Site institucional completo e responsivo
+- ✅ 5 páginas principais (Home, Sobre, Instrumentos, Contato, Manutenção)
+- ✅ 3 páginas de políticas (Privacidade, Cookies, Termos de Uso)
+- ✅ Componentes reutilizáveis e modulares
+- ✅ Integração com Google Maps para localização das unidades
+- ✅ Integração com WhatsApp para contato direto
+- ✅ Sistema de SEO com sitemap e robots.txt
+- ✅ Docker para deploy facilitado
+- ✅ Documentação técnica completa
 
 ---
 
-**Desenvolvido com ❤️ usando Next.js, React e TypeScript**
+**Desenvolvido com ❤️ por Jonata Jesus usando Next.js, React e TypeScript**
 
