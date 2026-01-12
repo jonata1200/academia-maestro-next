@@ -5,12 +5,22 @@ FROM node:20-alpine AS builder
 
 WORKDIR /app
 
+# Copia os arquivos de gerenciamento de pacotes
 COPY package*.json ./
 
 # Instala TODAS as dependências (incluindo as de desenvolvimento) para poder construir
-RUN npm install
+RUN npm ci --legacy-peer-deps
 
-COPY . .
+# Copia os arquivos de configuração necessários para o build
+COPY next.config.ts ./
+COPY tsconfig.json ./
+COPY tailwind.config.ts ./
+COPY postcss.config.js ./
+COPY eslint.config.mjs ./
+
+# Copia o código-fonte e arquivos públicos
+COPY public ./public
+COPY src ./src
 
 # Gera a build de produção otimizada
 RUN npm run build
@@ -23,24 +33,27 @@ FROM node:20-alpine AS runner
 WORKDIR /app
 
 ENV NODE_ENV=production
+# Desabilita telemetria do Next.js
+ENV NEXT_TELEMETRY_DISABLED=1
 
-# Copia os arquivos de gerenciamento de pacotes da fase anterior
-COPY --from=builder /app/package*.json ./
+# Adiciona o usuário nextjs com baixos privilégios
+RUN addgroup --system --gid 1001 nodejs
+RUN adduser --system --uid 1001 nextjs
 
-# --- MUDANÇA PRINCIPAL ---
-# Instala APENAS as dependências listadas em "dependencies" no package.json.
-# Isso ignora todas as "devDependencies" (ESLint, TypeScript, etc.) que são pesadas
-# e desnecessárias para rodar o site. É isso que vai reduzir o tamanho da imagem.
-RUN npm install --omit=dev
-
-# Copia os arquivos que foram construídos na fase anterior
+# Copia os arquivos públicos
 COPY --from=builder /app/public ./public
-COPY --from=builder /app/.next ./.next
 
-# A imagem oficial 'node:alpine' já vem com um usuário de baixa permissão chamado 'node'.
-# Mudar para este usuário é uma prática de segurança recomendada.
-USER node
+# Copia os arquivos standalone da build (já inclui node_modules necessários)
+COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
+COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
+
+# Muda para o usuário de baixa permissão
+USER nextjs
 
 EXPOSE 3000
 
-CMD ["npm", "start"]
+ENV PORT=3000
+ENV HOSTNAME="0.0.0.0"
+
+# Usa o servidor standalone do Next.js (mais eficiente que npm start)
+CMD ["node", "server.js"]

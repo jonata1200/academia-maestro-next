@@ -1,27 +1,54 @@
-# Dependências do Node
+# Dependências
 node_modules
-
-# Arquivos de build do Next.js
-.next/
-out/
-
-# Arquivos de log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Arquivos de ambiente local
-.env.development.local
-.env.test.local
-.env.production.local
+# Build do Next.js
+.next
+out
+build
 
-# Arquivos de configuração do editor e do sistema
-.vscode
+# Arquivos de desenvolvimento
+.env*.local
+.env.development
+.env.test
+
+# Arquivos de sistema
 .DS_Store
+Thumbs.db
 
 # Git
 .git
+.gitignore
 
-# Arquivos do Docker (não devem ser copiados para si mesmos)
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+*~
+
+# Testes
+coverage
+.nyc_output
+
+# Docker
 Dockerfile
 .dockerignore
+docker-compose.yml
+
+# Documentação
+docs
+README.md
+README-PORTAS.md
+
+# Scripts auxiliares
+kill-port.bat
+kill-port.ps1
+
+# Arquivos temporários
+*.log
+.cache
+temp
+tmp
