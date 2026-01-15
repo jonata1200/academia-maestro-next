@@ -10,6 +10,9 @@
     "paths": {
       "@/*": [
         "src/*"
+      ],
+      "@design-system/*": [
+        "src/design-system/*"
       ]
     },
     // O RESTO DAS SUAS CONFIGURAÇÕES...
