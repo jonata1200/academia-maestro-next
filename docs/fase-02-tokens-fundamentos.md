@@ -13,99 +13,99 @@ Criar a base do Design System através de tokens de design (design tokens) que d
 ## ✅ Checklist de Ações
 
 ### 1. Tokens de Cores
-- [ ] Criar arquivo `src/design-system/tokens/colors.ts`
-- [ ] Definir paleta de cores primárias
-  - [ ] Primary (azul #0000FF)
-  - [ ] Primary variants (light, dark, hover states)
-- [ ] Definir paleta de cores secundárias
-  - [ ] Secondary (branco #FFFFFF)
-  - [ ] Background colors
-- [ ] Definir cores semânticas
-  - [ ] Success, Error, Warning, Info
-- [ ] Definir cores neutras
-  - [ ] Text colors (text-color, text-light)
-  - [ ] Gray scale (light-gray, dark-blue, etc.)
-- [ ] Criar tokens para estados (hover, active, disabled, focus)
-- [ ] Exportar tokens como constantes TypeScript
-- [ ] Criar tipos TypeScript para cores
+- [x] Criar arquivo `src/design-system/tokens/colors.ts`
+- [x] Definir paleta de cores primárias
+  - [x] Primary (azul #0000FF)
+  - [x] Primary variants (light, dark, hover states)
+- [x] Definir paleta de cores secundárias
+  - [x] Secondary (branco #FFFFFF)
+  - [x] Background colors
+- [x] Definir cores semânticas
+  - [x] Success, Error, Warning, Info
+- [x] Definir cores neutras
+  - [x] Text colors (text-color, text-light)
+  - [x] Gray scale (light-gray, dark-blue, etc.)
+- [x] Criar tokens para estados (hover, active, disabled, focus)
+- [x] Exportar tokens como constantes TypeScript
+- [x] Criar tipos TypeScript para cores
 
 ### 2. Tokens de Tipografia
-- [ ] Criar arquivo `src/design-system/tokens/typography.ts`
-- [ ] Definir famílias de fontes
-  - [ ] Font family principal (Poppins)
-  - [ ] Font families alternativas
-- [ ] Definir escala de tamanhos de fonte
-  - [ ] Headings (h1, h2, h3, h4, h5, h6)
-  - [ ] Body text (small, base, large)
-  - [ ] Captions e labels
-- [ ] Definir line heights para cada tamanho
-- [ ] Definir font weights (light, regular, medium, semibold, bold)
-- [ ] Definir letter spacing quando necessário
-- [ ] Exportar tokens como constantes TypeScript
-- [ ] Criar tipos TypeScript para tipografia
+- [x] Criar arquivo `src/design-system/tokens/typography.ts`
+- [x] Definir famílias de fontes
+  - [x] Font family principal (Poppins)
+  - [x] Font families alternativas
+- [x] Definir escala de tamanhos de fonte
+  - [x] Headings (h1, h2, h3, h4, h5, h6)
+  - [x] Body text (small, base, large)
+  - [x] Captions e labels
+- [x] Definir line heights para cada tamanho
+- [x] Definir font weights (light, regular, medium, semibold, bold)
+- [x] Definir letter spacing quando necessário
+- [x] Exportar tokens como constantes TypeScript
+- [x] Criar tipos TypeScript para tipografia
 
 ### 3. Tokens de Espaçamento
-- [ ] Criar arquivo `src/design-system/tokens/spacing.ts`
-- [ ] Definir escala de espaçamentos (4px, 8px, 12px, 16px, 24px, 32px, etc.)
-- [ ] Criar tokens nomeados (xs, sm, md, lg, xl, 2xl, etc.)
-- [ ] Definir espaçamentos para padding e margin
-- [ ] Definir gaps para grids e flex containers
-- [ ] Exportar tokens como constantes TypeScript
+- [x] Criar arquivo `src/design-system/tokens/spacing.ts`
+- [x] Definir escala de espaçamentos (4px, 8px, 12px, 16px, 24px, 32px, etc.)
+- [x] Criar tokens nomeados (xs, sm, md, lg, xl, 2xl, etc.)
+- [x] Definir espaçamentos para padding e margin
+- [x] Definir gaps para grids e flex containers
+- [x] Exportar tokens como constantes TypeScript
 
 ### 4. Tokens de Bordas e Raios
-- [ ] Criar arquivo `src/design-system/tokens/borders.ts`
-- [ ] Definir raios de borda (border-radius)
-  - [ ] Small, medium, large, full
-- [ ] Definir larguras de borda
-- [ ] Definir estilos de borda (solid, dashed, dotted)
-- [ ] Exportar tokens como constantes TypeScript
+- [x] Criar arquivo `src/design-system/tokens/borders.ts`
+- [x] Definir raios de borda (border-radius)
+  - [x] Small, medium, large, full
+- [x] Definir larguras de borda
+- [x] Definir estilos de borda (solid, dashed, dotted)
+- [x] Exportar tokens como constantes TypeScript
 
 ### 5. Tokens de Sombras
-- [ ] Criar arquivo `src/design-system/tokens/shadows.ts`
-- [ ] Definir sistema de elevação
-  - [ ] Shadow sm, md, lg, xl
-  - [ ] Shadow para cards, modals, dropdowns
-- [ ] Exportar tokens como constantes TypeScript
+- [x] Criar arquivo `src/design-system/tokens/shadows.ts`
+- [x] Definir sistema de elevação
+  - [x] Shadow sm, md, lg, xl
+  - [x] Shadow para cards, modals, dropdowns
+- [x] Exportar tokens como constantes TypeScript
 
 ### 6. Tokens de Animações
-- [ ] Criar arquivo `src/design-system/tokens/animations.ts`
-- [ ] Definir durações de transição (fast, normal, slow)
-- [ ] Definir easing functions (ease-in, ease-out, ease-in-out)
-- [ ] Definir animações customizadas (slideUp, fadeIn, etc.)
-- [ ] Exportar tokens como constantes TypeScript
+- [x] Criar arquivo `src/design-system/tokens/animations.ts`
+- [x] Definir durações de transição (fast, normal, slow)
+- [x] Definir easing functions (ease-in, ease-out, ease-in-out)
+- [x] Definir animações customizadas (slideUp, fadeIn, etc.)
+- [x] Exportar tokens como constantes TypeScript
 
 ### 7. Tokens de Breakpoints
-- [ ] Criar arquivo `src/design-system/tokens/breakpoints.ts`
-- [ ] Definir breakpoints responsivos
-  - [ ] Mobile, Tablet, Desktop, Large Desktop
-- [ ] Alinhar com breakpoints do Tailwind CSS
-- [ ] Exportar tokens como constantes TypeScript
+- [x] Criar arquivo `src/design-system/tokens/breakpoints.ts`
+- [x] Definir breakpoints responsivos
+  - [x] Mobile, Tablet, Desktop, Large Desktop
+- [x] Alinhar com breakpoints do Tailwind CSS
+- [x] Exportar tokens como constantes TypeScript
 
 ### 8. Arquivo de Tokens Centralizado
-- [ ] Criar arquivo `src/design-system/tokens/index.ts`
-- [ ] Exportar todos os tokens de forma organizada
-- [ ] Criar objeto centralizado com todos os tokens
-- [ ] Garantir tipagem TypeScript completa
+- [x] Criar arquivo `src/design-system/tokens/index.ts`
+- [x] Exportar todos os tokens de forma organizada
+- [x] Criar objeto centralizado com todos os tokens
+- [x] Garantir tipagem TypeScript completa
 
 ### 9. Integração com Tailwind CSS
-- [ ] Atualizar `tailwind.config.ts` para usar tokens
-- [ ] Mapear tokens de cores para cores do Tailwind
-- [ ] Mapear tokens de espaçamento para spacing do Tailwind
-- [ ] Mapear tokens de tipografia para fontSize do Tailwind
-- [ ] Mapear tokens de sombras para boxShadow do Tailwind
-- [ ] Mapear tokens de animações para keyframes do Tailwind
-- [ ] Testar que todas as classes Tailwind funcionam corretamente
+- [x] Atualizar `tailwind.config.ts` para usar tokens
+- [x] Mapear tokens de cores para cores do Tailwind
+- [x] Mapear tokens de espaçamento para spacing do Tailwind
+- [x] Mapear tokens de tipografia para fontSize do Tailwind
+- [x] Mapear tokens de sombras para boxShadow do Tailwind
+- [x] Mapear tokens de animações para keyframes do Tailwind
+- [x] Testar que todas as classes Tailwind funcionam corretamente
 
 ### 10. Documentação dos Tokens
-- [ ] Documentar cada token no Storybook
-- [ ] Criar página de documentação de cores
-- [ ] Criar página de documentação de tipografia
-- [ ] Criar página de documentação de espaçamentos
-- [ ] Adicionar exemplos visuais de uso
+- [x] Documentar cada token no Storybook
+- [x] Criar página de documentação de cores
+- [x] Criar página de documentação de tipografia
+- [x] Criar página de documentação de espaçamentos
+- [x] Adicionar exemplos visuais de uso
 
 ### 11. Validação
-- [ ] Verificar que todos os tokens estão tipados corretamente
-- [ ] Testar imports dos tokens em componentes existentes
+- [x] Verificar que todos os tokens estão tipados corretamente
+- [x] Testar imports dos tokens em componentes existentes
 - [ ] Validar que não há valores hardcoded que deveriam usar tokens
 - [ ] Garantir consistência visual após aplicação dos tokens
 

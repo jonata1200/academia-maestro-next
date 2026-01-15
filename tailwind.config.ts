@@ -1,4 +1,5 @@
 import type { Config } from 'tailwindcss'
+import { animations, colors, spacing, typography, shadows } from './src/design-system/tokens'
 
 const config: Config = {
   content: [
@@ -9,27 +10,35 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: '#0000FF',
-        secondary: '#FFFFFF',
-        'text-color': '#333',
-        'text-light': '#555',
-        'light-gray': '#f4f4f4',
-        'dark-blue': '#000033',
+        primary: colors.brand.primary[500],
+        secondary: colors.brand.secondary[500],
+        'text-color': colors.neutral[800],
+        'text-light': colors.neutral[700],
+        'light-gray': colors.neutral[50],
+        'dark-blue': colors.neutral[950],
+        success: colors.semantic.success,
+        warning: colors.semantic.warning,
+        error: colors.semantic.error,
+        info: colors.semantic.info,
       },
       fontFamily: {
-        sans: ['Poppins', 'sans-serif'],
+        sans: [...typography.fontFamily.sans],
       },
       maxWidth: {
         container: '1100px',
       },
+      spacing,
+      boxShadow: {
+        ...shadows,
+      },
       // Animações customizadas (para o carrossel de instrumentos)
       keyframes: {
-        scroll: {
-          'to': { transform: 'translate(calc(-50% - 10px))' }
-        }
+        scroll: animations.keyframes.scroll,
+        slideUp: animations.keyframes.slideUp,
       },
       animation: {
-        scroll: 'scroll 40s linear infinite'
+        scroll: animations.animation.scroll,
+        slideUp: animations.animation.slideUp,
       }
     },
   },
