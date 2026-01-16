@@ -97,4 +97,62 @@ export class HomePage extends BasePage {
   async clickVerTodosInstrumentos() {
     await this.verTodosInstrumentosButton.click();
   }
+
+  /**
+   * Faz scroll na página
+   */
+  async scroll(y: number) {
+    await this.page.evaluate((targetY) => {
+      window.scrollTo(0, targetY);
+    }, y);
+    await this.page.waitForTimeout(500);
+  }
+
+  /**
+   * Verifica se header está transparente
+   */
+  async isHeaderTransparent(): Promise<boolean> {
+    const header = this.page.locator('header');
+    const classes = await header.getAttribute('class');
+    return classes?.includes('bg-transparent') || false;
+  }
+
+  /**
+   * Abre menu mobile
+   */
+  async openMobileMenu() {
+    const menuButton = this.page.locator('button[aria-label="Abrir menu"]');
+    const exists = await menuButton.isVisible({ timeout: 2000 }).catch(() => false);
+    if (exists) {
+      await menuButton.click();
+      await this.page.waitForTimeout(300);
+    }
+  }
+
+  /**
+   * Verifica se menu mobile está aberto
+   */
+  async isMobileMenuOpen(): Promise<boolean> {
+    const nav = this.page.locator('nav');
+    const classes = await nav.getAttribute('class');
+    return classes?.includes('left-0') || false;
+  }
+
+  /**
+   * Verifica se botão "Voltar ao Topo" está visível
+   */
+  async isScrollToTopVisible(): Promise<boolean> {
+    const button = this.page.locator('button[aria-label="Voltar ao topo"]');
+    return await button.isVisible({ timeout: 2000 }).catch(() => false);
+  }
+
+  /**
+   * Clica no botão "Voltar ao Topo"
+   */
+  async clickScrollToTop() {
+    const button = this.page.locator('button[aria-label="Voltar ao topo"]');
+    await button.waitFor({ state: 'visible', timeout: 2000 });
+    await button.click();
+    await this.page.waitForTimeout(1000);
+  }
 }

@@ -4,6 +4,9 @@
 ![React](https://img.shields.io/badge/React-19.1.0-61DAFB?style=flat-square&logo=react)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=flat-square&logo=typescript)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-3.4-38B2AC?style=flat-square&logo=tailwind-css)
+![Jest](https://img.shields.io/badge/Jest-30.2-C21325?style=flat-square&logo=jest)
+![Playwright](https://img.shields.io/badge/Playwright-1.57-45BA4B?style=flat-square&logo=playwright)
+![Storybook](https://img.shields.io/badge/Storybook-10.1-FF4785?style=flat-square&logo=storybook)
 ![License](https://img.shields.io/badge/license-Private-red?style=flat-square)
 
 ## 📋 Descrição do Projeto
@@ -24,6 +27,8 @@ O site apresenta informações sobre os cursos de instrumentos musicais, localiz
 - Interface moderna e intuitiva que transmite profissionalismo
 - Performance otimizada com Next.js 15 (SSR/SSG)
 - Totalmente responsivo para dispositivos móveis, tablets e desktops
+- **Design System completo** com componentes reutilizáveis e documentados no Storybook
+- **Testes abrangentes**: unitários (Jest) e E2E (Playwright) garantindo qualidade
 - Integração com Google Analytics para análise de tráfego
 - Conformidade com LGPD através de banner de cookies e políticas de privacidade
 
@@ -76,7 +81,15 @@ O site apresenta informações sobre os cursos de instrumentos musicais, localiz
 - **Sobre Nós**: História da escola desde 1981
 - **Políticas**: Privacidade, Cookies e Termos de Uso (conformidade LGPD)
 
-### 🎨 Componentes Reutilizáveis
+### 🎨 Design System
+- **Componentes Base**: Button, Input, Text, Label, Heading, Alert, Badge, Spinner
+- **Componentes Complexos**: Modal, Toast, Tooltip, Card, Accordion, Tabs, Form, Checkbox, Radio
+- **Componentes de Layout**: Container, Stack, Grid
+- **Sistema de Tokens**: Cores, tipografia, espaçamentos e animações padronizadas
+- **Documentação no Storybook**: Todos os componentes documentados com exemplos e variações
+- **Acessibilidade**: Componentes seguem padrões WCAG 2.1 AA
+
+### 🧩 Componentes Reutilizáveis
 - **Header Fixo**: Menu responsivo com efeito de transparência no topo da home
 - **Footer Completo**: Links de navegação, redes sociais e informações legais
 - **Cookie Banner**: Banner de consentimento para cookies (LGPD)
@@ -88,6 +101,13 @@ O site apresenta informações sobre os cursos de instrumentos musicais, localiz
 - **Sitemap.xml**: Geração automática do sitemap
 - **Robots.txt**: Configuração para crawlers
 - **Google Analytics**: Integração para análise de tráfego
+
+### 🧪 Testes e Qualidade
+- **Testes Unitários**: Cobertura completa de componentes, hooks e utilitários com Jest
+- **Testes E2E**: Testes de integração com Playwright cobrindo fluxos críticos
+- **Testes de Acessibilidade**: Validação de navegação por teclado, ARIA e semântica
+- **Testes Cross-Browser**: Validação em Chromium, Firefox e WebKit
+- **CI/CD Ready**: Configuração preparada para integração contínua
 
 ---
 
@@ -105,10 +125,22 @@ O site apresenta informações sobre os cursos de instrumentos musicais, localiz
 ### Bibliotecas Auxiliares
 - **[Swiper 11.2.10](https://swiperjs.com/)**: Biblioteca para carrosséis e sliders (preparado para uso futuro)
 - **[glob 11.0.3](https://www.npmjs.com/package/glob)**: Busca de arquivos para geração dinâmica de sitemap
+- **[clsx 2.1.1](https://github.com/lukeed/clsx)**: Utilitário para construção de classes CSS condicionais
+
+### Ferramentas de Testes
+- **[Jest 30.2.0](https://jestjs.io/)**: Framework de testes unitários
+- **[React Testing Library](https://testing-library.com/react)**: Utilitários para testar componentes React
+- **[Playwright 1.57.0](https://playwright.dev/)**: Framework para testes E2E e automação de navegadores
+- **[@testing-library/jest-dom](https://github.com/testing-library/jest-dom)**: Matchers customizados para DOM
+
+### Design System e Documentação
+- **[Storybook 10.1.11](https://storybook.js.org/)**: Ferramenta para documentação e desenvolvimento de componentes
+- **[@storybook/addon-a11y](https://storybook.js.org/addons/@storybook/addon-a11y)**: Addon para testes de acessibilidade no Storybook
 
 ### Ferramentas de Desenvolvimento
 - **[ESLint 9.x](https://eslint.org/)**: Linter para qualidade de código
 - **[Next.js ESLint Config](https://nextjs.org/docs/app/building-your-application/configuring/eslint)**: Configuração otimizada para Next.js
+- **[eslint-plugin-storybook](https://github.com/storybookjs/eslint-plugin-storybook)**: Regras ESLint para Storybook
 
 ### Deploy e Containerização
 - **Docker**: Dockerfile multi-stage para builds otimizados
@@ -196,6 +228,62 @@ Para verificar a qualidade do código:
 npm run lint
 ```
 
+### 7. Testes Unitários
+
+Para executar os testes unitários:
+
+```bash
+# Executar todos os testes
+npm test
+
+# Modo watch (re-executa ao salvar arquivos)
+npm run test:watch
+
+# Com relatório de cobertura
+npm run test:coverage
+
+# Modo CI (sem watch, com saída simplificada)
+npm run test:ci
+```
+
+### 8. Testes E2E (Playwright)
+
+Para executar os testes de integração:
+
+```bash
+# Executar todos os testes E2E
+npm run test:e2e
+
+# Interface visual interativa
+npm run test:e2e:ui
+
+# Modo debug (abre Playwright Inspector)
+npm run test:e2e:debug
+
+# Modo headed (com navegador visível)
+npm run test:e2e:headed
+
+# Ver relatório HTML dos testes
+npm run test:e2e:report
+
+# Instalar navegadores do Playwright (primeira vez)
+npm run test:e2e:install
+```
+
+### 9. Storybook
+
+Para visualizar e desenvolver componentes no Storybook:
+
+```bash
+# Iniciar Storybook em modo desenvolvimento
+npm run storybook
+
+# Build estático do Storybook
+npm run build-storybook
+```
+
+O Storybook estará disponível em **http://localhost:6006**
+
 ---
 
 ## 🐳 Executando com Docker
@@ -279,37 +367,102 @@ academia-maestro-next/
 │   │   ├── robots.ts               # Configuração do robots.txt
 │   │   └── sitemap.ts              # Geração automática do sitemap.xml
 │   │
-│   ├── components/                  # Componentes reutilizáveis
+│   ├── components/                  # Componentes reutilizáveis da aplicação
 │   │   ├── Header.tsx              # Cabeçalho com menu responsivo
-│   │   ├── Footer.tsx              # Rodapé com links e redes sociais
-│   │   ├── CookieBanner.tsx        # Banner de consentimento de cookies
-│   │   ├── GoogleAnalytics.tsx     # Integração com GA4
-│   │   ├── UnitsMap.tsx            # Componente de mapas das unidades
+│   │   ├── Footer.tsx               # Rodapé com links e redes sociais
+│   │   ├── CookieBanner.tsx         # Banner de consentimento de cookies
+│   │   ├── GoogleAnalytics.tsx      # Integração com GA4
+│   │   └── UnitsMap.tsx            # Componente de mapas das unidades
+│   │
+│   ├── design-system/               # Design System completo
+│   │   ├── components/              # Componentes do Design System
+│   │   │   ├── Button/             # Botão com variantes
+│   │   │   ├── Input/              # Input e Textarea
+│   │   │   ├── Modal/              # Modal/Dialog
+│   │   │   ├── Toast/               # Notificações
+│   │   │   ├── Card/                # Cards
+│   │   │   └── ...                 # Outros componentes
+│   │   ├── tokens/                  # Tokens de design
+│   │   │   ├── colors.ts           # Cores
+│   │   │   ├── typography.ts       # Tipografia
+│   │   │   └── spacing.ts          # Espaçamentos
+│   │   ├── hooks/                   # Hooks customizados
+│   │   │   ├── useModal.ts         # Hook para modais
+│   │   │   ├── useToast.ts         # Hook para toasts
+│   │   │   └── ...                 # Outros hooks
+│   │   ├── utils/                   # Utilitários
+│   │   │   └── cn.ts               # Helper para classes CSS
+│   │   └── README.md                # Documentação do Design System
+│   │
+│   ├── __tests__/                   # Testes unitários
+│   │   ├── components/             # Testes de componentes
+│   │   ├── hooks/                   # Testes de hooks
+│   │   ├── utils/                   # Testes de utilitários
+│   │   └── helpers/                 # Helpers de teste
+│   │
+│   └── stories/                      # Stories do Storybook
+│       ├── *.stories.tsx            # Stories dos componentes
+│       └── GettingStarted.mdx       # Documentação inicial
 │
-├── tailwind.config.ts          # Configuração do Tailwind CSS
-├── postcss.config.js           # Configuração do PostCSS
+├── e2e/                              # Testes E2E (Playwright)
+│   ├── specs/                       # Especificações de teste
+│   │   ├── navegacao-completa.spec.ts
+│   │   ├── header-interacoes.spec.ts
+│   │   ├── acessibilidade-interacoes.spec.ts
+│   │   └── ...                     # Outros testes
+│   ├── pages/                       # Page Objects
+│   │   ├── BasePage.ts
+│   │   ├── HomePage.ts
+│   │   └── ...                     # Outros page objects
+│   ├── fixtures/                    # Fixtures do Playwright
+│   ├── utils/                       # Utilitários de teste
+│   └── README.md                    # Documentação dos testes E2E
 │
-├── .next/                           # Build de produção (gerado automaticamente)
-├── node_modules/                    # Dependências (gerado automaticamente)
+├── docs/                             # Documentação do projeto
+│   ├── fase-*.md                    # Fases de implementação
+│   ├── design-system/               # Documentação do Design System
+│   └── e2e-testing-guide.md         # Guia de testes E2E
 │
-├── Dockerfile                       # Configuração Docker multi-stage
-├── next.config.ts                   # Configurações do Next.js
-├── tsconfig.json                    # Configurações do TypeScript
-├── eslint.config.mjs                # Configurações do ESLint
-├── package.json                     # Dependências e scripts
-└── README.md                        # Este arquivo
+├── .storybook/                       # Configuração do Storybook
+│   ├── main.ts
+│   └── preview.ts
+│
+├── tailwind.config.ts                # Configuração do Tailwind CSS
+├── postcss.config.js                # Configuração do PostCSS
+├── jest.config.js                    # Configuração do Jest
+├── playwright.config.ts              # Configuração do Playwright
+│
+├── .next/                            # Build de produção (gerado automaticamente)
+├── node_modules/                     # Dependências (gerado automaticamente)
+│
+├── Dockerfile                        # Configuração Docker multi-stage
+├── next.config.ts                    # Configurações do Next.js
+├── tsconfig.json                     # Configurações do TypeScript
+├── eslint.config.mjs                 # Configurações do ESLint
+├── package.json                      # Dependências e scripts
+└── README.md                         # Este arquivo
 ```
 
 ### 📝 Explicação das Pastas Principais
 
 - **`src/app/`**: Utiliza o App Router do Next.js 15. Cada subpasta representa uma rota, e `page.tsx` é o componente da página. A separação entre Server Components (`page.tsx`) e Client Components (`*PageClient.tsx`) otimiza performance e SEO.
 
-- **`src/components/`**: Componentes React reutilizáveis que podem ser utilizados em múltiplas páginas. Todos os componentes que usam hooks do React ou interatividade são marcados com `'use client'`.
+- **`src/components/`**: Componentes React reutilizáveis específicos da aplicação (Header, Footer, CookieBanner, etc.). Todos os componentes que usam hooks do React ou interatividade são marcados com `'use client'`.
+
+- **`src/design-system/`**: Design System completo com componentes reutilizáveis, tokens de design, hooks customizados e utilitários. Todos os componentes são documentados no Storybook e seguem padrões de acessibilidade.
+
+- **`src/__tests__/`**: Testes unitários organizados por tipo (components, hooks, utils). Utiliza Jest e React Testing Library para garantir qualidade e cobertura de código.
+
+- **`e2e/`**: Testes end-to-end com Playwright. Inclui page objects, fixtures e utilitários para testes de integração que validam fluxos completos do usuário.
+
+- **`docs/`**: Documentação completa do projeto, incluindo fases de implementação, guias do Design System e documentação de testes.
 
 - **`public/`**: Arquivos estáticos servidos diretamente pelo Next.js. Imagens, ícones e outros assets são referenciados com caminhos absolutos começando com `/`.
 
 - **`tailwind.config.ts`**: Configuração do Tailwind CSS com tema customizado, cores, fontes e animações.
 - **`postcss.config.js`**: Configuração do PostCSS com plugins do Tailwind CSS e Autoprefixer.
+- **`jest.config.js`**: Configuração do Jest para testes unitários.
+- **`playwright.config.ts`**: Configuração do Playwright para testes E2E.
 
 ---
 
@@ -358,8 +511,11 @@ O projeto foi desenvolvido utilizando as mais modernas tecnologias e melhores pr
 - **Framework**: Next.js 15 com App Router para performance otimizada
 - **Interface**: React 19 com TypeScript para código robusto e tipado
 - **Estilização**: Tailwind CSS para design responsivo e moderno
+- **Design System**: Componentes padronizados e documentados no Storybook
+- **Qualidade**: Testes unitários e E2E garantindo robustez e confiabilidade
 - **SEO**: Otimização completa para mecanismos de busca
 - **Performance**: SSR/SSG para carregamento rápido e melhor experiência do usuário
+- **Acessibilidade**: Componentes seguem padrões WCAG 2.1 AA
 - **Conformidade**: Implementação de LGPD com políticas de privacidade e cookies
 - **Analytics**: Integração com Google Analytics 4 para análise de tráfego
 
@@ -368,6 +524,9 @@ O projeto foi desenvolvido utilizando as mais modernas tecnologias e melhores pr
 - ✅ Site institucional completo e responsivo
 - ✅ 5 páginas principais (Home, Sobre, Instrumentos, Contato, Manutenção)
 - ✅ 3 páginas de políticas (Privacidade, Cookies, Termos de Uso)
+- ✅ **Design System completo** com componentes documentados no Storybook
+- ✅ **Testes unitários** com alta cobertura (Jest + React Testing Library)
+- ✅ **Testes E2E** cobrindo fluxos críticos (Playwright)
 - ✅ Componentes reutilizáveis e modulares
 - ✅ Integração com Google Maps para localização das unidades
 - ✅ Integração com WhatsApp para contato direto

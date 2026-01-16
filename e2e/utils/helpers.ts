@@ -121,6 +121,55 @@ export async function checkHeadingHierarchy(page: Page) {
 }
 
 /**
+ * Helper para scroll suave
+ */
+export async function smoothScrollTo(page: Page, y: number) {
+  await page.evaluate((targetY) => {
+    window.scrollTo({
+      top: targetY,
+      behavior: 'smooth',
+    });
+  }, y);
+  // Aguarda scroll completar
+  await page.waitForTimeout(1000);
+}
+
+/**
+ * Helper para esperar animações
+ */
+export async function waitForAnimation(page: Page, selector: string, timeout = 2000) {
+  await page.waitForSelector(selector, { state: 'visible', timeout });
+  // Aguarda animação completar (assumindo 300ms de duração)
+  await page.waitForTimeout(400);
+}
+
+/**
+ * Helper para interações de teclado
+ */
+export async function navigateWithKeyboard(page: Page, steps: number) {
+  for (let i = 0; i < steps; i++) {
+    await page.keyboard.press('Tab');
+    await page.waitForTimeout(100);
+  }
+}
+
+/**
+ * Helper para esperar transições
+ */
+export async function waitForTransition(page: Page, timeout = 500) {
+  await page.waitForTimeout(timeout);
+}
+
+/**
+ * Helper para scroll até elemento
+ */
+export async function scrollToElement(page: Page, selector: string) {
+  const element = page.locator(selector);
+  await element.scrollIntoViewIfNeeded();
+  await page.waitForTimeout(300);
+}
+
+/**
  * Helper para verificar links externos
  */
 export async function checkExternalLink(page: Page, linkSelector: string) {
