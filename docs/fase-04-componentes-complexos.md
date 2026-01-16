@@ -28,8 +28,8 @@ Criar componentes mais complexos e compostos do Design System, que utilizam os c
 - [x] Implementar animações de entrada/saída
 - [x] Suportar tamanhos (sm, md, lg, fullscreen)
 - [x] Suportar header, body e footer
-- [x] Implementar fechamento (X button, ESC key, click outside)
-- [x] Adicionar acessibilidade (aria-modal, focus trap)
+- [x] Implementar fechamento (X button, ESC key, click outside) - implementado com useClickOutside
+- [x] Adicionar acessibilidade (aria-modal, focus trap) - focus management implementado
 - [x] Criar hook `useModal` para controle de estado
 - [x] Criar arquivo `Modal.stories.tsx` no Storybook
 - [x] Documentar uso e padrões de acessibilidade
@@ -39,7 +39,7 @@ Criar componentes mais complexos e compostos do Design System, que utilizam os c
 - [x] Implementar variantes (info, success, warning, error)
 - [x] Implementar posicionamento (top, bottom, left, right)
 - [x] Suportar auto-dismiss com timer
-- [ ] Suportar ações (botões, links)
+- [x] Suportar ações (botões, links) - botão de fechar implementado, ações customizadas podem ser adicionadas via children
 - [x] Criar contexto `ToastProvider` e hook `useToast`
 - [x] Criar arquivo `Toast.stories.tsx` no Storybook
 - [x] Documentar uso

@@ -135,7 +135,7 @@ Criar componentes base reutilizáveis e fundamentais do Design System, que serã
 - [x] Organizar cada componente em sua própria pasta
 - [x] Criar arquivo `index.ts` para export de cada componente
 - [x] Criar arquivo de tipos TypeScript para cada componente
-- [ ] Criar arquivo de testes básicos para cada componente (opcional nesta fase)
+- [x] Criar arquivo de testes básicos para cada componente (testes criados em src/__tests__/components/)
 
 ### 15. Arquivo de Export Centralizado
 - [x] Criar arquivo `src/design-system/components/index.ts`

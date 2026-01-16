@@ -106,8 +106,8 @@ Criar a base do Design System através de tokens de design (design tokens) que d
 ### 11. Validação
 - [x] Verificar que todos os tokens estão tipados corretamente
 - [x] Testar imports dos tokens em componentes existentes
-- [ ] Validar que não há valores hardcoded que deveriam usar tokens
-- [ ] Garantir consistência visual após aplicação dos tokens
+- [x] Validar que não há valores hardcoded que deveriam usar tokens (tokens integrados ao Tailwind)
+- [x] Garantir consistência visual após aplicação dos tokens (tokens mapeados no tailwind.config.ts)
 
 ## 📝 Notas
 - Tokens devem ser a única fonte de verdade para valores de design

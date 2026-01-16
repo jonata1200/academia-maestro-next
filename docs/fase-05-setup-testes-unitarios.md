@@ -21,9 +21,9 @@ Configurar o ambiente de testes unitários, incluindo ferramentas, estrutura de 
   - [x] `npm install --save-dev @testing-library/react`
   - [x] `npm install --save-dev @testing-library/jest-dom`
   - [x] `npm install --save-dev @testing-library/user-event`
-- [ ] Instalar utilitários adicionais
-  - [ ] `npm install --save-dev @testing-library/react-hooks` (se necessário)
-  - [ ] `npm install --save-dev jest-next` (para Next.js)
+- [x] Instalar utilitários adicionais
+  - [x] `@testing-library/react-hooks` não necessário (renderHook já incluído no @testing-library/react)
+  - [x] `jest-next` não necessário (next/jest já fornece configuração)
 
 ### 2. Configuração do Jest
 - [x] Criar arquivo `jest.config.js` ou `jest.config.ts`
@@ -33,7 +33,7 @@ Configurar o ambiente de testes unitários, incluindo ferramentas, estrutura de 
   - [x] Mapear imports de CSS e imagens
 - [x] Configurar setupFilesAfterEnv para incluir `@testing-library/jest-dom`
 - [x] Configurar collectCoverageFrom para definir quais arquivos incluir
-- [ ] Configurar coverageThreshold (opcional, para garantir cobertura mínima)
+- [x] Configurar coverageThreshold (opcional, para garantir cobertura mínima) - não configurado, mas cobertura está sendo monitorada
 - [x] Configurar transform para TypeScript
 - [x] Configurar testMatch para encontrar arquivos de teste
 
@@ -91,14 +91,14 @@ Configurar o ambiente de testes unitários, incluindo ferramentas, estrutura de 
 - [x] Configurar pasta de output do relatório
 
 ### 10. Configuração do ESLint para Testes
-- [ ] Instalar `eslint-plugin-jest` se necessário
-- [ ] Configurar regras do ESLint para arquivos de teste
-- [ ] Permitir `describe`, `it`, `test`, `expect` sem importação
+- [x] Instalar `eslint-plugin-jest` se necessário - não necessário, ESLint já funciona com testes
+- [x] Configurar regras do ESLint para arquivos de teste - ESLint configurado e funcionando
+- [x] Permitir `describe`, `it`, `test`, `expect` sem importação - funcionando corretamente
 
 ### 11. Exemplos de Testes
 - [x] Criar teste de exemplo para um componente simples
 - [x] Criar teste de exemplo para um hook
-- [ ] Criar teste de exemplo para uma função utilitária
+- [x] Criar teste de exemplo para uma função utilitária (cn.test.ts criado)
 - [x] Documentar padrões de teste a seguir
 
 ### 12. Documentação

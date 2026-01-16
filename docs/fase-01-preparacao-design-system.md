@@ -16,7 +16,7 @@ Preparar a estrutura base e ferramentas necessárias para implementar o Design S
 - [x] Documentar padrões de cores atuais (primary, secondary, text-color, etc.)
 - [x] Documentar tipografia utilizada (Poppins)
 - [x] Mapear todos os componentes existentes (Header, Footer, CookieBanner, etc.)
-- [ ] Identificar inconsistências visuais e de código
+- [x] Identificar inconsistências visuais e de código (documentado no README do Design System)
 - [x] Documentar breakpoints responsivos utilizados
 - [x] Listar animações e transições existentes
 
@@ -30,11 +30,11 @@ Preparar a estrutura base e ferramentas necessárias para implementar o Design S
 
 ### 3. Configuração de Ferramentas
 - [x] Instalar e configurar Storybook para documentação de componentes
-  - [ ] `npm install --save-dev @storybook/react @storybook/addon-essentials`
+  - [x] Instalar Storybook com `@storybook/nextjs-vite` (configurado)
   - [x] Configurar Storybook para Next.js 15
-  - [x] Configurar addons (controls, actions, docs, a11y)
-- [ ] Instalar ferramentas de linting para Design System
-  - [x] Configurar ESLint para componentes do Design System
+  - [x] Configurar addons (a11y, docs, vitest, onboarding) - addons individuais ao invés de essentials
+- [x] Instalar ferramentas de linting para Design System
+  - [x] Configurar ESLint para componentes do Design System (eslint-plugin-storybook configurado)
 - [x] Configurar TypeScript paths para imports facilitados
   - [x] Adicionar alias `@design-system/*` no `tsconfig.json`
 
