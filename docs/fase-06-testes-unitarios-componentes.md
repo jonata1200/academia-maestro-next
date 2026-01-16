@@ -12,126 +12,126 @@ Escrever testes unitários completos para todos os componentes do projeto, garan
 ## ✅ Checklist de Ações
 
 ### 1. Testes do Componente Header
-- [ ] Criar arquivo `src/__tests__/components/Header.test.tsx`
-- [ ] Testar renderização básica
-- [ ] Testar exibição do logo
-- [ ] Testar exibição dos links de navegação
-- [ ] Testar abertura/fechamento do menu mobile
-- [ ] Testar mudança de estilo ao fazer scroll
-- [ ] Testar mudança de estilo na home (transparente no topo)
+- [x] Criar arquivo `src/__tests__/components/Header.test.tsx`
+- [x] Testar renderização básica
+- [x] Testar exibição do logo
+- [x] Testar exibição dos links de navegação
+- [x] Testar abertura/fechamento do menu mobile
+- [x] Testar mudança de estilo ao fazer scroll
+- [x] Testar mudança de estilo na home (transparente no topo)
 - [ ] Testar navegação entre páginas
 - [ ] Testar estado ativo do link atual
-- [ ] Testar acessibilidade (aria-labels, roles)
-- [ ] Testar responsividade (menu hambúrguer em mobile)
+- [x] Testar acessibilidade (aria-labels, roles)
+- [x] Testar responsividade (menu hambúrguer em mobile)
 - [ ] Testar interações de teclado
 
 ### 2. Testes do Componente Footer
-- [ ] Criar arquivo `src/__tests__/components/Footer.test.tsx`
-- [ ] Testar renderização básica
-- [ ] Testar exibição de links de navegação
-- [ ] Testar exibição de links de redes sociais
-- [ ] Testar exibição de informações de contato
-- [ ] Testar exibição de informações legais
-- [ ] Testar links externos (abrem em nova aba)
-- [ ] Testar acessibilidade
+- [x] Criar arquivo `src/__tests__/components/Footer.test.tsx`
+- [x] Testar renderização básica
+- [x] Testar exibição de links de navegação
+- [x] Testar exibição de links de redes sociais
+- [x] Testar exibição de informações de contato
+- [x] Testar exibição de informações legais
+- [x] Testar links externos (abrem em nova aba)
+- [x] Testar acessibilidade
 
 ### 3. Testes do Componente CookieBanner
-- [ ] Criar arquivo `src/__tests__/components/CookieBanner.test.tsx`
-- [ ] Testar renderização quando cookies não foram aceitos
-- [ ] Testar não renderização quando cookies foram aceitos
-- [ ] Testar clique no botão de aceitar
-- [ ] Testar salvamento no localStorage
+- [x] Criar arquivo `src/__tests__/components/CookieBanner.test.tsx`
+- [x] Testar renderização quando cookies não foram aceitos
+- [x] Testar não renderização quando cookies foram aceitos
+- [x] Testar clique no botão de aceitar
+- [x] Testar salvamento no localStorage
 - [ ] Testar persistência após reload
-- [ ] Testar acessibilidade
+- [x] Testar acessibilidade
 
 ### 4. Testes do Componente GoogleAnalytics
-- [ ] Criar arquivo `src/__tests__/components/GoogleAnalytics.test.tsx`
-- [ ] Testar renderização do script do GA
+- [x] Criar arquivo `src/__tests__/components/GoogleAnalytics.test.tsx`
+- [x] Testar renderização do script do GA
 - [ ] Testar que script não renderiza sem ID
-- [ ] Testar que script renderiza com ID válido
-- [ ] Mockar window.gtag se necessário
+- [x] Testar que script renderiza com ID válido
+- [x] Mockar window.gtag se necessário
 
 ### 5. Testes do Componente UnitsMap
-- [ ] Criar arquivo `src/__tests__/components/UnitsMap.test.tsx`
-- [ ] Testar renderização básica
-- [ ] Testar exibição de múltiplas unidades
-- [ ] Testar exibição de informações de cada unidade
-- [ ] Testar links do Google Maps
-- [ ] Testar links do WhatsApp
-- [ ] Testar acessibilidade
+- [x] Criar arquivo `src/__tests__/components/UnitsMap.test.tsx`
+- [x] Testar renderização básica
+- [x] Testar exibição de múltiplas unidades
+- [x] Testar exibição de informações de cada unidade
+- [x] Testar links do Google Maps
+- [x] Testar links do WhatsApp
+- [x] Testar acessibilidade
 
 ### 6. Testes dos Componentes de Página (PageClient)
-- [ ] Criar testes para `HomePageClient.test.tsx`
-  - [ ] Testar renderização
-  - [ ] Testar seções principais
-  - [ ] Testar carrossel de instrumentos
+- [x] Criar testes para `HomePageClient.test.tsx`
+  - [x] Testar renderização
+  - [x] Testar seções principais
+  - [x] Testar carrossel de instrumentos
   - [ ] Testar links e CTAs
-- [ ] Criar testes para `SobrePageClient.test.tsx`
-  - [ ] Testar renderização
-  - [ ] Testar conteúdo da página
-- [ ] Criar testes para `InstrumentosPageClient.test.tsx`
-  - [ ] Testar renderização
+- [x] Criar testes para `SobrePageClient.test.tsx`
+  - [x] Testar renderização
+  - [x] Testar conteúdo da página
+- [x] Criar testes para `InstrumentosPageClient.test.tsx`
+  - [x] Testar renderização
   - [ ] Testar exibição de instrumentos
-- [ ] Criar testes para `ContatoPageClient.test.tsx`
-  - [ ] Testar renderização
-  - [ ] Testar integração com UnitsMap
-- [ ] Criar testes para `ManutencaoPageClient.test.tsx`
-  - [ ] Testar renderização
+- [x] Criar testes para `ContatoPageClient.test.tsx`
+  - [x] Testar renderização
+  - [x] Testar integração com UnitsMap
+- [x] Criar testes para `ManutencaoPageClient.test.tsx`
+  - [x] Testar renderização
   - [ ] Testar conteúdo da página
 
 ### 7. Testes dos Componentes do Design System - Button
-- [ ] Criar arquivo `src/design-system/components/Button/Button.test.tsx`
-- [ ] Testar renderização com diferentes variantes
-- [ ] Testar renderização com diferentes tamanhos
-- [ ] Testar estados (disabled, loading)
-- [ ] Testar clique e eventos
+- [x] Criar arquivo `src/design-system/components/Button/Button.test.tsx`
+- [x] Testar renderização com diferentes variantes
+- [x] Testar renderização com diferentes tamanhos
+- [x] Testar estados (disabled, loading)
+- [x] Testar clique e eventos
 - [ ] Testar ícones (left, right, icon-only)
-- [ ] Testar fullWidth
-- [ ] Testar acessibilidade
+- [x] Testar fullWidth
+- [x] Testar acessibilidade
 
 ### 8. Testes dos Componentes do Design System - Input
-- [ ] Criar arquivo `src/design-system/components/Input/Input.test.tsx`
-- [ ] Testar renderização básica
-- [ ] Testar diferentes estados (error, disabled)
-- [ ] Testar placeholder e value
-- [ ] Testar onChange
+- [x] Criar arquivo `src/design-system/components/Input/Input.test.tsx`
+- [x] Testar renderização básica
+- [x] Testar diferentes estados (error, disabled)
+- [x] Testar placeholder e value
+- [x] Testar onChange
 - [ ] Testar ícones
-- [ ] Testar error message
-- [ ] Testar acessibilidade
+- [x] Testar error message
+- [x] Testar acessibilidade
 
 ### 9. Testes dos Componentes do Design System - Modal
-- [ ] Criar arquivo `src/design-system/components/Modal/Modal.test.tsx`
-- [ ] Testar abertura e fechamento
-- [ ] Testar fechamento com ESC
+- [x] Criar arquivo `src/design-system/components/Modal/Modal.test.tsx`
+- [x] Testar abertura e fechamento
+- [x] Testar fechamento com ESC
 - [ ] Testar fechamento ao clicar no overlay
 - [ ] Testar focus trap
 - [ ] Testar diferentes tamanhos
-- [ ] Testar acessibilidade (aria-modal)
+- [x] Testar acessibilidade (aria-modal)
 
 ### 10. Testes dos Componentes do Design System - Toast
-- [ ] Criar arquivo `src/design-system/components/Toast/Toast.test.tsx`
-- [ ] Testar exibição de toast
-- [ ] Testar diferentes variantes
+- [x] Criar arquivo `src/design-system/components/Toast/Toast.test.tsx`
+- [x] Testar exibição de toast
+- [x] Testar diferentes variantes
 - [ ] Testar auto-dismiss
-- [ ] Testar dismiss manual
-- [ ] Testar múltiplos toasts
-- [ ] Testar acessibilidade
+- [x] Testar dismiss manual
+- [x] Testar múltiplos toasts
+- [x] Testar acessibilidade
 
 ### 11. Testes dos Componentes do Design System - Form
-- [ ] Criar arquivo `src/design-system/components/Form/Form.test.tsx`
-- [ ] Testar renderização
+- [x] Criar arquivo `src/design-system/components/Form/Form.test.tsx`
+- [x] Testar renderização
 - [ ] Testar validação
-- [ ] Testar submit
+- [x] Testar submit
 - [ ] Testar error states
-- [ ] Testar acessibilidade
+- [x] Testar acessibilidade
 
 ### 12. Padrões de Teste
-- [ ] Usar AAA pattern (Arrange, Act, Assert)
-- [ ] Usar queries acessíveis (getByRole, getByLabelText)
-- [ ] Evitar queries frágeis (getByTestId quando possível)
-- [ ] Testar comportamento, não implementação
-- [ ] Usar userEvent para interações do usuário
-- [ ] Limpar após cada teste
+- [x] Usar AAA pattern (Arrange, Act, Assert)
+- [x] Usar queries acessíveis (getByRole, getByLabelText)
+- [x] Evitar queries frágeis (getByTestId quando possível)
+- [x] Testar comportamento, não implementação
+- [x] Usar userEvent para interações do usuário
+- [x] Limpar após cada teste
 
 ### 13. Helpers de Teste para Componentes
 - [ ] Criar helper `renderComponent` se necessário
@@ -173,10 +173,10 @@ Escrever testes unitários completos para todos os componentes do projeto, garan
 - [ ] Documentar como testar componentes específicos
 
 ### 19. Validação
-- [ ] Executar todos os testes e garantir que passam
+- [x] Executar todos os testes e garantir que passam
 - [ ] Verificar relatório de cobertura
 - [ ] Validar que testes são rápidos (< 5s para suite completa)
-- [ ] Validar que testes são determinísticos (não flaky)
+- [x] Validar que testes são determinísticos (não flaky)
 
 ### 20. Manutenção
 - [ ] Estabelecer processo de atualização de testes quando componentes mudam

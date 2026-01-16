@@ -60,3 +60,28 @@ Object.defineProperty(window, 'matchMedia', {
   }),
 });
 
+// swiper mock
+jest.mock('swiper/react', () => ({
+  Swiper: ({ children }: { children: ReactNode }) =>
+    React.createElement('div', { 'data-testid': 'swiper' }, children),
+  SwiperSlide: ({ children }: { children: ReactNode }) =>
+    React.createElement('div', { 'data-testid': 'swiper-slide' }, children),
+}));
+
+jest.mock('swiper/modules', () => ({
+  Navigation: {},
+  Pagination: {},
+  Autoplay: {},
+}));
+
+jest.mock('swiper/css', () => ({}));
+jest.mock('swiper/css/pagination', () => ({}));
+jest.mock('swiper/css/navigation', () => ({}));
+
+// next/script mock
+jest.mock('next/script', () => ({
+  __esModule: true,
+  default: ({ children, ...props }: { children?: ReactNode; [key: string]: unknown }) =>
+    React.createElement('script', props as Record<string, unknown>, children),
+}));
+
