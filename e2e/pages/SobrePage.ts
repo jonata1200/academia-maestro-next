@@ -1,4 +1,4 @@
-import { Page } from '@playwright/test';
+import { Page, Locator } from '@playwright/test';
 import { BasePage } from './BasePage';
 
 /**
@@ -6,9 +6,13 @@ import { BasePage } from './BasePage';
  */
 export class SobrePage extends BasePage {
   readonly pageTitle: string = 'Sobre Nós';
+  readonly mainContent: Locator;
+  readonly headings: Locator;
 
   constructor(page: Page) {
     super(page);
+    this.mainContent = page.locator('main, [role="main"], section').first();
+    this.headings = page.locator('h1, h2, h3');
   }
 
   /**
@@ -25,5 +29,12 @@ export class SobrePage extends BasePage {
   async isLoaded(): Promise<boolean> {
     const title = await this.getTitle();
     return title.includes(this.pageTitle) || await this.page.locator('h1, h2').filter({ hasText: /sobre/i }).isVisible();
+  }
+
+  /**
+   * Obtém o número de headings na página
+   */
+  async getHeadingsCount(): Promise<number> {
+    return await this.headings.count();
   }
 }

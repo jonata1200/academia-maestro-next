@@ -7,10 +7,12 @@ import { BasePage } from './BasePage';
 export class InstrumentosPage extends BasePage {
   readonly pageTitle: string = 'Instrumentos';
   readonly instrumentCards: Locator;
+  readonly instrumentImages: Locator;
 
   constructor(page: Page) {
     super(page);
-    this.instrumentCards = page.locator('[class*="instrument"], [class*="card"]');
+    this.instrumentCards = page.locator('[class*="instrument"], [class*="card"], a[href="/instrumentos"]');
+    this.instrumentImages = page.locator('img[alt*="violão"], img[alt*="guitarra"], img[alt*="bateria"], img[alt*="teclado"], img[alt*="violino"]');
   }
 
   /**
@@ -34,5 +36,13 @@ export class InstrumentosPage extends BasePage {
    */
   async getInstrumentCount(): Promise<number> {
     return await this.instrumentCards.count();
+  }
+
+  /**
+   * Verifica se há imagens de instrumentos
+   */
+  async hasInstrumentImages(): Promise<boolean> {
+    const count = await this.instrumentImages.count();
+    return count > 0;
   }
 }

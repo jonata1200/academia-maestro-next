@@ -1,4 +1,4 @@
-import { Page } from '@playwright/test';
+import { Page, Locator } from '@playwright/test';
 import { BasePage } from './BasePage';
 
 /**
@@ -6,9 +6,11 @@ import { BasePage } from './BasePage';
  */
 export class ManutencaoPage extends BasePage {
   readonly pageTitle: string = 'Manutenção';
+  readonly mainContent: Locator;
 
   constructor(page: Page) {
     super(page);
+    this.mainContent = page.locator('main, [role="main"], section').first();
   }
 
   /**

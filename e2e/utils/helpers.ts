@@ -60,6 +60,67 @@ export async function checkBasicA11y(page: Page) {
 }
 
 /**
+ * Helper para verificar meta tags
+ */
+export async function checkMetaTag(page: Page, name: string, expectedContent?: string) {
+  const meta = page.locator(`meta[name="${name}"]`);
+  const exists = await meta.count() > 0;
+  expect(exists).toBe(true);
+  
+  if (expectedContent) {
+    const content = await meta.getAttribute('content');
+    expect(content).toContain(expectedContent);
+  }
+}
+
+/**
+ * Helper para verificar links
+ */
+export async function checkLink(page: Page, selector: string, expectedHref?: string, shouldOpenInNewTab = false) {
+  const link = page.locator(selector);
+  await expect(link).toBeVisible();
+  
+  if (expectedHref) {
+    const href = await link.getAttribute('href');
+    expect(href).toContain(expectedHref);
+  }
+  
+  if (shouldOpenInNewTab) {
+    const target = await link.getAttribute('target');
+    expect(target).toBe('_blank');
+  }
+}
+
+/**
+ * Helper para verificar imagens
+ */
+export async function checkImage(page: Page, selector: string, shouldHaveAlt = true) {
+  const image = page.locator(selector);
+  await expect(image).toBeVisible();
+  
+  if (shouldHaveAlt) {
+    const alt = await image.getAttribute('alt');
+    expect(alt).toBeTruthy();
+    expect(alt!.length).toBeGreaterThan(0);
+  }
+}
+
+/**
+ * Helper para verificar heading hierarchy
+ */
+export async function checkHeadingHierarchy(page: Page) {
+  // Deve ter exatamente um h1
+  const h1 = page.locator('h1');
+  const h1Count = await h1.count();
+  expect(h1Count).toBe(1);
+  
+  // Deve ter pelo menos um h2
+  const h2 = page.locator('h2');
+  const h2Count = await h2.count();
+  expect(h2Count).toBeGreaterThan(0);
+}
+
+/**
  * Helper para verificar links externos
  */
 export async function checkExternalLink(page: Page, linkSelector: string) {
