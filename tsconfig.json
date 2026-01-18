@@ -42,13 +42,11 @@
   ],
   "exclude": [
     "node_modules",
-    "src/__tests__/**",
     "**/*.test.ts",
     "**/*.test.tsx",
     "**/*.spec.ts",
     "**/*.spec.tsx",
     "jest.config.ts",
-    "jest.setup.ts",
-    "test/e2e/**"
+    "jest.setup.ts"
   ]
 }

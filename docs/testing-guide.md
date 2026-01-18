@@ -11,11 +11,11 @@
 - `npm run test:coverage`
 
 ## Estrutura
-- `src/__tests__/components/`: testes de componentes
-- `src/__tests__/hooks/`: testes de hooks
-- `src/__tests__/utils/`: testes de utilitários
-- `src/__tests__/helpers/`: helpers (ex.: `renderWithProviders`)
-- `src/__tests__/mocks/`: mocks compartilhados
+- `test/unit/components/`: testes de componentes
+- `test/unit/hooks/`: testes de hooks
+- `test/unit/utils/`: testes de utilitários
+- `test/unit/helpers/`: helpers (ex.: `renderWithProviders`)
+- `test/unit/mocks/`: mocks compartilhados
 
 ## Convenções
 - Nome de arquivo: `*.test.ts` / `*.test.tsx`

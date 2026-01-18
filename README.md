@@ -394,15 +394,17 @@ academia-maestro-next/
 │   │   │   └── cn.ts               # Helper para classes CSS
 │   │   └── README.md                # Documentação do Design System
 │   │
-│   ├── __tests__/                   # Testes unitários
-│   │   ├── components/             # Testes de componentes
-│   │   ├── hooks/                   # Testes de hooks
-│   │   ├── utils/                   # Testes de utilitários
-│   │   └── helpers/                 # Helpers de teste
-│   │
 │   └── stories/                      # Stories do Storybook
 │       ├── *.stories.tsx            # Stories dos componentes
 │       └── GettingStarted.mdx       # Documentação inicial
+│
+├── test/                             # Testes unitários
+│   └── unit/                         # Testes unitários organizados
+│       ├── components/               # Testes de componentes
+│       ├── hooks/                    # Testes de hooks
+│       ├── utils/                    # Testes de utilitários
+│       ├── helpers/                  # Helpers de teste
+│       └── mocks/                    # Mocks e fixtures
 │
 ├── e2e/                              # Testes E2E (Playwright)
 │   ├── specs/                       # Especificações de teste
@@ -451,7 +453,7 @@ academia-maestro-next/
 
 - **`src/design-system/`**: Design System completo com componentes reutilizáveis, tokens de design, hooks customizados e utilitários. Todos os componentes são documentados no Storybook e seguem padrões de acessibilidade.
 
-- **`src/__tests__/`**: Testes unitários organizados por tipo (components, hooks, utils). Utiliza Jest e React Testing Library para garantir qualidade e cobertura de código.
+- **`test/unit/`**: Testes unitários organizados por tipo (components, hooks, utils, helpers, mocks). Utiliza Jest e React Testing Library para garantir qualidade e cobertura de código.
 
 - **`e2e/`**: Testes end-to-end com Playwright. Inclui page objects, fixtures e utilitários para testes de integração que validam fluxos completos do usuário.
 
