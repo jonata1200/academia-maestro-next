@@ -3,7 +3,7 @@ import { Input } from '../design-system/components/Input';
 import { Label } from '../design-system/components/Label';
 
 const meta = {
-  title: 'Design System/Input',
+  title: 'Design System/Componentes/Formulários/Input',
   component: Input,
   args: {
     id: 'nome',

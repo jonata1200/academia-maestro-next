@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/nextjs-vite';
 import { Label } from '../design-system/components/Label';
 
 const meta = {
-  title: 'Design System/Label',
+  title: 'Design System/Componentes/Formulários/Label',
   component: Label,
   args: {
     children: 'Nome',

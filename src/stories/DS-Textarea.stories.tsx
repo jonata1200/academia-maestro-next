@@ -4,7 +4,7 @@ import { Textarea } from '../design-system/components/Textarea';
 import { Label } from '../design-system/components/Label';
 
 const meta = {
-  title: 'Design System/Textarea',
+  title: 'Design System/Componentes/Formulários/Textarea',
   component: Textarea,
   args: {
     id: 'mensagem',

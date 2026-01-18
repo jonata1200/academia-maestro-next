@@ -3,7 +3,7 @@ import { Grid } from '../design-system/components/Grid';
 import { Badge } from '../design-system/components/Badge';
 
 const meta = {
-  title: 'Design System/Grid',
+  title: 'Design System/Componentes/Layout/Grid',
   component: Grid,
   args: {
     columns: 3,

@@ -55,7 +55,7 @@ function WrappedToastDemo() {
 }
 
 const meta = {
-  title: 'Design System/Toast',
+  title: 'Design System/Componentes/Feedback/Toast',
   component: WrappedToastDemo,
 } satisfies Meta<typeof WrappedToastDemo>;
 

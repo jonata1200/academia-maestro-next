@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/nextjs-vite';
 import { Button } from '../design-system/components/Button';
 
 const meta = {
-  title: 'Design System/Button',
+  title: 'Design System/Componentes/Formulários/Button',
   component: Button,
   args: {
     children: 'Botão',

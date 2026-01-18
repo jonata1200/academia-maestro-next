@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/nextjs-vite';
 import { Spinner } from '../design-system/components/Spinner';
 
 const meta = {
-  title: 'Design System/Spinner',
+  title: 'Design System/Componentes/Feedback/Spinner',
   component: Spinner,
   args: {
     size: 'md',

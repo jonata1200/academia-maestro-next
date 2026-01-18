@@ -3,7 +3,7 @@ import { Select } from '../design-system/components/Select';
 import { Label } from '../design-system/components/Label';
 
 const meta = {
-  title: 'Design System/Select',
+  title: 'Design System/Componentes/Formulários/Select',
   component: Select,
   args: {
     id: 'instrumento',

@@ -4,7 +4,7 @@ import { Section } from '../design-system/components/Section';
 import { Text } from '../design-system/components/Text';
 
 const meta = {
-  title: 'Design System/Section',
+  title: 'Design System/Componentes/Layout/Section',
   component: Section,
   args: {
     title: 'Título da seção',

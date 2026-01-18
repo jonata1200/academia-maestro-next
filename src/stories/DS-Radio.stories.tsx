@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { RadioGroup } from '../design-system/components/Radio';
 
 const meta = {
-  title: 'Design System/Radio',
+  title: 'Design System/Componentes/Formulários/Radio',
   component: RadioGroup,
   args: {
     name: 'unidade',

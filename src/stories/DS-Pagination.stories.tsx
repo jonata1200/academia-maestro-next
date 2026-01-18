@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Pagination } from '../design-system/components/Pagination';
 
 const meta = {
-  title: 'Design System/Pagination',
+  title: 'Design System/Componentes/Navegação/Pagination',
   component: Pagination,
   args: {
     page: 1,

@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/nextjs-vite';
 import { Nav } from '../design-system/components/Nav';
 
 const meta = {
-  title: 'Design System/Nav',
+  title: 'Design System/Componentes/Navegação/Nav',
   component: Nav,
   args: {
     orientation: 'horizontal',

@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/nextjs-vite';
 import { Alert } from '../design-system/components/Alert';
 
 const meta = {
-  title: 'Design System/Alert',
+  title: 'Design System/Componentes/Feedback/Alert',
   component: Alert,
   args: {
     variant: 'info',

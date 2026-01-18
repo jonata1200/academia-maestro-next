@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/nextjs-vite';
 import { Container } from '../design-system/components/Container';
 
 const meta = {
-  title: 'Design System/Container',
+  title: 'Design System/Componentes/Layout/Container',
   component: Container,
   args: {
     padded: true,

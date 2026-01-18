@@ -30,7 +30,7 @@ function ModalDemo() {
 }
 
 const meta = {
-  title: 'Design System/Modal',
+  title: 'Design System/Componentes/Feedback/Modal',
   component: ModalDemo,
 } satisfies Meta<typeof ModalDemo>;
 

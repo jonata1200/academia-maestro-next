@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/nextjs-vite';
 import { Breadcrumb } from '../design-system/components/Breadcrumb';
 
 const meta = {
-  title: 'Design System/Breadcrumb',
+  title: 'Design System/Componentes/Navegação/Breadcrumb',
   component: Breadcrumb,
   args: {
     items: [

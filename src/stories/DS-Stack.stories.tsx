@@ -3,7 +3,7 @@ import { Stack } from '../design-system/components/Stack';
 import { Badge } from '../design-system/components/Badge';
 
 const meta = {
-  title: 'Design System/Stack',
+  title: 'Design System/Componentes/Layout/Stack',
   component: Stack,
   args: {
     direction: 'row',

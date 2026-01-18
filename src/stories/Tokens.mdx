@@ -1,36 +1,120 @@
 import { Meta } from '@storybook/addon-docs/blocks';
 import { colors, typography, spacing } from '../design-system/tokens';
 
-<Meta title="Design System/Tokens" />
+<Meta title="Design System/Introdução/Tokens" />
 
 # Tokens
 
-Esta página documenta os **tokens** do Design System. Eles são a fonte de verdade para cores, tipografia e espaçamento.
+Os **tokens** são a base do Design System da Academia Maestro. Eles são valores de design reutilizáveis que garantem consistência visual em toda a aplicação.
 
-## Cores (resumo)
+## O que são Tokens?
 
-- **Primary 500**: `{colors.brand.primary[500]}`
-- **Secondary 500**: `{colors.brand.secondary[500]}`
-- **Text**: `{colors.neutral[800]}`
-- **Text light**: `{colors.neutral[700]}`
-- **Light gray**: `{colors.neutral[50]}`
-- **Dark blue**: `{colors.neutral[950]}`
+Tokens são variáveis que representam decisões de design fundamentais:
+- **Cores**: Paleta de cores da marca e semânticas
+- **Tipografia**: Famílias de fonte, tamanhos e pesos
+- **Espaçamento**: Escala consistente de espaçamentos
+- **Animações**: Durações e curvas de animação
+- **Breakpoints**: Pontos de quebra responsivos
+- **Sombras**: Elevação e profundidade
+- **Bordas**: Raio de borda e estilos
 
-## Tipografia (font-family)
+## Cores
 
-Fonte padrão: `{typography.fontFamily.sans.join(', ')}`
+### Cores da Marca
 
-## Espaçamento (escala)
+| Token | Valor | Uso |
+|-------|-------|-----|
+| Primary 500 | `{colors.brand.primary[500]}` | Cor principal da marca |
+| Primary 600 | `{colors.brand.primary[600]}` | Hover do primary |
+| Primary 700 | `{colors.brand.primary[700]}` | Active do primary |
+| Secondary 500 | `{colors.brand.secondary[500]}` | Cor secundária |
 
-| Token | Valor |
-|------:|:------|
-| 0 | {spacing[0]} |
-| 1 | {spacing[1]} |
-| 2 | {spacing[2]} |
-| 3 | {spacing[3]} |
-| 4 | {spacing[4]} |
-| 6 | {spacing[6]} |
-| 8 | {spacing[8]} |
-| 12 | {spacing[12]} |
-| 16 | {spacing[16]} |
+### Cores Neutras
+
+| Token | Valor | Uso |
+|-------|-------|-----|
+| Neutral 50 | `{colors.neutral[50]}` | Fundo claro |
+| Neutral 700 | `{colors.neutral[700]}` | Texto secundário |
+| Neutral 800 | `{colors.neutral[800]}` | Texto principal |
+| Neutral 950 | `{colors.neutral[950]}` | Fundo escuro |
+
+### Cores Semânticas
+
+| Token | Valor | Uso |
+|-------|-------|-----|
+| Success | `{colors.semantic.success}` | Mensagens de sucesso |
+| Warning | `{colors.semantic.warning}` | Avisos |
+| Error | `{colors.semantic.error}` | Erros |
+| Info | `{colors.semantic.info}` | Informações |
+
+## Tipografia
+
+### Família de Fonte
+
+Fonte padrão: **{typography.fontFamily.sans.join(', ')}**
+
+### Tamanhos de Fonte
+
+O sistema utiliza uma escala tipográfica que varia de `xs` (0.75rem) até `5xl` (3rem).
+
+Exemplo de uso:
+```typescript
+import { typography } from '@design-system/tokens';
+
+// Aplicar tamanho base
+className={typography.fontSize.base[0]}
+```
+
+### Pesos de Fonte
+
+- Light (300)
+- Regular (400)
+- Medium (500)
+- Semibold (600)
+- Bold (700)
+
+## Espaçamento
+
+O sistema utiliza uma escala de espaçamento baseada em rem (root em), garantindo consistência e responsividade.
+
+| Token | Valor | Equivalente | Uso comum |
+|------:|:------|:------------|:----------|
+| 0 | {spacing[0]} | 0px | Sem espaçamento |
+| 1 | {spacing[1]} | 4px | Espaçamento mínimo |
+| 2 | {spacing[2]} | 8px | Espaçamento pequeno |
+| 3 | {spacing[3]} | 12px | Espaçamento médio-pequeno |
+| 4 | {spacing[4]} | 16px | Espaçamento padrão |
+| 6 | {spacing[6]} | 24px | Espaçamento médio |
+| 8 | {spacing[8]} | 32px | Espaçamento grande |
+| 12 | {spacing[12]} | 48px | Espaçamento extra grande |
+| 16 | {spacing[16]} | 64px | Espaçamento máximo |
+
+## Como usar Tokens
+
+### Importar tokens
+
+```typescript
+import { colors, typography, spacing } from '../design-system/tokens';
+
+// Usar cores
+<div style={{ backgroundColor: colors.brand.primary[500] }}>
+
+// Usar espaçamento
+<div style={{ padding: spacing[4] }}>
+
+// Usar tipografia
+<p style={{ fontFamily: typography.fontFamily.sans.join(', ') }}>
+```
+
+### Com Tailwind CSS
+
+Os tokens também são disponibilizados via Tailwind CSS através das configurações do projeto, permitindo uso como classes utilitárias.
+
+## Boas Práticas
+
+- ✅ **Use sempre tokens** em vez de valores hardcoded
+- ✅ **Mantenha consistência** usando a mesma escala de espaçamento
+- ✅ **Respeite a paleta** de cores definida
+- ❌ **Não crie** novos valores de espaçamento fora da escala
+- ❌ **Não use** cores que não estejam nos tokens
 

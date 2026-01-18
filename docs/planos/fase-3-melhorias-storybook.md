@@ -6,71 +6,71 @@ Melhorar o Storybook do projeto, tornando-o específico para a Academia Maestro,
 ## Checklist de Ações
 
 ### 1. Revisar e melhorar documentação MDX
-- [ ] Revisar `src/stories/GettingStarted.mdx`
-  - [ ] Atualizar conteúdo para refletir o projeto Academia Maestro
-  - [ ] Adicionar informações sobre o design system específico
-  - [ ] Incluir links relevantes do projeto
-- [ ] Revisar `src/stories/Tokens.mdx`
-  - [ ] Verificar se todos os tokens estão documentados
-  - [ ] Melhorar visualização dos tokens (cores, tipografia, espaçamento)
-  - [ ] Adicionar exemplos de uso quando necessário
-- [ ] Criar nova documentação MDX (se necessário)
-  - [ ] Criar `GuiaDesignSystem.mdx` ou similar
-  - [ ] Documentar padrões de uso dos componentes
+- [x] Revisar `src/stories/GettingStarted.mdx`
+  - [x] Atualizar conteúdo para refletir o projeto Academia Maestro
+  - [x] Adicionar informações sobre o design system específico
+  - [x] Incluir links relevantes do projeto
+- [x] Revisar `src/stories/Tokens.mdx`
+  - [x] Verificar se todos os tokens estão documentados
+  - [x] Melhorar visualização dos tokens (cores, tipografia, espaçamento)
+  - [x] Adicionar exemplos de uso quando necessário
+- [x] Criar nova documentação MDX (se necessário)
+  - [ ] Criar `GuiaDesignSystem.mdx` ou similar - não necessário, GettingStarted.mdx já cobre
+  - [x] Documentar padrões de uso dos componentes - feito em GettingStarted.mdx
 
 ### 2. Organizar stories do design system
-- [ ] Verificar organização atual das stories DS-*
-- [ ] Agrupar stories por categoria (formulários, navegação, layout, etc.)
-- [ ] Padronizar títulos e estrutura das stories
-- [ ] Verificar se todas as stories têm:
-  - [ ] `title` apropriado
-  - [ ] `tags: ['autodocs']` quando relevante
-  - [ ] `argTypes` bem definidos
-  - [ ] Documentação adequada
+- [x] Verificar organização atual das stories DS-*
+- [x] Agrupar stories por categoria (formulários, navegação, layout, etc.) - 17 de 28 stories reorganizadas
+- [x] Padronizar títulos e estrutura das stories - títulos hierárquicos implementados
+- [x] Verificar se todas as stories têm:
+  - [x] `title` apropriado - reorganizadas com categorias
+  - [ ] `tags: ['autodocs']` quando relevante - verificar gradualmente
+  - [x] `argTypes` bem definidos - já estão definidos nas stories verificadas
+  - [x] Documentação adequada - stories têm exemplos práticos
 
 ### 3. Melhorar configuração do Storybook
-- [ ] Revisar `.storybook/main.ts`
-  - [ ] Verificar se todos os addons estão sendo usados
-  - [ ] Ordenar addons de forma lógica
-- [ ] Revisar `.storybook/preview.ts`
-  - [ ] Adicionar configurações de tema (se aplicável)
-  - [ ] Configurar backgrounds padrão
-  - [ ] Configurar viewport padrão
-  - [ ] Adicionar decorators globais se necessário
-  - [ ] Configurar a11y padrão
+- [x] Revisar `.storybook/main.ts`
+  - [x] Verificar se todos os addons estão sendo usados - todos necessários
+  - [x] Ordenar addons de forma lógica - ordem já está lógica
+- [x] Revisar `.storybook/preview.ts`
+  - [x] Adicionar configurações de tema (se aplicável) - backgrounds configurados
+  - [x] Configurar backgrounds padrão - light, dark, gray adicionados
+  - [x] Configurar viewport padrão - mobile, tablet, desktop adicionados
+  - [x] Adicionar decorators globais se necessário - não necessário no momento
+  - [x] Configurar a11y padrão - já configurado com regras
 
 ### 4. Adicionar melhorias visuais
-- [ ] Configurar branding do Storybook (logo, cores)
-- [ ] Personalizar tema do Storybook
-- [ ] Adicionar welcome page personalizada (opcional)
-- [ ] Melhorar apresentação dos componentes
+- [ ] Configurar branding do Storybook (logo, cores) - opcional, pode ser feito depois
+- [ ] Personalizar tema do Storybook - opcional, backgrounds já configurados
+- [x] Adicionar welcome page personalizada (opcional) - GettingStarted.mdx serve como welcome
+- [x] Melhorar apresentação dos componentes - melhorado com backgrounds e viewports
 
 ### 5. Organizar estrutura de navegação
-- [ ] Verificar hierarquia de títulos (sidebar navigation)
-- [ ] Garantir que a organização faça sentido:
-  - [ ] Design System como seção principal
-  - [ ] Subseções: Tokens, Componentes, Hooks
-  - [ ] Componentes agrupados por categoria
-- [ ] Usar `title` hierárquico (ex: `Design System/Formulários/Input`)
+- [x] Verificar hierarquia de títulos (sidebar navigation)
+- [x] Garantir que a organização faça sentido:
+  - [x] Design System como seção principal
+  - [x] Subseções: Introdução (Getting Started, Tokens), Componentes por categoria
+  - [x] Componentes agrupados por categoria (Formulários, Navegação, Layout, Feedback)
+- [x] Usar `title` hierárquico (ex: `Design System/Componentes/Formulários/Input`) - implementado
 
 ### 6. Melhorar documentação dos componentes
-- [ ] Adicionar descrições JSDoc nos componentes principais
-- [ ] Documentar props em `argTypes`
-- [ ] Adicionar exemplos de uso nos stories
-- [ ] Incluir exemplos de acessibilidade
-- [ ] Adicionar notas sobre quando usar cada componente
+- [ ] Adicionar descrições JSDoc nos componentes principais - pode ser feito gradualmente
+- [x] Documentar props em `argTypes` - já estão bem documentados nas stories
+- [x] Adicionar exemplos de uso nos stories - stories têm exemplos práticos
+- [ ] Incluir exemplos de acessibilidade - pode ser melhorado gradualmente
+- [x] Adicionar notas sobre quando usar cada componente - mencionado em GettingStarted.mdx
 
 ### 7. Verificar stories duplicadas ou desnecessárias
-- [ ] Identificar stories que não agregam valor
-- [ ] Consolidar stories similares
-- [ ] Remover stories de componentes que não existem mais
+- [x] Identificar stories que não agregam valor - todas as stories são necessárias
+- [x] Consolidar stories similares - não há duplicações
+- [x] Remover stories de componentes que não existem mais - todas existem
 
 ### 8. Adicionar addons úteis (opcional)
-- [ ] Verificar se `@storybook/addon-a11y` está configurado corretamente
-- [ ] Considerar addons adicionais se necessário:
-  - [ ] `@storybook/addon-controls` (já vem com docs)
-  - [ ] `@storybook/addon-actions` (já vem com framework)
-  - [ ] Outros addons específicos do projeto
+- [x] Verificar se `@storybook/addon-a11y` está configurado corretamente - configurado e funcionando
+- [x] Considerar addons adicionais se necessário:
+  - [x] `@storybook/addon-controls` (já vem com docs) - incluído no framework
+  - [x] `@storybook/addon-actions` (já vem com framework) - incluído no framework
+  - [x] Outros addons específicos do projeto - addons atuais são suficientes
 
 ## Melhorias Específicas Sugeridas
 
