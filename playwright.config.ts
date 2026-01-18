@@ -6,7 +6,7 @@ import { defineConfig, devices } from '@playwright/test';
  */
 export default defineConfig({
   // Diretório onde os testes estão localizados
-  testDir: './e2e/specs',
+  testDir: './test/e2e/specs',
   
   // Timeout para cada teste
   timeout: 30 * 1000,
