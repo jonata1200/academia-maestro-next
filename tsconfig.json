@@ -49,6 +49,6 @@
     "**/*.spec.tsx",
     "jest.config.ts",
     "jest.setup.ts",
-    "e2e/**"
+    "test/e2e/**"
   ]
 }
