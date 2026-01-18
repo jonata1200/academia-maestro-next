@@ -6,48 +6,48 @@ Mover todos os arquivos de teste de `src/__tests__/` para uma pasta `test/` na r
 ## Checklist de Ações
 
 ### 1. Criar estrutura de pastas `test/`
-- [ ] Criar pasta `test/` na raiz do projeto
-- [ ] Criar `test/unit/` para testes unitários
-- [ ] Criar `test/unit/components/` para testes de componentes
-- [ ] Criar `test/unit/hooks/` para testes de hooks
-- [ ] Criar `test/unit/utils/` para testes de utilitários
-- [ ] Criar `test/unit/helpers/` para helpers de teste
-- [ ] Criar `test/unit/mocks/` para mocks e fixtures
-- [ ] Criar `test/e2e/` (se necessário separar do e2e existente, ou manter como está)
+- [x] Criar pasta `test/` na raiz do projeto
+- [x] Criar `test/unit/` para testes unitários
+- [x] Criar `test/unit/components/` para testes de componentes
+- [x] Criar `test/unit/hooks/` para testes de hooks
+- [x] Criar `test/unit/utils/` para testes de utilitários
+- [x] Criar `test/unit/helpers/` para helpers de teste
+- [x] Criar `test/unit/mocks/` para mocks e fixtures
+- [x] Criar `test/e2e/` (se necessário separar do e2e existente, ou manter como está) - e2e já existe na raiz, mantido
 
 ### 2. Mover arquivos de teste
-- [ ] Mover `src/__tests__/components/*` → `test/unit/components/`
-- [ ] Mover `src/__tests__/hooks/*` → `test/unit/hooks/`
-- [ ] Mover `src/__tests__/utils/*` → `test/unit/utils/`
-- [ ] Mover `src/__tests__/helpers/*` → `test/unit/helpers/`
-- [ ] Mover `src/__tests__/mocks/*` → `test/unit/mocks/`
+- [x] Mover `src/__tests__/components/*` → `test/unit/components/`
+- [x] Mover `src/__tests__/hooks/*` → `test/unit/hooks/`
+- [x] Mover `src/__tests__/utils/*` → `test/unit/utils/`
+- [x] Mover `src/__tests__/helpers/*` → `test/unit/helpers/`
+- [x] Mover `src/__tests__/mocks/*` → `test/unit/mocks/`
 
 ### 3. Atualizar imports nos arquivos de teste
-- [ ] Atualizar imports relativos nos testes de componentes
-- [ ] Atualizar imports relativos nos testes de hooks
-- [ ] Atualizar imports relativos nos testes de utils
-- [ ] Atualizar imports nos arquivos de helpers
-- [ ] Atualizar imports nos arquivos de mocks
+- [x] Atualizar imports relativos nos testes de componentes - não necessário, todos usam aliases TypeScript
+- [x] Atualizar imports relativos nos testes de hooks - não necessário, todos usam aliases TypeScript
+- [x] Atualizar imports relativos nos testes de utils - não necessário, todos usam aliases TypeScript
+- [x] Atualizar imports nos arquivos de helpers - não necessário, todos usam aliases TypeScript
+- [x] Atualizar imports nos arquivos de mocks - não necessário, todos usam aliases TypeScript
 
 ### 4. Atualizar configurações
-- [ ] Atualizar `jest.config.ts` para apontar para nova estrutura
-  - [ ] Ajustar `roots` ou `testMatch` para incluir `test/`
-  - [ ] Ajustar `moduleNameMapper` se necessário para paths
-- [ ] Atualizar `tsconfig.test.json` se houver paths customizados
-- [ ] Verificar e atualizar `vitest.config.ts` se usar testes do Storybook
-- [ ] Verificar scripts no `package.json` (podem não precisar mudanças)
+- [x] Atualizar `jest.config.ts` para apontar para nova estrutura
+  - [x] Ajustar `roots` ou `testMatch` para incluir `test/` - testMatch já funciona com test/
+  - [x] Ajustar `moduleNameMapper` se necessário para paths - atualizado caminho do fileMock.js
+- [x] Atualizar `tsconfig.test.json` se houver paths customizados - atualizado include para test/
+- [x] Verificar e atualizar `vitest.config.ts` se usar testes do Storybook - não precisa mudanças
+- [x] Verificar scripts no `package.json` (podem não precisar mudanças) - scripts funcionam corretamente
 
 ### 5. Atualizar arquivos que referenciam testes
-- [ ] Verificar `.gitignore` (geralmente não precisa mudar)
-- [ ] Atualizar documentação (README.md, docs/testing-guide.md)
-- [ ] Verificar se há referências em outros arquivos de configuração
+- [x] Verificar `.gitignore` (geralmente não precisa mudar) - não precisa mudanças
+- [ ] Atualizar documentação (README.md, docs/testing-guide.md) - será feito na Fase 4
+- [x] Verificar se há referências em outros arquivos de configuração - sem outras referências
 
 ### 6. Limpeza final
-- [ ] Remover pasta `src/__tests__/` vazia
-- [ ] Executar testes para verificar se tudo funciona
-  - [ ] `npm test` deve executar todos os testes
-  - [ ] Verificar se cobertura ainda funciona
-  - [ ] Verificar se testes individuais ainda funcionam
+- [x] Remover pasta `src/__tests__/` vazia
+- [x] Executar testes para verificar se tudo funciona
+  - [x] `npm test` deve executar todos os testes - testado com sucesso
+  - [x] Verificar se cobertura ainda funciona - configuração mantida
+  - [x] Verificar se testes individuais ainda funcionam - testado Button.test.tsx com sucesso
 
 ## Estrutura Final Esperada
 

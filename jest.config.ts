@@ -11,7 +11,7 @@ const customJestConfig = {
     '^@/(.*)$': '<rootDir>/src/$1',
     '^@design-system/(.*)$': '<rootDir>/src/design-system/$1',
     '\\.(css|less|sass|scss)$': 'identity-obj-proxy',
-    '\\.(png|jpg|jpeg|gif|webp|svg|avif)$': '<rootDir>/src/__tests__/mocks/fileMock.js',
+    '\\.(png|jpg|jpeg|gif|webp|svg|avif)$': '<rootDir>/test/unit/mocks/fileMock.js',
   },
   testMatch: ['**/?(*.)+(test|spec).(ts|tsx)'],
   modulePathIgnorePatterns: ['<rootDir>/.next/'],
