@@ -6,7 +6,6 @@
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-3.4-38B2AC?style=flat-square&logo=tailwind-css)
 ![Jest](https://img.shields.io/badge/Jest-30.2-C21325?style=flat-square&logo=jest)
 ![Playwright](https://img.shields.io/badge/Playwright-1.57-45BA4B?style=flat-square&logo=playwright)
-![Storybook](https://img.shields.io/badge/Storybook-10.1-FF4785?style=flat-square&logo=storybook)
 ![License](https://img.shields.io/badge/license-Private-red?style=flat-square)
 
 ## 📋 Descrição do Projeto
@@ -27,7 +26,7 @@ O site apresenta informações sobre os cursos de instrumentos musicais, localiz
 - Interface moderna e intuitiva que transmite profissionalismo
 - Performance otimizada com Next.js 15 (SSR/SSG)
 - Totalmente responsivo para dispositivos móveis, tablets e desktops
-- **Design System completo** com componentes reutilizáveis e documentados no Storybook
+- **Design System completo** com componentes reutilizáveis
 - **Testes abrangentes**: unitários (Jest) e E2E (Playwright) garantindo qualidade
 - Integração com Google Analytics para análise de tráfego
 - Conformidade com LGPD através de banner de cookies e políticas de privacidade
@@ -86,7 +85,7 @@ O site apresenta informações sobre os cursos de instrumentos musicais, localiz
 - **Componentes Complexos**: Modal, Toast, Tooltip, Card, Accordion, Tabs, Form, Checkbox, Radio
 - **Componentes de Layout**: Container, Stack, Grid
 - **Sistema de Tokens**: Cores, tipografia, espaçamentos e animações padronizadas
-- **Documentação no Storybook**: Todos os componentes documentados com exemplos e variações
+- **Design System completo**: Componentes reutilizáveis e bem estruturados
 - **Acessibilidade**: Componentes seguem padrões WCAG 2.1 AA
 
 ### 🧩 Componentes Reutilizáveis
@@ -133,14 +132,9 @@ O site apresenta informações sobre os cursos de instrumentos musicais, localiz
 - **[Playwright 1.57.0](https://playwright.dev/)**: Framework para testes E2E e automação de navegadores
 - **[@testing-library/jest-dom](https://github.com/testing-library/jest-dom)**: Matchers customizados para DOM
 
-### Design System e Documentação
-- **[Storybook 10.1.11](https://storybook.js.org/)**: Ferramenta para documentação e desenvolvimento de componentes
-- **[@storybook/addon-a11y](https://storybook.js.org/addons/@storybook/addon-a11y)**: Addon para testes de acessibilidade no Storybook
-
 ### Ferramentas de Desenvolvimento
 - **[ESLint 9.x](https://eslint.org/)**: Linter para qualidade de código
 - **[Next.js ESLint Config](https://nextjs.org/docs/app/building-your-application/configuring/eslint)**: Configuração otimizada para Next.js
-- **[eslint-plugin-storybook](https://github.com/storybookjs/eslint-plugin-storybook)**: Regras ESLint para Storybook
 
 ### Deploy e Containerização
 - **Docker**: Dockerfile multi-stage para builds otimizados
@@ -270,20 +264,6 @@ npm run test:e2e:report
 npm run test:e2e:install
 ```
 
-### 9. Storybook
-
-Para visualizar e desenvolver componentes no Storybook:
-
-```bash
-# Iniciar Storybook em modo desenvolvimento
-npm run storybook
-
-# Build estático do Storybook
-npm run build-storybook
-```
-
-O Storybook estará disponível em **http://localhost:6006**
-
 ---
 
 ## 🐳 Executando com Docker
@@ -394,10 +374,6 @@ academia-maestro-next/
 │   │   │   └── cn.ts               # Helper para classes CSS
 │   │   └── README.md                # Documentação do Design System
 │   │
-│   └── stories/                      # Stories do Storybook
-│       ├── *.stories.tsx            # Stories dos componentes
-│       └── GettingStarted.mdx       # Documentação inicial
-│
 ├── test/                             # Testes unitários
 │   └── unit/                         # Testes unitários organizados
 │       ├── components/               # Testes de componentes
@@ -425,10 +401,6 @@ academia-maestro-next/
 │   ├── design-system/               # Documentação do Design System
 │   └── e2e-testing-guide.md         # Guia de testes E2E
 │
-├── .storybook/                       # Configuração do Storybook
-│   ├── main.ts
-│   └── preview.ts
-│
 ├── tailwind.config.ts                # Configuração do Tailwind CSS
 ├── postcss.config.js                # Configuração do PostCSS
 ├── jest.config.js                    # Configuração do Jest
@@ -451,7 +423,7 @@ academia-maestro-next/
 
 - **`src/components/`**: Componentes React reutilizáveis específicos da aplicação (Header, Footer, CookieBanner, etc.). Todos os componentes que usam hooks do React ou interatividade são marcados com `'use client'`.
 
-- **`src/design-system/`**: Design System completo com componentes reutilizáveis, tokens de design, hooks customizados e utilitários. Todos os componentes são documentados no Storybook e seguem padrões de acessibilidade.
+- **`src/design-system/`**: Design System completo com componentes reutilizáveis, tokens de design, hooks customizados e utilitários. Todos os componentes seguem padrões de acessibilidade.
 
 - **`test/unit/`**: Testes unitários organizados por tipo (components, hooks, utils, helpers, mocks). Utiliza Jest e React Testing Library para garantir qualidade e cobertura de código.
 
@@ -513,7 +485,7 @@ O projeto foi desenvolvido utilizando as mais modernas tecnologias e melhores pr
 - **Framework**: Next.js 15 com App Router para performance otimizada
 - **Interface**: React 19 com TypeScript para código robusto e tipado
 - **Estilização**: Tailwind CSS para design responsivo e moderno
-- **Design System**: Componentes padronizados e documentados no Storybook
+- **Design System**: Componentes padronizados e reutilizáveis
 - **Qualidade**: Testes unitários e E2E garantindo robustez e confiabilidade
 - **SEO**: Otimização completa para mecanismos de busca
 - **Performance**: SSR/SSG para carregamento rápido e melhor experiência do usuário
@@ -526,7 +498,7 @@ O projeto foi desenvolvido utilizando as mais modernas tecnologias e melhores pr
 - ✅ Site institucional completo e responsivo
 - ✅ 5 páginas principais (Home, Sobre, Instrumentos, Contato, Manutenção)
 - ✅ 3 páginas de políticas (Privacidade, Cookies, Termos de Uso)
-- ✅ **Design System completo** com componentes documentados no Storybook
+- ✅ **Design System completo** com componentes reutilizáveis
 - ✅ **Testes unitários** com alta cobertura (Jest + React Testing Library)
 - ✅ **Testes E2E** cobrindo fluxos críticos (Playwright)
 - ✅ Componentes reutilizáveis e modulares

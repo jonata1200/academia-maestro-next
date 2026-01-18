@@ -7,7 +7,7 @@ Este Design System define **tokens**, **componentes** e **padrões** para manter
 - **Consistência**: evitar valores “hardcoded”; usar tokens e componentes do DS.
 - **Acessibilidade**: focar em WCAG 2.1 AA (semântica, teclado, contraste, foco).
 - **Composição**: componentes pequenos e reutilizáveis, compondo UI maior.
-- **Manutenibilidade**: APIs simples, tipadas e com documentação no Storybook.
+- **Manutenibilidade**: APIs simples, tipadas e bem documentadas.
 
 ## Auditoria inicial (estado atual)
 
@@ -39,7 +39,7 @@ O projeto usa os breakpoints padrão do Tailwind (a menos que sejam customizados
 
 ## Contribuição (resumo)
 - Crie/ajuste tokens antes de adicionar novos valores visuais.
-- Todo componente novo deve ter documentação no Storybook.
+- Todo componente novo deve ser bem documentado e testado.
 - Preferir `className` + Tailwind/tokens e evitar CSS global.
 
 ## Versionamento (inicial)
