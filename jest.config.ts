@@ -14,7 +14,6 @@ const customJestConfig = {
     '\\.(png|jpg|jpeg|gif|webp|svg|avif)$': '<rootDir>/test/unit/mocks/fileMock.js',
   },
   testMatch: ['**/?(*.)+(test|spec).(ts|tsx)'],
-  testPathIgnorePatterns: ['<rootDir>/test/e2e/', '<rootDir>/e2e/'],
   modulePathIgnorePatterns: ['<rootDir>/.next/'],
   collectCoverageFrom: [
     'src/**/*.{ts,tsx}',

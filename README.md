@@ -5,7 +5,6 @@
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=flat-square&logo=typescript)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-3.4-38B2AC?style=flat-square&logo=tailwind-css)
 ![Jest](https://img.shields.io/badge/Jest-30.2-C21325?style=flat-square&logo=jest)
-![Playwright](https://img.shields.io/badge/Playwright-1.57-45BA4B?style=flat-square&logo=playwright)
 ![License](https://img.shields.io/badge/license-Private-red?style=flat-square)
 
 ## 📋 Descrição do Projeto
@@ -27,7 +26,7 @@ O site apresenta informações sobre os cursos de instrumentos musicais, localiz
 - Performance otimizada com Next.js 15 (SSR/SSG)
 - Totalmente responsivo para dispositivos móveis, tablets e desktops
 - **Design System completo** com componentes reutilizáveis
-- **Testes abrangentes**: unitários (Jest) e E2E (Playwright) garantindo qualidade
+- **Testes unitários** com Jest garantindo qualidade
 - Integração com Google Analytics para análise de tráfego
 - Conformidade com LGPD através de banner de cookies e políticas de privacidade
 
@@ -103,9 +102,6 @@ O site apresenta informações sobre os cursos de instrumentos musicais, localiz
 
 ### 🧪 Testes e Qualidade
 - **Testes Unitários**: Cobertura completa de componentes, hooks e utilitários com Jest
-- **Testes E2E**: Testes de integração com Playwright cobrindo fluxos críticos
-- **Testes de Acessibilidade**: Validação de navegação por teclado, ARIA e semântica
-- **Testes Cross-Browser**: Validação em Chromium, Firefox e WebKit
 - **CI/CD Ready**: Configuração preparada para integração contínua
 
 ---
@@ -129,7 +125,6 @@ O site apresenta informações sobre os cursos de instrumentos musicais, localiz
 ### Ferramentas de Testes
 - **[Jest 30.2.0](https://jestjs.io/)**: Framework de testes unitários
 - **[React Testing Library](https://testing-library.com/react)**: Utilitários para testar componentes React
-- **[Playwright 1.57.0](https://playwright.dev/)**: Framework para testes E2E e automação de navegadores
 - **[@testing-library/jest-dom](https://github.com/testing-library/jest-dom)**: Matchers customizados para DOM
 
 ### Ferramentas de Desenvolvimento
@@ -238,30 +233,6 @@ npm run test:coverage
 
 # Modo CI (sem watch, com saída simplificada)
 npm run test:ci
-```
-
-### 8. Testes E2E (Playwright)
-
-Para executar os testes de integração:
-
-```bash
-# Executar todos os testes E2E
-npm run test:e2e
-
-# Interface visual interativa
-npm run test:e2e:ui
-
-# Modo debug (abre Playwright Inspector)
-npm run test:e2e:debug
-
-# Modo headed (com navegador visível)
-npm run test:e2e:headed
-
-# Ver relatório HTML dos testes
-npm run test:e2e:report
-
-# Instalar navegadores do Playwright (primeira vez)
-npm run test:e2e:install
 ```
 
 ---
@@ -382,29 +353,14 @@ academia-maestro-next/
 │       ├── helpers/                  # Helpers de teste
 │       └── mocks/                    # Mocks e fixtures
 │
-├── e2e/                              # Testes E2E (Playwright)
-│   ├── specs/                       # Especificações de teste
-│   │   ├── navegacao-completa.spec.ts
-│   │   ├── header-interacoes.spec.ts
-│   │   ├── acessibilidade-interacoes.spec.ts
-│   │   └── ...                     # Outros testes
-│   ├── pages/                       # Page Objects
-│   │   ├── BasePage.ts
-│   │   ├── HomePage.ts
-│   │   └── ...                     # Outros page objects
-│   ├── fixtures/                    # Fixtures do Playwright
-│   ├── utils/                       # Utilitários de teste
-│   └── README.md                    # Documentação dos testes E2E
-│
 ├── docs/                             # Documentação do projeto
 │   ├── fase-*.md                    # Fases de implementação
 │   ├── design-system/               # Documentação do Design System
-│   └── e2e-testing-guide.md         # Guia de testes E2E
+│   └── testing-guide.md             # Guia de testes unitários
 │
 ├── tailwind.config.ts                # Configuração do Tailwind CSS
 ├── postcss.config.js                # Configuração do PostCSS
-├── jest.config.js                    # Configuração do Jest
-├── playwright.config.ts              # Configuração do Playwright
+├── jest.config.ts                    # Configuração do Jest
 │
 ├── .next/                            # Build de produção (gerado automaticamente)
 ├── node_modules/                     # Dependências (gerado automaticamente)
@@ -427,16 +383,13 @@ academia-maestro-next/
 
 - **`test/unit/`**: Testes unitários organizados por tipo (components, hooks, utils, helpers, mocks). Utiliza Jest e React Testing Library para garantir qualidade e cobertura de código.
 
-- **`e2e/`**: Testes end-to-end com Playwright. Inclui page objects, fixtures e utilitários para testes de integração que validam fluxos completos do usuário.
-
 - **`docs/`**: Documentação completa do projeto, incluindo fases de implementação, guias do Design System e documentação de testes.
 
 - **`public/`**: Arquivos estáticos servidos diretamente pelo Next.js. Imagens, ícones e outros assets são referenciados com caminhos absolutos começando com `/`.
 
 - **`tailwind.config.ts`**: Configuração do Tailwind CSS com tema customizado, cores, fontes e animações.
 - **`postcss.config.js`**: Configuração do PostCSS com plugins do Tailwind CSS e Autoprefixer.
-- **`jest.config.js`**: Configuração do Jest para testes unitários.
-- **`playwright.config.ts`**: Configuração do Playwright para testes E2E.
+- **`jest.config.ts`**: Configuração do Jest para testes unitários.
 
 ---
 
@@ -486,7 +439,7 @@ O projeto foi desenvolvido utilizando as mais modernas tecnologias e melhores pr
 - **Interface**: React 19 com TypeScript para código robusto e tipado
 - **Estilização**: Tailwind CSS para design responsivo e moderno
 - **Design System**: Componentes padronizados e reutilizáveis
-- **Qualidade**: Testes unitários e E2E garantindo robustez e confiabilidade
+- **Qualidade**: Testes unitários garantindo robustez e confiabilidade
 - **SEO**: Otimização completa para mecanismos de busca
 - **Performance**: SSR/SSG para carregamento rápido e melhor experiência do usuário
 - **Acessibilidade**: Componentes seguem padrões WCAG 2.1 AA
@@ -500,7 +453,6 @@ O projeto foi desenvolvido utilizando as mais modernas tecnologias e melhores pr
 - ✅ 3 páginas de políticas (Privacidade, Cookies, Termos de Uso)
 - ✅ **Design System completo** com componentes reutilizáveis
 - ✅ **Testes unitários** com alta cobertura (Jest + React Testing Library)
-- ✅ **Testes E2E** cobrindo fluxos críticos (Playwright)
 - ✅ Componentes reutilizáveis e modulares
 - ✅ Integração com Google Maps para localização das unidades
 - ✅ Integração com WhatsApp para contato direto
