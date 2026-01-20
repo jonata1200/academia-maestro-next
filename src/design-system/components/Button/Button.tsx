@@ -18,7 +18,7 @@ export type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
 };
 
 const base =
-  'inline-flex items-center justify-center gap-2 rounded-full font-bold transition-all duration-300 ease-in-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary disabled:opacity-50 disabled:cursor-not-allowed disabled:pointer-events-none active:scale-[0.98]';
+  'inline-flex items-center justify-center gap-2 rounded-2xl font-bold transition-all duration-300 ease-in-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary disabled:opacity-50 disabled:cursor-not-allowed disabled:pointer-events-none active:scale-[0.98]';
 
 const variants: Record<ButtonVariant, string> = {
   primary:
@@ -31,11 +31,11 @@ const variants: Record<ButtonVariant, string> = {
     'text-text-color bg-transparent hover:bg-gray-100 active:bg-gray-200 focus-visible:bg-gray-100',
 };
 
-// Tamanhos do botão com padding balanceado para bordas arredondadas
+// Tamanhos do botão com padding balanceado para bordas arredondadas (aumentado 40%)
 const sizes: Record<ButtonSize, string> = {
-  sm: 'h-9 px-6 text-sm',
-  md: 'h-11 px-8 text-base',
-  lg: 'h-12 px-10 text-base',
+  sm: 'h-[3.25rem] px-8 text-sm',
+  md: 'h-[3.75rem] px-11 text-base',
+  lg: 'h-[4.25rem] px-14 text-lg',
 };
 
 export const Button = React.forwardRef<HTMLButtonElement | HTMLAnchorElement, ButtonProps>(function Button(

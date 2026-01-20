@@ -1,39 +1,75 @@
 # Script para encerrar processos na porta 3000
 # Uso: powershell -ExecutionPolicy Bypass -File scripts/kill-port-3000.ps1
+#
+# Este script identifica e encerra APENAS processos que estão usando a porta 3000,
+# evitando matar outros processos Node.js que possam estar rodando em outras portas.
 
 Write-Host ""
-Write-Host "Verificando processos Node.js..." -ForegroundColor Cyan
+Write-Host "Verificando processos na porta 3000..." -ForegroundColor Cyan
 
-# Busca todos os processos Node.js
-$nodeProcesses = Get-Process -Name "node" -ErrorAction SilentlyContinue
+# Busca processos usando a porta 3000 usando netstat
+$portProcesses = netstat -ano | findstr ":3000" | findstr "LISTENING"
 
-if ($nodeProcesses)
+if ($portProcesses)
 {
-    Write-Host "Encontrados $($nodeProcesses.Count) processo(s) Node.js" -ForegroundColor Yellow
+    $pids = @()
     
-    # Encerra cada processo
-    foreach ($process in $nodeProcesses)
+    # Extrai os PIDs dos processos
+    foreach ($line in $portProcesses)
     {
-        try
+        $parts = $line -split '\s+'
+        $pid = $parts[-1]
+        if ($pid -and $pid -notin $pids)
         {
-            Write-Host "  Encerrando processo ID: $($process.Id)" -ForegroundColor Gray
-            Stop-Process -Id $process.Id -Force -ErrorAction Stop
-        }
-        catch
-        {
-            Write-Host "  Nao foi possivel encerrar processo ID: $($process.Id)" -ForegroundColor Red
+            $pids += $pid
         }
     }
     
-    # Aguarda para garantir que a porta seja liberada
-    Write-Host "Aguardando 2 segundos para liberar a porta..." -ForegroundColor Yellow
-    Start-Sleep -Seconds 2
-    
-    Write-Host "Porta 3000 liberada com sucesso!" -ForegroundColor Green
+    if ($pids.Count -gt 0)
+    {
+        Write-Host "Encontrados $($pids.Count) processo(s) usando a porta 3000" -ForegroundColor Yellow
+        
+        # Encerra cada processo específico da porta 3000
+        foreach ($pid in $pids)
+        {
+            try
+            {
+                $process = Get-Process -Id $pid -ErrorAction SilentlyContinue
+                if ($process)
+                {
+                    Write-Host "  Encerrando processo ID: $pid ($($process.ProcessName))" -ForegroundColor Gray
+                    Stop-Process -Id $pid -Force -ErrorAction Stop
+                }
+            }
+            catch
+            {
+                Write-Host "  Nao foi possivel encerrar processo ID: $pid" -ForegroundColor Red
+            }
+        }
+        
+        # Aguarda para garantir que a porta seja liberada
+        Write-Host "Aguardando 2 segundos para liberar a porta..." -ForegroundColor Yellow
+        Start-Sleep -Seconds 2
+        
+        # Verifica se a porta foi liberada
+        $stillInUse = netstat -ano | findstr ":3000" | findstr "LISTENING"
+        if ($stillInUse)
+        {
+            Write-Host "Aviso: A porta 3000 ainda pode estar em uso. Tente novamente." -ForegroundColor Yellow
+        }
+        else
+        {
+            Write-Host "Porta 3000 liberada com sucesso!" -ForegroundColor Green
+        }
+    }
+    else
+    {
+        Write-Host "Nenhum processo encontrado na porta 3000" -ForegroundColor Green
+    }
 }
 else
 {
-    Write-Host "Nenhum processo Node.js em execucao" -ForegroundColor Green
+    Write-Host "Nenhum processo encontrado na porta 3000" -ForegroundColor Green
 }
 
 Write-Host ""
