@@ -3,19 +3,20 @@
 'use client';
 
 import React from 'react';
+import { Container, Card } from '@/design-system/components';
 
 export default function SobrePageClient() {
   return (
     <div className="pt-[100px]">
       <section className="py-20 md:py-16 text-center">
-        <div className="container">
+        <Container>
           <h1 className="text-4xl md:text-[2.8rem] font-bold">Nossa Trajetória</h1>
           <p className="text-lg mt-4">Conheça a história que transformou a Academia Maestro em uma referência na educação musical desde 1981.</p>
-        </div>
+        </Container>
       </section>
 
       <section className="py-10 md:py-16">
-        <div className="container">
+        <Container>
           <div className="relative max-w-[800px] mx-auto before:content-[''] before:absolute before:left-[25px] before:top-0 before:bottom-0 before:w-[3px] before:bg-primary before:-translate-x-1/2">
             <div className="py-5 pl-[70px] relative mb-8">
               <div className="absolute left-0 top-5 bg-primary text-secondary w-[50px] h-[50px] rounded-full flex justify-center items-center text-2xl z-10">
@@ -45,33 +46,33 @@ export default function SobrePageClient() {
               </div>
             </div>
           </div>
-        </div>
+        </Container>
       </section>
 
       <section className="py-20 bg-light-gray">
-        <div className="container">
+        <Container>
           <h2 className="text-center text-dark-blue text-[2.2rem] mb-10 font-bold">Nossos Pilares</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
-            <div className="bg-white p-8 rounded-xl border border-gray-200 text-center shadow-[0_4px_15px_rgba(0,0,0,0.05)] transition-all duration-300 border-t-[3px] border-t-transparent hover:-translate-y-2.5 hover:shadow-[0_12px_25px_rgba(0,0,0,0.08)] hover:border-t-primary group">
+            <Card variant="outlined" className="text-center transition-all duration-300 border-t-[3px] border-t-transparent hover:-translate-y-2.5 hover:shadow-[0_12px_25px_rgba(0,0,0,0.08)] hover:border-t-primary group p-8">
               <h4 className="text-primary text-2xl font-bold border-b-2 border-primary pb-2.5 mt-0 mb-5 inline-block">
                 Missão
               </h4>
               <p className="text-text-light">Promover o ensino musical de forma simples e prática, superando as expectativas.</p>
-            </div>
-            <div className="bg-white p-8 rounded-xl border border-gray-200 text-center shadow-[0_4px_15px_rgba(0,0,0,0.05)] transition-all duration-300 border-t-[3px] border-t-transparent hover:-translate-y-2.5 hover:shadow-[0_12px_25px_rgba(0,0,0,0.08)] hover:border-t-primary group">
+            </Card>
+            <Card variant="outlined" className="text-center transition-all duration-300 border-t-[3px] border-t-transparent hover:-translate-y-2.5 hover:shadow-[0_12px_25px_rgba(0,0,0,0.08)] hover:border-t-primary group p-8">
               <h4 className="text-primary text-2xl font-bold border-b-2 border-primary pb-2.5 mt-0 mb-5 inline-block">
                 Visão
               </h4>
               <p className="text-text-light">Conscientizar sobre a importância da música para a qualidade e o estilo de vida.</p>
-            </div>
-            <div className="bg-white p-8 rounded-xl border border-gray-200 text-center shadow-[0_4px_15px_rgba(0,0,0,0.05)] transition-all duration-300 border-t-[3px] border-t-transparent hover:-translate-y-2.5 hover:shadow-[0_12px_25px_rgba(0,0,0,0.08)] hover:border-t-primary group">
+            </Card>
+            <Card variant="outlined" className="text-center transition-all duration-300 border-t-[3px] border-t-transparent hover:-translate-y-2.5 hover:shadow-[0_12px_25px_rgba(0,0,0,0.08)] hover:border-t-primary group p-8">
               <h4 className="text-primary text-2xl font-bold border-b-2 border-primary pb-2.5 mt-0 mb-5 inline-block">
                 Valores
               </h4>
               <p className="text-text-light">Empatia, humanidade e excelência no servir, respeitando a individualidade de cada aluno.</p>
-            </div>
+            </Card>
           </div>
-        </div>
+        </Container>
       </section>
     </div>
   );

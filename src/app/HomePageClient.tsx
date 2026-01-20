@@ -6,6 +6,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import UnitsMap from '@/components/UnitsMap';
+import { Button, Container, Card } from '@/design-system/components';
 
 const instruments = [
   { href: "/instrumentos", src: "/violao.jpg", alt: "Violão", name: "Violão" },
@@ -22,45 +23,45 @@ export default function HomePageClient() {
       {/* Hero Section */}
       <section className="relative text-white text-center bg-[url('https://images.pexels.com/photos/164821/pexels-photo-164821.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop')] bg-cover bg-center flex flex-col items-center justify-center min-h-[400px] px-5 isolate md:pt-[220px] md:pb-[120px] md:px-5 md:flex-none md:min-h-0">
         <div className="absolute inset-0 bg-gradient-to-br from-dark-blue/80 via-[rgba(0,0,102,0.6)] to-dark-blue/80 -z-10"></div>
-        <div className="container relative z-10">
+        <Container className="relative z-10">
           <h1 className="text-white text-3xl md:text-[3.2rem] md:leading-tight mb-4 font-bold">A Música Transforma Vidas<span className="hidden md:inline">. Comece a Sua Transformação.</span></h1>
           <p className="text-white/90 text-xl md:text-[1.3rem]">Ensino musical de forma simples e prática, desde 1981.</p>
-        </div>
+        </Container>
       </section>
 
       {/* Seção "Por que escolher a Maestro?" */}
       <section className="py-20 md:py-16 text-center bg-light-gray">
-        <div className="container">
+        <Container>
           <h2 className="text-[2.2rem] mb-12 font-bold md:text-[2.2rem]">Por que escolher a Maestro?</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white p-8 rounded-xl text-center border border-gray-200 shadow-[0_4px_15px_rgba(0,0,0,0.05)] transition-all duration-300 border-t-[3px] border-t-transparent hover:-translate-y-2.5 hover:shadow-[0_12px_25px_rgba(0,0,0,0.08)] hover:border-t-primary group">
-              <div className="w-16 h-16 mx-auto mb-5 bg-[#e8e8ff] rounded-full flex justify-center items-center">
+            <Card variant="outlined" className="text-center transition-all duration-300 border-t-[3px] border-t-transparent hover:-translate-y-2.5 hover:shadow-[0_12px_25px_rgba(0,0,0,0.08)] hover:border-t-primary group">
+              <div className="w-16 h-16 mx-auto mb-5 bg-primary/10 rounded-full flex justify-center items-center">
                 <Image src="/experiencia.png" alt="Ícone de Experiência" width={40} height={40} />
               </div>
               <h3 className="text-2xl font-bold text-primary mb-4">Tradição e Experiência</h3>
               <p>Desde 1981 no mercado, com mais de 15 mil alunos formados e uma metodologia comprovada.</p>
-            </div>
-            <div className="bg-white p-8 rounded-xl text-center border border-gray-200 shadow-[0_4px_15px_rgba(0,0,0,0.05)] transition-all duration-300 border-t-[3px] border-t-transparent hover:-translate-y-2.5 hover:shadow-[0_12px_25px_rgba(0,0,0,0.08)] hover:border-t-primary group">
-              <div className="w-16 h-16 mx-auto mb-5 bg-[#e8e8ff] rounded-full flex justify-center items-center">
+            </Card>
+            <Card variant="outlined" className="text-center transition-all duration-300 border-t-[3px] border-t-transparent hover:-translate-y-2.5 hover:shadow-[0_12px_25px_rgba(0,0,0,0.08)] hover:border-t-primary group">
+              <div className="w-16 h-16 mx-auto mb-5 bg-primary/10 rounded-full flex justify-center items-center">
                 <Image src="/professor.png" alt="Ícone de Professor Qualificado" width={40} height={40} />
               </div>
               <h3 className="text-2xl font-bold text-primary mb-4">Professores Qualificados</h3>
               <p>Nossa equipe é formada por músicos profissionais e apaixonados pelo ensino.</p>
-            </div>
-            <div className="bg-white p-8 rounded-xl text-center border border-gray-200 shadow-[0_4px_15px_rgba(0,0,0,0.05)] transition-all duration-300 border-t-[3px] border-t-transparent hover:-translate-y-2.5 hover:shadow-[0_12px_25px_rgba(0,0,0,0.08)] hover:border-t-primary group">
-              <div className="w-16 h-16 mx-auto mb-5 bg-[#e8e8ff] rounded-full flex justify-center items-center">
+            </Card>
+            <Card variant="outlined" className="text-center transition-all duration-300 border-t-[3px] border-t-transparent hover:-translate-y-2.5 hover:shadow-[0_12px_25px_rgba(0,0,0,0.08)] hover:border-t-primary group">
+              <div className="w-16 h-16 mx-auto mb-5 bg-primary/10 rounded-full flex justify-center items-center">
                 <Image src="/niveis.png" alt="Ícone de Todos os Níveis" width={40} height={40} />
               </div>
               <h3 className="text-2xl font-bold text-primary mb-4">Para Todos os Níveis</h3>
               <p>Do iniciante que nunca tocou ao músico que busca aperfeiçoamento profissional.</p>
-            </div>
+            </Card>
           </div>
-        </div>
+        </Container>
       </section>
 
       {/* Seção de Instrumentos */}
       <section className="py-20 md:py-16 text-center overflow-x-hidden">
-        <div className="container">
+        <Container>
           <h2 className="text-[2.2rem] mb-16 font-bold md:text-[2.2rem]">Escolha um Instrumento para Aprender</h2>
           <div className="max-w-full -webkit-mask-[linear-gradient(90deg,transparent,white_10%,white_90%,transparent)] mask-[linear-gradient(90deg,transparent,white_10%,white_90%,transparent)] mb-10 instrument-scroller">
             <div className="flex gap-5 w-max animate-scroll scroller-inner">
@@ -84,21 +85,18 @@ export default function HomePageClient() {
               ))}
             </div>
           </div>
-          <Link
-            href="/instrumentos"
-            className="bg-primary text-white py-3 px-6 rounded-md no-underline font-semibold inline-block transition-all duration-300 border-none cursor-pointer text-base shadow-[0_4px_15px_rgba(0,0,255,0.2)] hover:-translate-y-1 hover:bg-[#0000cc]"
-          >
+          <Button href="/instrumentos" variant="primary" size="lg" className="shadow-[0_4px_15px_rgba(0,0,255,0.2)] hover:-translate-y-1">
             Ver todos os instrumentos
-          </Link>
-        </div>
+          </Button>
+        </Container>
       </section>
 
       {/* Seção de Localização */}
       <section className="py-20 md:py-16 text-center">
-        <div className="container">
+        <Container>
           <h2 className="text-[2.2rem] mb-12 font-bold md:text-[2.2rem]">Encontre a Maestro mais perto de você</h2>
           <UnitsMap />
-        </div>
+        </Container>
       </section>
     </>
   );

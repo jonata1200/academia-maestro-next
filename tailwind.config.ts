@@ -10,8 +10,16 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: colors.brand.primary[500],
-        secondary: colors.brand.secondary[500],
+        primary: {
+          DEFAULT: colors.brand.primary[500],
+          500: colors.brand.primary[500],
+          600: colors.brand.primary[600],
+          700: colors.brand.primary[700],
+        },
+        secondary: {
+          DEFAULT: colors.brand.secondary[500],
+          500: colors.brand.secondary[500],
+        },
         'text-color': colors.neutral[800],
         'text-light': colors.neutral[700],
         'light-gray': colors.neutral[50],

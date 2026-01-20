@@ -7,12 +7,7 @@
 @tailwind utilities;
 
 :root {
-    --primary-color: #0000FF;
-    --secondary-color: #FFFFFF;
-    --text-color: #333;
-    --text-light: #555;
-    --light-gray: #f4f4f4;
-    --dark-blue: #000033;
+    /* Mantendo apenas variáveis necessárias para funcionalidades específicas */
     --font-family: var(--font-poppins, 'Poppins', sans-serif);
 }
 
@@ -24,8 +19,8 @@
 
 body {
     font-family: var(--font-family);
-    color: var(--text-color);
-    background-color: var(--secondary-color);
+    color: theme('colors.text-color');
+    background-color: theme('colors.secondary');
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -36,21 +31,17 @@ main {
     flex-grow: 1;
 }
 
-.container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
+/* Container removido - usar componente Container do design system ou classe max-w-container */
 
 h1, h2, h3, h4 {
-    color: var(--dark-blue);
+    color: theme('colors.dark-blue');
     margin-bottom: 20px;
 }
 
 p {
     line-height: 1.6;
     margin-bottom: 15px;
-    color: var(--text-light);
+    color: theme('colors.text-light');
 }
 
 
@@ -75,7 +66,7 @@ p {
   width: 100%;
   height: 3px;
   border-radius: 3px;
-  background-color: var(--dark-blue);
+  background-color: theme('colors.dark-blue');
   transition: all 0.3s ease-in-out;
 }
 
@@ -100,11 +91,11 @@ p {
   opacity: 1 !important;
 }
 .swiper-pagination-bullet-active {
-  background-color: var(--primary-color) !important;
+  background-color: theme('colors.primary.DEFAULT') !important;
 }
 .swiper-button-next,
 .swiper-button-prev {
-  color: var(--primary-color) !important;
+  color: theme('colors.primary.DEFAULT') !important;
   background-color: rgba(255, 255, 255, 0.9);
   border-radius: 50%;
   width: 44px !important;
@@ -115,8 +106,8 @@ p {
 }
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
-  background-color: var(--primary-color);
-  color: var(--secondary-color) !important;
+  background-color: theme('colors.primary.DEFAULT');
+  color: theme('colors.secondary.DEFAULT') !important;
 }
 .swiper-button-next::after,
 .swiper-button-prev::after {

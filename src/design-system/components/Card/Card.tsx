@@ -43,7 +43,15 @@ export function Card({
         </div>
       ) : null}
 
-      <div className="p-4">{children}</div>
+      {children && (
+        <div className={cn(
+          // Aplica padding padrão apenas se não houver padding customizado no container externo
+          // e se houver header/footer (para manter consistência)
+          (header || footer || imageSrc) && 'p-4'
+        )}>
+          {children}
+        </div>
+      )}
 
       {footer ? <div className="p-4 border-t border-gray-100">{footer}</div> : null}
     </div>

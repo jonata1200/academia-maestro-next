@@ -5,8 +5,8 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
-import Link from 'next/link';
 import Image from 'next/image';
+import { Container, Button } from '@/design-system/components';
 
 // Imports de CSS do Swiper (essenciais para o funcionamento base)
 import 'swiper/css';
@@ -16,7 +16,7 @@ import 'swiper/css/navigation';
 export default function InstrumentosPageClient() { 
   return (
     <div className="pt-[180px] pb-20">
-      <div className="container">
+      <Container>
         <h1 className="text-center text-[2.8rem] mb-4 font-bold">Instrumentos Ensinados</h1>
         <p className="text-center max-w-[700px] mx-auto mb-16 text-xl">
           Do clássico ao popular, do acústico ao elétrico. Deslize para explorar nossas categorias e comece sua jornada musical.
@@ -126,14 +126,11 @@ export default function InstrumentosPageClient() {
         </div>
         
         <div className="text-center mt-5">
-          <Link
-            href="/contato"
-            className="bg-primary text-secondary py-4 px-9 text-lg rounded-lg no-underline font-semibold inline-block transition-all duration-300 shadow-[0_4px_15px_rgba(0,0,255,0.2)] hover:-translate-y-1 hover:bg-[#0000cc]"
-          >
+          <Button href="/contato" variant="primary" size="lg" className="shadow-[0_4px_15px_rgba(0,0,255,0.2)] hover:-translate-y-1">
             Agendar Aula Experimental
-          </Link>
+          </Button>
         </div>
-      </div>
+      </Container>
     </div>
   );
 }
