@@ -233,7 +233,12 @@ npm run test:coverage
 
 # Modo CI (sem watch, com saída simplificada)
 npm run test:ci
+
+# Atualizar snapshots (se houver)
+npm run test:update
 ```
+
+Para mais informações sobre testes, consulte o [Guia de Testes](docs/testing-guide.md).
 
 ---
 
