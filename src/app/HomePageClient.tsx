@@ -1,5 +1,4 @@
 // src/app/HomePageClient.tsx
-
 'use client';
 
 import React from 'react';
@@ -85,7 +84,7 @@ export default function HomePageClient() {
               ))}
             </div>
           </div>
-          <Button href="/instrumentos" variant="primary" size="lg" className="shadow-[0_4px_15px_rgba(0,0,255,0.2)] hover:-translate-y-1">
+          <Button href="/instrumentos" variant="primary" size="lg">
             Ver todos os instrumentos
           </Button>
         </Container>

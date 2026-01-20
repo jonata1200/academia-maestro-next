@@ -126,7 +126,7 @@ export default function InstrumentosPageClient() {
         </div>
         
         <div className="text-center mt-5">
-          <Button href="/contato" variant="primary" size="lg" className="shadow-[0_4px_15px_rgba(0,0,255,0.2)] hover:-translate-y-1">
+          <Button href="/contato" variant="primary" size="lg">
             Agendar Aula Experimental
           </Button>
         </div>

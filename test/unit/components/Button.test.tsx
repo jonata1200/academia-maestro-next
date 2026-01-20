@@ -14,7 +14,7 @@ describe('Button', () => {
     expect(screen.getByRole('button')).toHaveClass('bg-primary');
 
     rerender(<Button variant="secondary">Secondary</Button>);
-    expect(screen.getByRole('button')).toHaveClass('bg-secondary');
+    expect(screen.getByRole('button')).toHaveClass('bg-white');
 
     rerender(<Button variant="outline">Outline</Button>);
     expect(screen.getByRole('button')).toHaveClass('border-primary');
@@ -25,13 +25,13 @@ describe('Button', () => {
 
   it('renderiza diferentes tamanhos', () => {
     const { rerender } = render(<Button size="sm">Small</Button>);
-    expect(screen.getByRole('button')).toHaveClass('h-8');
+    expect(screen.getByRole('button')).toHaveClass('h-12');
 
     rerender(<Button size="md">Medium</Button>);
-    expect(screen.getByRole('button')).toHaveClass('h-10');
+    expect(screen.getByRole('button')).toHaveClass('h-14');
 
     rerender(<Button size="lg">Large</Button>);
-    expect(screen.getByRole('button')).toHaveClass('h-12');
+    expect(screen.getByRole('button')).toHaveClass('h-16');
   });
 
   it('fica desabilitado quando loading', () => {

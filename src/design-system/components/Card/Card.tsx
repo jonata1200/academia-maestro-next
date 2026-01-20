@@ -45,9 +45,8 @@ export function Card({
 
       {children && (
         <div className={cn(
-          // Aplica padding padrão apenas se não houver padding customizado no container externo
-          // e se houver header/footer (para manter consistência)
-          (header || footer || imageSrc) && 'p-4'
+          // Aplica padding padrão sempre, a menos que seja sobrescrito por className
+          'p-6'
         )}>
           {children}
         </div>

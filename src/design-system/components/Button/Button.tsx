@@ -18,19 +18,24 @@ export type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
 };
 
 const base =
-  'inline-flex items-center justify-center gap-2 rounded-md font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-info disabled:opacity-50 disabled:pointer-events-none';
+  'inline-flex items-center justify-center gap-2 rounded-full font-bold transition-all duration-300 ease-in-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary disabled:opacity-50 disabled:cursor-not-allowed disabled:pointer-events-none active:scale-[0.98]';
 
 const variants: Record<ButtonVariant, string> = {
-  primary: 'bg-primary text-white hover:bg-primary-600 active:bg-primary-700',
-  secondary: 'bg-secondary text-text-color border border-gray-200 hover:bg-light-gray',
-  outline: 'border border-primary text-primary hover:bg-light-gray',
-  ghost: 'text-text-color hover:bg-light-gray',
+  primary:
+    'bg-primary text-white hover:bg-primary-600 active:bg-primary-700 shadow-lg hover:shadow-xl hover:-translate-y-0.5 focus-visible:shadow-xl',
+  secondary:
+    'bg-white text-text-color border border-gray-300 hover:border-gray-400 hover:bg-gray-50 active:bg-gray-100 shadow-md hover:shadow-lg',
+  outline:
+    'border-2 border-primary text-primary bg-transparent hover:bg-primary hover:text-white active:bg-primary-700 active:border-primary-700 shadow-md hover:shadow-lg',
+  ghost:
+    'text-text-color bg-transparent hover:bg-gray-100 active:bg-gray-200 focus-visible:bg-gray-100',
 };
 
+// Tamanhos do botão com padding balanceado para bordas arredondadas
 const sizes: Record<ButtonSize, string> = {
-  sm: 'h-8 px-3 text-sm',
-  md: 'h-10 px-4 text-base',
-  lg: 'h-12 px-5 text-base',
+  sm: 'h-9 px-6 text-sm',
+  md: 'h-11 px-8 text-base',
+  lg: 'h-12 px-10 text-base',
 };
 
 export const Button = React.forwardRef<HTMLButtonElement | HTMLAnchorElement, ButtonProps>(function Button(
