@@ -82,10 +82,12 @@ O site apresenta informações sobre os cursos de instrumentos musicais, localiz
 ### 🎨 Design System
 - **Componentes Base**: Button, Input, Text, Label, Heading, Alert, Badge, Spinner
 - **Componentes Complexos**: Modal, Toast, Tooltip, Card, Accordion, Tabs, Form, Checkbox, Radio
-- **Componentes de Layout**: Container, Stack, Grid
-- **Sistema de Tokens**: Cores, tipografia, espaçamentos e animações padronizadas
-- **Design System completo**: Componentes reutilizáveis e bem estruturados
+- **Componentes de Layout**: Container, Stack, Grid, Section, Hero, Nav
+- **Sistema de Tokens**: Cores, tipografia, espaçamentos, animações, sombras e bordas padronizadas
+- **Hooks Customizados**: useModal, useToast, useForm, useClickOutside, useKeyboard
+- **Design System completo**: Componentes reutilizáveis, tipados e bem estruturados
 - **Acessibilidade**: Componentes seguem padrões WCAG 2.1 AA
+- **📚 Documentação Completa**: Consulte [Design System](docs/design-system/README.md) e [Documentação de Testes](docs/testes/README.md)
 
 ### 🧩 Componentes Reutilizáveis
 - **Header Fixo**: Menu responsivo com efeito de transparência no topo da home
@@ -238,7 +240,7 @@ npm run test:ci
 npm run test:update
 ```
 
-Para mais informações sobre testes, consulte o [Guia de Testes](docs/testing-guide.md).
+Para mais informações sobre testes, consulte a [Documentação de Testes](docs/testes/README.md).
 
 ---
 
@@ -348,7 +350,6 @@ academia-maestro-next/
 │   │   │   └── ...                 # Outros hooks
 │   │   ├── utils/                   # Utilitários
 │   │   │   └── cn.ts               # Helper para classes CSS
-│   │   └── README.md                # Documentação do Design System
 │   │
 ├── test/                             # Testes unitários
 │   └── unit/                         # Testes unitários organizados
@@ -359,9 +360,21 @@ academia-maestro-next/
 │       └── mocks/                    # Mocks e fixtures
 │
 ├── docs/                             # Documentação do projeto
-│   ├── fase-*.md                    # Fases de implementação
 │   ├── design-system/               # Documentação do Design System
-│   └── testing-guide.md             # Guia de testes unitários
+│   │   ├── 01-visao-geral.md        # Visão geral e princípios
+│   │   ├── 02-tokens.md             # Tokens de design
+│   │   ├── 03-componentes-base.md   # Componentes base
+│   │   ├── 04-componentes-formulario.md # Componentes de formulário
+│   │   ├── 05-componentes-layout.md # Componentes de layout
+│   │   ├── 06-componentes-complexos.md # Componentes complexos
+│   │   ├── 07-hooks.md              # Hooks customizados
+│   │   ├── 08-acessibilidade.md     # Guia de acessibilidade
+│   │   ├── 09-exemplos.md           # Exemplos práticos
+│   ├── testes/                      # Documentação de testes
+│   │   ├── testes.md                # Execução dos testes
+│   ├── troubleshooting/             # Solução de problemas
+│   │   ├── porta-3000.md           # Problema da porta 3000
+│   │   └── outros-problemas.md     # Outros problemas comuns
 │
 ├── tailwind.config.ts                # Configuração do Tailwind CSS
 ├── postcss.config.js                # Configuração do PostCSS
