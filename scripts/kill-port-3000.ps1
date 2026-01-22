@@ -18,10 +18,10 @@ if ($portProcesses)
     foreach ($line in $portProcesses)
     {
         $parts = $line -split '\s+'
-        $pid = $parts[-1]
-        if ($pid -and $pid -notin $pids)
+        $processId = $parts[-1]
+        if ($processId -and $processId -notin $pids)
         {
-            $pids += $pid
+            $pids += $processId
         }
     }
     
@@ -30,20 +30,20 @@ if ($portProcesses)
         Write-Host "Encontrados $($pids.Count) processo(s) usando a porta 3000" -ForegroundColor Yellow
         
         # Encerra cada processo específico da porta 3000
-        foreach ($pid in $pids)
+        foreach ($processId in $pids)
         {
             try
             {
-                $process = Get-Process -Id $pid -ErrorAction SilentlyContinue
+                $process = Get-Process -Id $processId -ErrorAction SilentlyContinue
                 if ($process)
                 {
-                    Write-Host "  Encerrando processo ID: $pid ($($process.ProcessName))" -ForegroundColor Gray
-                    Stop-Process -Id $pid -Force -ErrorAction Stop
+                    Write-Host "  Encerrando processo ID: $processId ($($process.ProcessName))" -ForegroundColor Gray
+                    Stop-Process -Id $processId -Force -ErrorAction Stop
                 }
             }
             catch
             {
-                Write-Host "  Nao foi possivel encerrar processo ID: $pid" -ForegroundColor Red
+                Write-Host "  Nao foi possivel encerrar processo ID: $processId" -ForegroundColor Red
             }
         }
         
