@@ -115,17 +115,15 @@ export default function ManutencaoPageClient() {
         <Container>
           <h3 className="text-[1.8rem] mb-4 font-bold">Pronto para dar vida nova ao seu instrumento?</h3>
           <p className="mb-6">Entre em contato pelo WhatsApp e solicite um orçamento sem compromisso.</p>
-          <Button
-            href={whatsappLink}
-            variant="primary"
-            size="lg"
-            asLink
-            target="_blank"
-            rel="noopener noreferrer"
-            className="shadow-[0_4px_15px_rgba(0,0,255,0.2)] hover:-translate-y-1"
-          >
-            Falar com um Especialista
-          </Button>
+          <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
+            <Button
+              variant="primary"
+              size="lg"
+              className="shadow-[0_4px_15px_rgba(0,0,255,0.2)] hover:-translate-y-1"
+            >
+              Falar com um Especialista
+            </Button>
+          </a>
         </Container>
       </section>
     </>
