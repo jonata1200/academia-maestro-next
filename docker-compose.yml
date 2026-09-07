@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  academia-maestro:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: academia-maestro-next
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - NEXT_TELEMETRY_DISABLED=1
+    restart: unless-stopped
+    # Caso precise adicionar variáveis de ambiente no futuro, descomente:
+    # env_file:
+    #   - .env.production

@@ -1,0 +1,54 @@
+# Dependências
+node_modules
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build do Next.js
+.next
+out
+build
+
+# Arquivos de desenvolvimento
+.env*.local
+.env.development
+.env.test
+
+# Arquivos de sistema
+.DS_Store
+Thumbs.db
+
+# Git
+.git
+.gitignore
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+*~
+
+# Testes
+coverage
+.nyc_output
+
+# Docker
+Dockerfile
+.dockerignore
+docker-compose.yml
+
+# Documentação
+docs
+README.md
+README-PORTAS.md
+
+# Scripts auxiliares
+kill-port.bat
+kill-port.ps1
+
+# Arquivos temporários
+*.log
+.cache
+temp
+tmp

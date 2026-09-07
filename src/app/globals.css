@@ -1,0 +1,124 @@
+/* ========================================================
+   ESTILOS GLOBAIS (VERSÃO FINAL E CORRIGIDA)
+   ======================================================== */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    /* Mantendo apenas variáveis necessárias para funcionalidades específicas */
+    --font-family: var(--font-poppins, 'Poppins', sans-serif);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    color: theme('colors.text-color');
+    background-color: theme('colors.secondary.DEFAULT');
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+main {
+    flex-grow: 1;
+}
+
+/* Container removido - usar componente Container do design system ou classe max-w-container */
+
+h1, h2, h3, h4 {
+    color: theme('colors.dark-blue');
+    margin-bottom: 20px;
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: theme('colors.text-light');
+}
+
+
+/* --- ANIMAÇÕES CUSTOMIZADAS --- */
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-up {
+  animation: slideUp 0.5s ease-out;
+}
+
+/* --- ANIMAÇÕES DO MENU HAMBÚRGUER --- */
+.menu-bar {
+  width: 100%;
+  height: 3px;
+  border-radius: 3px;
+  background-color: theme('colors.dark-blue');
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-toggle.open .menu-bar:nth-child(1) {
+  transform: rotate(45deg) translate(7px, 7px);
+}
+
+.menu-toggle.open .menu-bar:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.open .menu-bar:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* --- ESTILOS CUSTOMIZADOS DO SWIPER --- */
+.swiper-pagination {
+  bottom: 10px !important;
+}
+.swiper-pagination-bullet {
+  background-color: rgba(0, 0, 255, 0.3) !important;
+  opacity: 1 !important;
+}
+.swiper-pagination-bullet-active {
+  background-color: theme('colors.primary.DEFAULT') !important;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  color: theme('colors.primary.DEFAULT') !important;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  width: 44px !important;
+  height: 44px !important;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  top: 50%;
+  transform: translateY(-50%);
+}
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background-color: theme('colors.primary.DEFAULT');
+  color: theme('colors.secondary.DEFAULT') !important;
+}
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 18px !important;
+  font-weight: bold;
+}
+
+/* --- ANIMAÇÃO DE SCROLL INFINITO --- */
+.instrument-scroller:hover .scroller-inner {
+  animation-play-state: paused;
+}
+
+/* --- RESPONSIVIDADE GLOBAL --- */
+/* Estilos responsivos específicos podem ser adicionados aqui se necessário */
